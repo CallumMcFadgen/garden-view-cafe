@@ -1,20 +1,50 @@
 .navbar-links {
-font-family: 'Lato', sans-serif;
-font-size: 50;
-font-weight: 400;
-color: black;
-text-align: center;
-text-decoration: none;
+  text-align: center;
+  left: 33%;
+  width: 30%;
+  position: relative;
+  display: inline-block
 }
 
-.navbar-spacers{
-font-family: 'Lato', sans-serif;
-font-size: 80;
-font-weight: 700;
-word-spacing: 10px;
-color: black;
+.link {
+  color: rgb(94, 89, 89);
+  text-decoration: none;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.header-ui{
-border: thin black solid;
+.link:active {
+    color: black;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+.navbar-spacers {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  word-spacing: 10px;
+  color: black;
+  position: relative;
+
+}
+
+.header-ui {
+  border: thin black solid;
+}
+
+.header-title{
+    font-family: "Lato", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    width: 30%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
 }
