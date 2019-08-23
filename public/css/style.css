@@ -1,0 +1,20 @@
+.navbar-links {
+font-family: 'Lato', sans-serif;
+font-size: 50;
+font-weight: 400;
+color: black;
+text-align: center;
+text-decoration: none;
+}
+
+.navbar-spacers{
+font-family: 'Lato', sans-serif;
+font-size: 80;
+font-weight: 700;
+word-spacing: 10px;
+color: black;
+}
+
+.header-ui{
+border: thin black solid;
+}

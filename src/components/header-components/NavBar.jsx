@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom';
 class NavBar extends Component {
   render() {
     return (
-      <header>
-        <ul id="navBarLinks">
-          <li className="navButton"><Link to="">Home</Link></li>
-          <li className="navButton"><Link to="./MenuPage">Menu</Link></li>
-          <li className="navButton"><Link to="./EventsPage">Events</Link></li>
-          <li className="navButton"><Link to="./GalleryPage">Gallery</Link></li>
-          <li className="navButton"><Link to="./ContactPage">Contact</Link></li>
-        </ul>
+      <header className="header-ui">
+        <div className="navbar-links">
+          <span className="navButton"><Link to="">Home</Link></span>
+          <span className="navbar-spacers"> / </span>
+          <span className="navButton"><Link to="./MenuPage">Menu</Link></span>
+          <span className="navbar-spacers"> / </span>
+          <span className="navButton"><Link to="./EventsPage">Events</Link></span>
+          <span className="navbar-spacers"> / </span>
+          <span className="navButton"><Link to="./GalleryPage">Gallery</Link></span>
+          <span className="navbar-spacers"> / </span>
+          <span className="navButton"><Link to="./ContactPage">Contact</Link></span>
+        </div>
       </header>
     )
   }
