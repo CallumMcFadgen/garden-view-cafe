@@ -1,3 +1,5 @@
+/* NavBar/Header Styling */
+
 .navbar-links {
   text-align: center;
   left: 33%;
@@ -21,7 +23,6 @@
     font-family: "Lato", sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 40px;
   }
 
 .navbar-spacers {
@@ -31,7 +32,6 @@
   word-spacing: 10px;
   color: black;
   position: relative;
-
 }
 
 .header-ui {
@@ -47,4 +47,33 @@
     display: inline-block;
     text-align: center;
     line-height: 80px;
+    text-decoration: none;
 }
+
+
+
+/* Footer Styling */
+
+.footer-ui{
+border: thin black solid;
+}
+
+.copyright-ui{
+  font-family: "Lato", sans-serif;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 3%;
+  line-height: 50px;
+}
+
+.copyright-text{
+  font-size: 5px;
+  font-weight: 200;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+}
+

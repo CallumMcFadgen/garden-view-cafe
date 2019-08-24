@@ -10,11 +10,13 @@ import EventsPage from './EventsPage';
 import GalleryPage from './GalleryPage';
 import ContactPage from './ContactPage';
 import NavBar from './header-components/NavBar';
+import Footer from './footer-components/Footer';
 
 
 class App extends Component {
   render() {
     return (
+      <div>
       <Router>
         <div>
           <NavBar />
@@ -27,6 +29,10 @@ class App extends Component {
           </div>
         </div>
       </Router>
+      <div>
+        <Footer />
+      </div>
+      </div>
     )
   }
 }
