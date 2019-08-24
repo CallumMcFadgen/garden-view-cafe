@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 
 class HomePage extends Component {
     render() {
@@ -6,6 +8,7 @@ class HomePage extends Component {
         <div>
           <h1>Welcome</h1>
           <br/>
+
           <br/>
           <br/>
           <br/>
@@ -16,6 +19,7 @@ class HomePage extends Component {
     }
   }
   
-  
-  
+ 
+
+
   export default HomePage;
