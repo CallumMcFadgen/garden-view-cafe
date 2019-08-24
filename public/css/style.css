@@ -4,6 +4,7 @@
   text-align: center;
   left: 28%;
   width: 30%;
+  bottom: 8px;
   position: relative;
   display: inline-block;
 }
@@ -55,11 +56,33 @@
   display: inline-block;
   width: 8%;
   left: 29%;
+  bottom: 8px;
 }
 
 .header-sm-icon-spacing {
   word-spacing: 3px;
 }
+
+
+/* Page Banner Styling */
+
+.banner-ui {
+  border: thin black solid;
+  width: 100%;
+  position: relative;
+}
+
+.banner-text {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 130px;
+  font-weight: 400;
+  width: 60%;
+  position: relative;
+  bottom: 260px;
+  left: 2%;
+}
+
 
 /* Footer Styling */
 

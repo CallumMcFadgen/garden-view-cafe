@@ -1,25 +1,22 @@
+//Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 
 class HomePage extends Component {
-    render() {
-      return (
+  render() {
+    return (
+      <div>
         <div>
-          <h1>Welcome</h1>
-          <br/>
-
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <img className="banner-ui" src="./images/banner/banner-img.png" alt="homepage banner image" />
+          <h1 className="banner-text">Welcome</h1>
         </div>
-      )
-    }
+      </div>
+    )
   }
-  
- 
+}
 
+ReactDOM.render(<HomePage />,document.querySelector('#root'));
 
-  export default HomePage;
+export default HomePage;
