@@ -6,12 +6,11 @@ import ReactDOM from 'react-dom';
 class GalleryPage extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <br />
-          <img className="banner-ui" src="./images/banner/banner-img.png" alt="homepage banner image" />
+      <div className="container">
+        <div className="banner-ui" >
+          <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner image" />
           <h1 className="banner-text">Gallery</h1>
-       </div>
+        </div>
       </div>
     )
   }
