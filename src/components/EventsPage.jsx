@@ -11,6 +11,9 @@ class EventsPage extends Component {
           <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner image" />
           <h1 className="banner-text">Events</h1>
         </div>
+        <div>
+          <h2 className="text">Content coming soon</h2>
+        </div>
       </div>
     )
   }
