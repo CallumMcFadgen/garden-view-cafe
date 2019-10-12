@@ -24,54 +24,25 @@
   font-weight: 400;
 }
 
-.link:active {
-  color: black;
-  text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-}
 
-.navbar-spacers {
-  font-family: "Lato", sans-serif;
-  font-size: 15px;
+/* Primary navbar heading */
+.navbar-brand {
+  font-family: "Lato", sans-serif !important;
+  font-size: 2.25rem !important;
   font-weight: 700;
-  word-spacing: 10px;
-  color: black;
-  position: relative;
 }
 
-.header-ui {
-  border: thin black solid;
-}
 
-.header-title {
-  font-family: "Lato", sans-serif;
-  font-size: 35px;
-  font-weight: 700;
-  width: 30%;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  line-height: 80px;
-  text-decoration: none;
-}
-
+/* Small round social media icons in the appbar  */
 .header-sm-icons-ui {
-  position: relative;
-  display: inline-block;
-  width: 8%;
-  left: 29%;
-  bottom: 8px;
-}
-
-.header-sm-icon-spacing {
-  word-spacing: 3px;
+  display: inline-flexbox;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  padding-top: .4rem;
 }
 
 
-/* Container Styling */
-
+/* Styling for the page wrapper */
 .container {
   padding: 1%;
 }
@@ -86,29 +57,30 @@
   margin-bottom: 2%;
 }
 
+
+/* Styling for the page banner image (large thin image) */
 .banner-image {
   width: 100%;
-  position: relative;
   border: thin black solid;
 }
 
 .banner-text {
-  color: white;
+  color: #fff;
   font-family: "Lato", sans-serif;
-  font-size: 130px;
+  font-size: 5rem;
   font-weight: 400;
-  width: 60%;
-  position: relative;
-  bottom: 260px;
-  left: 2%;
+  position: absolute;
+  bottom: -17%;
+  left: 3%;
 }
+
 
 
 /* Content Styling */
 
 .content-3-col {
   padding: 1%;
-  width: 98%;
+  width: 100%;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -129,9 +101,6 @@
   text-align: center;
 }
 
-.content-regular {
-  /* border: thin black solid; */
-}
 
 .regular-text {
   padding: 3% 3% 3% 3%;
