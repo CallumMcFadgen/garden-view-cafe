@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 
@@ -13,13 +13,13 @@ class NavBar extends Component {    //page header bar with logo/title, active na
         <div className="links-ui">
           <span><Link className="link" to="">Home</Link></span>
           <span className="navbar-spacers"> / </span>
-          <span><Link className="link" to="./MenuPage" >Menu</Link></span>
+          <span><Link className="link" to="./menu-page" >Menu</Link></span>
           <span className="navbar-spacers"> / </span>
-          <span><Link className="link" to="./EventsPage">Events</Link></span>
+          <span><Link className="link" to="./events-page">Events</Link></span>
           <span className="navbar-spacers"> / </span>
-          <span><Link className="link" to="./GalleryPage">Gallery</Link></span>
+          <span><Link className="link" to="./gallery-page">Gallery</Link></span>
           <span className="navbar-spacers"> / </span>
-          <span><Link className="link" to="./ContactPage">Contact</Link></span>
+          <span><Link className="link" to="./contact-page">Contact</Link></span>
         </div>
         <div className="header-sm-icons-ui">
           <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 20, width: 20 }} bgColor="#4d4d4d" />

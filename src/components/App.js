@@ -1,15 +1,14 @@
 //Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import { browserHistory } from 'react-router';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 //Files
-import HomePage from './HomePage';
-import MenuPage from './MenuPage';
-import EventsPage from './EventsPage';
-import GalleryPage from './GalleryPage';
-import ContactPage from './ContactPage';
+import HomePage from './home-page';
+import MenuPage from './menu-page';
+import EventsPage from './events-page';
+import GalleryPage from './gallery-page';
+import ContactPage from './contact-page';
 import NavBar from './navbar-components/navbar';
 import Footer from './footer-components/footer';
 
@@ -23,10 +22,10 @@ class App extends Component {
             <NavBar />
             <div>
               <Route name="home" exact path="/" component={HomePage} />
-              <Route name="menu" exact path="/MenuPage" component={MenuPage} />
-              <Route name="events" exact path="/EventsPage" component={EventsPage} />
-              <Route name="gallery" exact path="/GalleryPage" component={GalleryPage} />
-              <Route name="contact" exact path="/ContactPage" component={ContactPage} />
+              <Route name="menu" exact path="/menu-page" component={MenuPage} />
+              <Route name="events" exact path="/events-page" component={EventsPage} />
+              <Route name="gallery" exact path="/gallery-page" component={GalleryPage} />
+              <Route name="contact" exact path="/contact-page" component={ContactPage} />
             </div>
           </div>
         </Router>

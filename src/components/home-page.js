@@ -2,18 +2,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
 class HomePage extends Component {
   render() {
     return (
       <div className="container">
         <div className="banner-ui" >
-          <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner image" />
+          <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner" />
           <h1 className="banner-text">Welcome</h1>
         </div>
         <div className="content-3-col">
           <div className="content-image-medium" >
-            <img className="image-medium" src="./images/medium/medium-wineglasses-image.png" />
+            <img className="image-medium" src="./images/medium/medium-wineglasses-image.png" alt="wineglass" />
           </div>
           <div className="content-qoute">
             <p className="quote-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -35,7 +34,7 @@ class HomePage extends Component {
             <p className="regular-text">"dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing lit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor"</p>
           </div>
           <div className="content-image-medium" >
-            <img className="image-medium" src="./images/medium/medium-coffee-image.png" />
+            <img className="image-medium" src="./images/medium/medium-coffee-image.png" alt="coffee"/>
           </div>
           <div className="content-qoute">
             <p className="quote-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -49,7 +48,7 @@ class HomePage extends Component {
         </div>
         <div className="content-3-col">
           <div className="content-image-medium" >
-            <img className="image-medium" src="./images/medium/medium-frenchtoast-image.png" />
+            <img className="image-medium" src="./images/medium/medium-frenchtoast-image.png" alt="frenchtoast" />
           </div>
           <div className="content-qoute">
             <p className="quote-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

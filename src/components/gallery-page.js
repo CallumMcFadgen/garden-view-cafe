@@ -2,13 +2,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
 class GalleryPage extends Component {
   render() {
     return (
       <div className="container">
         <div className="banner-ui" >
-          <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner image" />
+          <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner" />
           <h1 className="banner-text">Gallery</h1>
         </div>
         <div>
