@@ -1,3 +1,9 @@
+.text {
+  text-align: center;
+  font-size: 100px;
+}
+
+
 /* NavBar/Header Styling */
 
 .links-ui {
@@ -64,15 +70,119 @@
 }
 
 
-/* Page Banner Styling */
+/* Container Styling */
+
+.container {
+  padding: 1%;
+}
+
+
+/* Banner Styling */
 
 .banner-ui {
-  border: thin black solid;
+  width: 100%;
+  height: 412px;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+.banner-image {
   width: 100%;
   position: relative;
+  border: thin black solid;
 }
 
 .banner-text {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 130px;
+  font-weight: 400;
+  width: 60%;
+  position: relative;
+  bottom: 260px;
+  left: 2%;
+}
+
+
+/* Content Styling */
+
+.content-3-col {
+  padding: 1%;
+  width: 98%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-quote {
+  /* border: thin black solid; */
+  display: flex;
+  justify-content: center;
+}
+
+.quote-text {
+  padding: 3% 10% 3% 10%;
+  font-family: "Merriweather", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.content-regular {
+  /* border: thin black solid; */
+}
+
+.regular-text {
+  padding: 3% 3% 3% 3%;
+  font-family: "Merriweather", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  display: block;
+}
+
+.content-image-medium {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-medium {
+  border: black thin solid;
+  width: 70%;
+}
+
+.intro-text {
+  font-family: "Merriweather", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.sub-banner-ui {
+  width: 100%;
+}
+
+.sub-banner-image-ui {
+  position: relative;
+  display: flex;
+  left: 30%;
+  justify-content: center;
+  width: 70%;
+  height: 370px;
+  border: thin black solid;
+}
+
+.sub-banner-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: thin black solid;
+}
+
+.sub-banner-text {
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 130px;
