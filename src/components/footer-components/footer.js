@@ -29,5 +29,3 @@ class Footer extends Component {    //page Footer with copyright information and
 ReactDOM.render(<Footer />, document.querySelector('#root'));
 
 export default Footer;
-
-

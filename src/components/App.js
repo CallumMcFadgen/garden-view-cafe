@@ -10,8 +10,8 @@ import MenuPage from './MenuPage';
 import EventsPage from './EventsPage';
 import GalleryPage from './GalleryPage';
 import ContactPage from './ContactPage';
-import NavBar from './header-components/NavBar';
-import Footer from './footer-components/Footer';
+import NavBar from './navbar-components/navbar';
+import Footer from './footer-components/footer';
 
 
 class App extends Component {
