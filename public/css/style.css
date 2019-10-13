@@ -1,32 +1,3 @@
-.text {
-  text-align: center;
-  font-size: 100px;
-}
-
-.body {
-  padding: none;
-}
-
-/* NavBar/Header Styling */
-
-.links-ui {
-  text-align: center;
-  left: 28%;
-  width: 30%;
-  bottom: 8px;
-  position: relative;
-  display: inline-block;
-}
-
-.link {
-  color: #4d4d4d;
-  text-decoration: none;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-}
-
 
 /* Primary navbar heading (overiding bootstrap) */
 .navbar-brand {
@@ -36,7 +7,6 @@
   text-decoration: none !important;
   padding: none !important;
 }
-
 
 
 /* Navigation links (overiding bootstrap) */
@@ -60,11 +30,19 @@
 .container {
   padding: 1% !important;
   width:100% !important;
+  max-width: 1920px !important;
 }
 
 
 /* Styling for the page banner image (large thin image) */
 .banner-image {
+  width: 100%;
+  border: thin black solid;
+}
+
+
+/* Styling for the page sub-banner image (large thin image) */
+.sub-banner-image {
   width: 100%;
   border: thin black solid;
 }
@@ -79,6 +57,18 @@
   position: absolute;
   bottom: 0%;
   left: 3.2%;
+}
+
+
+/* Large white heading text on page banner image */
+.sub-banner-text {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: 3.0%;
+  left: 3.0%;
 }
 
 
@@ -118,6 +108,14 @@ justify-content: center;
   top:5px;
 }
 
+/* Menu headings for name, desc, price */
+.menu-headings {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
 
 .regular-text {
   padding: 3% 3% 3% 3%;
@@ -131,7 +129,7 @@ justify-content: center;
 /* sizing for a medium portrait image */
 .image-medium-portrait {
   border: black thin solid;
-  width: 80%;
+  width: 90%;
   height: 80%;
   justify-content: center;
 }
@@ -141,7 +139,7 @@ justify-content: center;
 /* sizing for a medium landscape image */
 .image-medium-landscape {
   border: black thin solid;
-  width: 80%;
+  width: 100%;
 }
 
 .intro-text {
@@ -174,16 +172,6 @@ justify-content: center;
   border: thin black solid;
 }
 
-.sub-banner-text {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 130px;
-  font-weight: 400;
-  width: 60%;
-  position: relative;
-  bottom: 260px;
-  left: 2%;
-}
 
 
 /* Footer Styling */

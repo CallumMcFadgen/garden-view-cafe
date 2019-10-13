@@ -1,7 +1,8 @@
 //Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Container, Row, Col } from 'reactstrap';
 
 //Files
 import HomePage from './home-page';
@@ -17,7 +18,7 @@ import Footer from './footer-components/footer';
 class App extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <Router>
           <div>
             <NavBar />
@@ -34,11 +35,11 @@ class App extends Component {
         <div>
           <Footer />
         </div>
-      </div>
+      </Container>
     )
   }
 }
 
-ReactDOM.render(<App />,document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
 
 export default App;
