@@ -18,44 +18,49 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar light expand="md" style={{color: 'white', border: 'thin black solid'}}>>
+      <Navbar light expand="xl" style={{color: 'white', border: 'thin black solid'}}>>
         <NavbarBrand href="/">Garden View Cafe</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home  </NavLink>
+              <NavLink href="/">Home</NavLink>
             </NavItem>
+            <span>&nbsp;&nbsp;</span>
             <NavItem>
-              <NavLink href="/menu-page">Menu  </NavLink>
+              <NavLink href="/menu-page">Menu</NavLink>
             </NavItem>
+            <span>&nbsp;&nbsp;</span>
             <NavItem>
-              <NavLink href="/events-page">Events  </NavLink>
+              <NavLink href="/events-page">Events</NavLink>
             </NavItem>
+            <span>&nbsp;&nbsp;</span>
             <NavItem>
-              <NavLink href="/gallery-page">Gallery  </NavLink>
+              <NavLink href="/gallery-page">Gallery</NavLink>
             </NavItem>
+            <span>&nbsp;&nbsp;</span>
             <NavItem>
-              <NavLink href="/contact-page">Contact    </NavLink>
+              <NavLink href="/contact-page">Contact</NavLink>
             </NavItem>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <NavItem>
               <div className="header-sm-icons-ui">
-                <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 20, width: 20 }} bgColor="#4d4d4d" />
+                <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
               </div>
             </NavItem>
             <NavItem>
               <div className="header-sm-icons-ui">
-                <SocialIcon network="twitter" url="https://twitter.com" style={{ height: 20, width: 20 }} bgColor="#4d4d4d" />
+                <SocialIcon network="twitter" url="https://twitter.com" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
               </div>
             </NavItem>
             <NavItem>
               <div className="header-sm-icons-ui">
-                <SocialIcon network="instagram" url="https://www.instagram.com" style={{ height: 20, width: 20 }} bgColor="#4d4d4d" />
+                <SocialIcon network="instagram" url="https://www.instagram.com" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
               </div>
             </NavItem>
             <NavItem>
               <div className="header-sm-icons-ui">
-                <SocialIcon network="pinterest" url="https://www.pinterest.nz" style={{ height: 20, width: 20 }} bgColor="#4d4d4d" />
+                <SocialIcon network="pinterest" url="https://www.pinterest.nz" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
               </div>
             </NavItem>
           </Nav>
