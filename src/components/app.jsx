@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Container, Row, Col } from 'reactstrap';
+import { Container} from 'reactstrap';
 
 //Files
 import HomePage from './home-page';

@@ -1,3 +1,9 @@
+/* Clear any existing mock ups on body */
+.body {
+  margin: none;
+  padding: none;
+}
+
 
 /* Primary navbar heading (overiding bootstrap) */
 .navbar-brand {
@@ -34,6 +40,12 @@
 }
 
 
+/* Styling for banner image col */
+.image-col-banner {
+  padding: 1%;
+}
+
+
 /* Styling for the page banner image (large thin image) */
 .banner-image {
   width: 100%;
@@ -55,7 +67,7 @@
   font-size: 5rem;
   font-weight: 400;
   position: absolute;
-  bottom: 0%;
+  bottom: 3.2%;
   left: 3.2%;
 }
 
@@ -79,8 +91,7 @@
 
 
 /* Column for displaying images */
-.image-col {
-  padding: 1%;
+.image-col-portrait {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,16 +108,25 @@ align-items: center;
 justify-content: center;
 }
 
+/* Text col styling */
+.text-col {
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
 
 /* Quote text styling */
 .quote-text {
   padding: 3% 10% 3% 10%;
   font-family: "Merriweather", sans-serif;
   font-style: italic;
-  font-size: 20px;
+  font-size: 150%;
   font-weight: 400;
   top:5px;
 }
+
 
 /* Menu headings for name, desc, price */
 .menu-headings {
@@ -117,10 +137,27 @@ justify-content: center;
 }
 
 
+
+.test{border:none !important;}
+
+/* Breakfast button styling */
+.breakfast-button {
+  padding-bottom: 1%;
+  left: 85%;
+  position: absolute;
+}
+
+/* Table heading (overriding bootstrap) */
+.table thead th{
+  font-family: "Lato", sans-serif !important;
+  font-size:  1.5rem !important;
+  font-weight: 300 !important;
+}
+
 .regular-text {
   padding: 3% 3% 3% 3%;
   font-family: "Merriweather", sans-serif;
-  font-size: 15px;
+  font-size: 100%;
   font-weight: 200;
   display: block;
 }
@@ -135,12 +172,12 @@ justify-content: center;
 }
 
 
-
 /* sizing for a medium landscape image */
 .image-medium-landscape {
   border: black thin solid;
   width: 100%;
 }
+
 
 .intro-text {
   font-family: "Merriweather", sans-serif;
