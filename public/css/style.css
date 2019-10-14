@@ -137,15 +137,21 @@ justify-content: center;
 }
 
 
+/* table text (overriding bootstrap) */
+.table td, .table th {
+  font-family: "Merriweather", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 200 !important;
+}
 
-.test{border:none !important;}
 
 /* Breakfast button styling */
-.breakfast-button {
+.button {
   padding-bottom: 1%;
   left: 85%;
   position: absolute;
 }
+
 
 /* Table heading (overriding bootstrap) */
 .table thead th{

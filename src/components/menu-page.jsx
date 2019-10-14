@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
-import BreakfastButtons from './buttons/breakfast-menu-sort-group'
-import LunchButtons from './buttons/lunch-menu-sort-group'
-import DinnerButtons from './buttons/dinner-menu-sort-group'
-import BreakfastTable from './tables/breakfast-table'
+import BreakfastButtons from './buttons/breakfast-menu-sort-group';
+import LunchButtons from './buttons/lunch-menu-sort-group';
+import DinnerButtons from './buttons/dinner-menu-sort-group';
+import BreakfastTable from './tables/breakfast-table';
+import LunchTable from './tables/lunch-table';
 
 class MenuPage extends Component {
   render() {
@@ -33,7 +34,7 @@ class MenuPage extends Component {
         </Row>
 
         <Row>
-          <Col className="breakfast-button">
+          <Col className="button">
           <BreakfastButtons/>
           </Col>
         </Row>
@@ -51,18 +52,15 @@ class MenuPage extends Component {
           </Col>
         </Row>
 
-        <Row className="row-padding">
-          <Col>
-            <h4 className="menu-headings">Name</h4>
-          </Col>
-          <Col>
-            <h4 className="menu-headings">Description</h4>
-          </Col>
-          <Col>
-            <h4 className="menu-headings">Price</h4>
-          </Col>
-          <Col>
+        <Row>
+          <Col className="button">
           <LunchButtons/>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          <LunchTable/>
           </Col>
         </Row>
 
