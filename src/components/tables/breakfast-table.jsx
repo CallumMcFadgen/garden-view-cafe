@@ -31,6 +31,36 @@ const BreakfastTable = (props) => {
           <td>Served with caramelised bananas, cured bacon, mascarpone vanilla cream & maple syrup</td>
           <td>$15.00</td>
         </tr>
+        <tr>
+          <th scope="row"></th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
       </tbody>
     </Table>
   );

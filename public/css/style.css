@@ -145,12 +145,20 @@ justify-content: center;
 }
 
 
-/* Breakfast button styling */
-.button {
+/* Menu sorting buttons styling */
+.menu-button {
   padding-bottom: 1%;
-  left: 85%;
-  position: absolute;
 }
+
+
+.btn-outline-secondary {
+  position: relative !important;
+  float: right;
+  margin-right: 1%;
+}
+
+
+
 
 
 /* Table heading (overriding bootstrap) */

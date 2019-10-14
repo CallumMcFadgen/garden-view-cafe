@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 
-const LunchTable = (props) => {
+const DinnerTable = (props) => {
   return (
     <Table>
       <thead>
@@ -15,21 +15,21 @@ const LunchTable = (props) => {
       <tbody>
         <tr>
           <th scope="row"></th>
-          <td>Roast Vegetable Salad</td>
-          <td>A range of seasonal produce, roasted with a balsamic glaze and served with fresh salad greens</td>
-          <td>$15.00</td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td>Roast Lamb Salad</td>
-          <td>Local free range lamb, roasted with a mint dressing and served with salad greens</td>
-          <td>$18.00</td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td>Fish & Chips</td>
-          <td>Fresh fish fried in a beer batter and served with homemade chunky fries and Aioli</td>
+          <td>Halloumi Salad</td>
+          <td>Grilled local halloumi, julienne vegetables, served with salad greens</td>
           <td>$20.00</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Steak Fillet</td>
+          <td>Pure angus beef sirloin served with roasted potatoes and seasonal vegetables</td>
+          <td>$30.00</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Seafood Fettuccine</td>
+          <td>Handmade pasta tossed with alfredo sauce and full of fresh seafood and served with crust sourdough bread</td>
+          <td>$25.00</td>
         </tr>
         <tr>
           <th scope="row"></th>
@@ -66,4 +66,4 @@ const LunchTable = (props) => {
   );
 }
 
-export default LunchTable;
+export default DinnerTable;

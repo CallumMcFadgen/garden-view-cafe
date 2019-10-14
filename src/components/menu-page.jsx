@@ -7,6 +7,7 @@ import LunchButtons from './buttons/lunch-menu-sort-group';
 import DinnerButtons from './buttons/dinner-menu-sort-group';
 import BreakfastTable from './tables/breakfast-table';
 import LunchTable from './tables/lunch-table';
+import DinnerTable from './tables/dinner-table';
 
 class MenuPage extends Component {
   render() {
@@ -34,7 +35,7 @@ class MenuPage extends Component {
         </Row>
 
         <Row>
-          <Col className="button">
+          <Col className="menu-button">
           <BreakfastButtons/>
           </Col>
         </Row>
@@ -53,7 +54,7 @@ class MenuPage extends Component {
         </Row>
 
         <Row>
-          <Col className="button">
+          <Col className="menu-button">
           <LunchButtons/>
           </Col>
         </Row>
@@ -71,18 +72,15 @@ class MenuPage extends Component {
           </Col>
         </Row>
 
-        <Row className="row-padding">
-          <Col>
-            <h4 className="menu-headings">Name</h4>
+        <Row>
+          <Col className="menu-button">
+          <DinnerButtons/>
           </Col>
+        </Row>
+
+        <Row>
           <Col>
-            <h4 className="menu-headings">Description</h4>
-          </Col>
-          <Col>
-            <h4 className="menu-headings">Price</h4>
-          </Col>
-          <Col>
-            <DinnerButtons/>
+          <DinnerTable/>
           </Col>
         </Row>
 
