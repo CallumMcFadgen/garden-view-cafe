@@ -8,7 +8,7 @@
 /* Primary navbar heading (overiding bootstrap) */
 .navbar-brand {
   font-family: "Lato", sans-serif !important;
-  font-size: 3.00rem !important;
+  font-size: 3.5vw !important;
   font-weight: 700 !important;
   text-decoration: none !important;
   padding: none !important;
@@ -64,11 +64,13 @@
 .banner-text {
   color: #fff;
   font-family: "Lato", sans-serif;
-  font-size: 5rem;
-  font-weight: 400;
+  font-size: 12vw;
+  font-weight: 800;
   position: absolute;
-  bottom: 3.2%;
-  left: 3.2%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 
@@ -79,8 +81,8 @@
   font-size: 3rem;
   font-weight: 400;
   position: absolute;
-  bottom: 3.0%;
-  left: 3.0%;
+  bottom: 5.0%;
+  left: 2.5%;
 }
 
 
@@ -93,7 +95,6 @@
 /* Column for displaying images */
 .image-col-portrait {
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: center;
 }
@@ -101,12 +102,13 @@
 
 /* Quote col styling */
 .quote-col {
-padding: 1%;
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
+  padding: 1%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* Text col styling */
 .text-col {
@@ -128,14 +130,6 @@ justify-content: center;
 }
 
 
-/* Menu headings for name, desc, price */
-.menu-headings {
-  font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-}
-
 
 /* table text (overriding bootstrap) */
 .table td, .table th {
@@ -143,6 +137,13 @@ justify-content: center;
   font-size: 1rem !important;
   font-weight: 200 !important;
 }
+
+
+/* Spacing aboving footer*/
+.pre-footer-spacing {
+  height: 3rem;
+}
+
 
 
 /* Menu sorting buttons styling */

@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
-import BreakfastButtons from './buttons/breakfast-menu-sort-group';
-import LunchButtons from './buttons/lunch-menu-sort-group';
-import DinnerButtons from './buttons/dinner-menu-sort-group';
+import BreakfastButtons from './buttons/menu/breakfast-sort-group';
+import LunchButtons from './buttons/menu/lunch-sort-group';
+import DinnerButtons from './buttons/menu/dinner-sort-group';
 import BreakfastTable from './tables/breakfast-table';
 import LunchTable from './tables/lunch-table';
 import DinnerTable from './tables/dinner-table';
@@ -16,7 +16,7 @@ class MenuPage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="banner-image" src="./images/banner/banner-img.png" alt="homepage banner" />
+            <img className="banner-image" src="./images/banners/banner-img.png" alt="homepage banner" />
             <h1 className="banner-text">Menu</h1>
           </Col>
         </Row>
