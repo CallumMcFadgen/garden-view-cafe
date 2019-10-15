@@ -19,7 +19,7 @@ class MenuPage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="banner-image" src="./images/banners/banner-img.png" alt="homepage banner" />
+            <img className="banner-image" src="./images/banners/banner-img.png" alt="menu page banner" />
             <h1 className="banner-text">Menu</h1>
           </Col>
         </Row>

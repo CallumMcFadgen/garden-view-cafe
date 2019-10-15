@@ -11,7 +11,7 @@ class HomePage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="banner-image" src="./images/banners/banner-img.png" alt="homepage banner" />
+            <img className="banner-image" src="./images/banners/banner-img.png" alt="home page banner" />
             <h1 className="banner-text">Welcome</h1>
           </Col>
         </Row>

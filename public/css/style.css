@@ -53,14 +53,7 @@
 }
 
 
-/* Styling for the page sub-banner image (large thin image) */
-.sub-banner-image {
-  width: 100%;
-  border: thin black solid;
-}
-
-
-/* Large white heading text on page banner image */
+/* Large white heading text with a black outline on the main page banner image */
 .banner-text {
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
@@ -75,7 +68,14 @@
 }
 
 
-/* Large white heading text on page banner image */
+/* Styling for the page sub-banner image (large thin image) */
+.sub-banner-image {
+  width: 100%;
+  border: thin black solid;
+}
+
+
+/* White heading text with a black outline on the page sub banner image */
 .sub-banner-text {
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
