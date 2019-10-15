@@ -1,13 +1,16 @@
-//Dependences
+// Package Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
+
+// Local Dependences
 import BreakfastButtons from './buttons/menu/breakfast-sort-group';
 import LunchButtons from './buttons/menu/lunch-sort-group';
 import DinnerButtons from './buttons/menu/dinner-sort-group';
-import BreakfastTable from './tables/breakfast-table';
-import LunchTable from './tables/lunch-table';
-import DinnerTable from './tables/dinner-table';
+import BreakfastTable from './tables/menu/breakfast-table';
+import LunchTable from './tables/menu/lunch-table';
+import DinnerTable from './tables/menu/dinner-table';
+
 
 class MenuPage extends Component {
   render() {

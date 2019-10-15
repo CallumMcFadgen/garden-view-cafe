@@ -1,7 +1,8 @@
-//Dependences
+// Package Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
+
 
 class HomePage extends Component {
   render() {

@@ -63,6 +63,7 @@
 /* Large white heading text on page banner image */
 .banner-text {
   color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-family: "Lato", sans-serif;
   font-size: 12vw;
   font-weight: 800;
@@ -77,12 +78,14 @@
 /* Large white heading text on page banner image */
 .sub-banner-text {
   color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-family: "Lato", sans-serif;
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: 8vw;
+  font-weight: 500;
   position: absolute;
-  bottom: 5.0%;
-  left: 2.5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 

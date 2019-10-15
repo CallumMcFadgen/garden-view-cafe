@@ -1,5 +1,7 @@
+// Package Dependences
 import React from 'react';
 import { Table } from 'reactstrap';
+
 
 const DinnerTable = (props) => {
   return (
@@ -33,33 +35,33 @@ const DinnerTable = (props) => {
         </tr>
         <tr>
           <th scope="row"></th>
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>Name</td>
+          <td>Desc</td>
+          <td>Price</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>Name</td>
+          <td>Desc</td>
+          <td>Price</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>Name</td>
+          <td>Desc</td>
+          <td>Price</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>Name</td>
+          <td>Desc</td>
+          <td>Price</td>
         </tr>
         <tr>
           <th scope="row"></th>
-          <td> </td>
-          <td> </td>
-          <td> </td>
+          <td>Name</td>
+          <td>Desc</td>
+          <td>Price</td>
         </tr>
       </tbody>
     </Table>

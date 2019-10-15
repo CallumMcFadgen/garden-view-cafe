@@ -1,7 +1,9 @@
-//Dependences
+// Package Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
+
+// Local Dependences
 import AutumnButtons from './buttons/events/autumn-sort-group';
 import SpringButtons from './buttons/events/spring-sort-group';
 import SummerButtons from './buttons/events/summer-sort-group';
@@ -10,6 +12,7 @@ import AutumnTable from './tables/events/autumn-events';
 import SpringTable from './tables/events/spring-events';
 import SummerTable from './tables/events/summer-events';
 import WinterTable from './tables/events/winter-events';
+
 
 class EventsPage extends Component {
   render() {

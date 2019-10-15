@@ -1,10 +1,10 @@
-//Dependences
+// Package Dependences
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container} from 'reactstrap';
 
-//Files
+// Local Dependences
 import HomePage from './home-page';
 import MenuPage from './menu-page';
 import EventsPage from './events-page';
