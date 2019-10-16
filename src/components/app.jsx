@@ -11,6 +11,7 @@ import EventsPage from './events-page';
 import GalleryPage from './gallery-page';
 import ContactPage from './contact-page';
 import ErrorPage from './error-page';
+import AdminPage from './admin-page';
 import NavBar from './navbar-components/navbar';
 import Footer from './footer-components/footer';
 
@@ -28,6 +29,7 @@ class App extends Component {
               <Route name="events" exact path="/events-page" component={EventsPage} />
               <Route name="gallery" exact path="/gallery-page" component={GalleryPage} />
               <Route name="contact" exact path="/contact-page" component={ContactPage} />
+              <Route name="admin" exact path="/admin-page" component={AdminPage} />
               <Route name="error" exact path="/error-page" component={ErrorPage} />
             </div>
           </div>

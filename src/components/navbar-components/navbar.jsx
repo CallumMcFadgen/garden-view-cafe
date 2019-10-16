@@ -42,6 +42,9 @@ const Example = (props) => {
             <NavItem>
               <NavLink href="/contact-page">Contact</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/admin-page">Admin</NavLink>
+            </NavItem>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <NavItem>
               <div className="header-sm-icons-ui">
