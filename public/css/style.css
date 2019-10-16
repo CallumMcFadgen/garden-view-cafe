@@ -148,7 +148,6 @@
 }
 
 
-
 /* Menu sorting buttons styling */
 .menu-button {
   padding-bottom: 1%;
@@ -160,8 +159,6 @@
   float: right;
   margin-right: 1%;
 }
-
-
 
 
 
@@ -231,35 +228,45 @@
 
 /* Footer Styling */
 
-.footer-ui {
+.footer {
   border: thin black solid;
+  width:100%;
 }
 
-.copyright-ui {
-  font-family: "Lato", sans-serif;
-  width: 20%;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  left: 3%;
-  line-height: 50px;
-}
 
+/* Copyright text located in the page footer */
 .copyright-text {
-  font-size: 5px;
-  font-weight: 200;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  font-size: 100%;
+  text-align: center;
 }
 
-.footer-sm-icons-ui {
+
+/*  */
+.footer-sm-icon {
   position: relative;
-  display: inline-block;
-  width: 10%;
-  left: 65%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
+/* provides some spacing for the footer social media icons */
 .footer-sm-icon-spacing {
-  word-spacing: 5px;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+
+/* Buisness hours and location information  */
+.footer-biz-info {
+  font-family: "Lato", sans-serif;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-size: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
 }
