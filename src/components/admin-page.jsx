@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
+import MenuItemForm from './forms/update-menu-form';
+
 class AdminPage extends Component {
     render() {
       return (
@@ -13,10 +15,12 @@ class AdminPage extends Component {
               <h1 className="banner-text">Admin</h1>
             </Col>
           </Row>
-          <div>
-            <h2 className="text">Content coming soon</h2>
-          </div>
-        </div>
+         <Row>
+           <Col>
+              <MenuItemForm />
+           </Col>
+         </Row>
+         </div>
       )
     }
   }

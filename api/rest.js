@@ -31,6 +31,20 @@ app.use((req, res, next) => {
 // Pull all data from the menu_items table
 router.get('/menu-items', routes.menuItems.GetAllInfo);
 
+// Pull single items data from the menu_items table
+router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetIndividualInfo);
+
+// Post new menu item
+router.post('/menu-items', jsonParser, routes.menuItems.PostNewItem);
+
+// Patch menu item
+router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchItem);
+
+
+
+
+
+
 // Pull all data from the item_reviews table
 router.get('/item-reviews', routes.itemReviews.GetAllInfo);
 
@@ -42,11 +56,6 @@ router.get('/event_reviews', routes.eventReviews.GetAllInfo);
 
 // Pull all data from the admin table
 router.get('/admins', routes.admins.GetAllInfo);
-
-
-
-// Pull single items data from the menu_items table
-router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetIndividualInfo);
 
 // Pull single items data from the item_reviews table       (buggy)
 router.get('/item_reviews/:id', middleware.checkID, routes.itemReviews.GetIndividualInfo);
