@@ -1,10 +1,16 @@
+// Package Dependences
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input,} from 'reactstrap';
+import { Form, FormGroup, Label, Input,} from 'reactstrap';
+
+// Local Dependences
+import MenuFormButtons from '../buttons/form/edit-menu-group.jsx';
+
 
 const MenuItemForm = (props) => {
   return (
     <Form className="update-menu-form">
-      <FormGroup className="update-menu-form-subheadings">
+      <div className="form-heading">Edit menu items</div>
+      <FormGroup>
         <Label>Item name</Label>
         <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter a menu item name" />
       </FormGroup>
@@ -59,7 +65,7 @@ const MenuItemForm = (props) => {
         </Label>
       </FormGroup>
       <br /> 
-      <Button>Submit</Button>
+      <MenuFormButtons />
     </Form>
   );
 }

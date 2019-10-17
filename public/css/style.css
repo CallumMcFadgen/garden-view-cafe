@@ -11,6 +11,13 @@
 }
 
 
+/* heading for forms */
+.form-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: 400;
+}
+
 /* update check box headings on menu update form (overriding bootstrap) */
 label {
   font-family: "Lato", sans-serif !important;
