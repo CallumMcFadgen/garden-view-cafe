@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 // Create a knex object
-const knex = require('knex') (
+const knex = require('knex')(
     {
         client: 'mysql',
         connection: config.database
@@ -28,43 +28,41 @@ app.use((req, res, next) => {
 });
 
 
-// Pull all items, pull single items, post new item, patch menu item from menu_items table
+// get all menu items, get one menu item, add a new menu item, update a menu item, delete a menu item
 router.get('/menu-items', routes.menuItems.GetAllMenuItems);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
 router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchMenuItem);
+router.delete('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.DeleteMenuItem);
 
 
-// Pull all reviews, pull a single review from the item_reviews table
+// get all item reviews, get one item review, add a new item review, update a item review, delete a item review
 router.get('/item-reviews', routes.itemReviews.GetAllItemReviews);
 router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetItemReview);
 router.post('/item-reviews', jsonParser, routes.itemReviews.PostItemReview);
 router.patch('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PatchItemReview);
+router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.DeleteItemReview);
 
 
-// Pull all data from the events table
+// get all events, get one event, add a new event, update a event, delete a event
 router.get('/events', routes.events.GetAllEvents);
 router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
-
-
-
+router.post('/events', jsonParser, middleware.checkID, routes.events.PostEvent);             //bug
+router.patch('/events/:id', jsonParser, middleware.checkID, routes.events.Patchevent);
+router.delete('/events/:id', jsonParser, middleware.checkID, routes.events.DeleteEvent);
 
 
 // Pull all data from the event_reviews table
-router.get('/event_reviews', routes.eventReviews.GetAllInfo);
+router.get('/event_reviews', routes.eventReviews.GetAllEventReviews);
+router.get('/event_reviews/:id', middleware.checkID, routes.eventReviews.GetEventReview);
+
+
+
+
 
 // Pull all data from the admin table
-router.get('/admins', routes.admins.GetAllInfo);
-
-
-
-
-
-// Pull single items data from the event_reviews table
-router.get('/event_reviews/:id', middleware.checkID, routes.eventReviews.GetIndividualInfo);
-
-// Pull single items data from the event_reviews table
-router.get('/admins/:id', middleware.checkID, routes.admins.GetIndividualInfo);
+router.get('/admins', routes.eventReviews.GetAllEventReviews);
+router.get('/admins/:id', middleware.checkID, routes.eventReviews.GetEventReview);
 
 
 
@@ -72,8 +70,6 @@ router.get('/admins/:id', middleware.checkID, routes.admins.GetIndividualInfo);
 
 app.use('/api', router);
 
-
-// 
 app.listen(config.APIServerPort, () => {
-        console.log(`server started on port ${config.APIServerPort}`);
+    console.log(`server started on port ${config.APIServerPort}`);
 })

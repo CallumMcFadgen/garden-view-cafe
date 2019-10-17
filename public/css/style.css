@@ -162,11 +162,6 @@ label {
 }
 
 
-/* Spacing aboving footer*/
-.pre-footer-spacing {
-  height: 3rem;
-}
-
 
 /* Menu sorting buttons styling */
 .menu-button {
@@ -222,6 +217,9 @@ label {
   text-align: center;
 }
 
+
+/**************************************************************************************/
+
 .sub-banner-ui {
   width: 100%;
 }
@@ -244,17 +242,24 @@ label {
   border: thin black solid;
 }
 
+/**************************************************************************************/
 
 
-/* Footer Styling */
 
+/** FOOTER STYLING ********************************************************************/
+
+/* spacing aboving footer*/
+.pre-footer-spacing {
+  height: 3rem;
+}
+
+/* basic stylying for footer row */
 .footer {
   border: thin black solid;
   width:100%;
 }
 
-
-/* Copyright text located in the page footer */
+/* copyright text located in the page footer */
 .copyright-text {
   font-family: "Lato", sans-serif;
   width: 100%;
@@ -262,8 +267,7 @@ label {
   text-align: center;
 }
 
-
-/*  */
+/* placement for the footers social media icons */
 .footer-sm-icon {
   position: relative;
   text-align: center;
@@ -272,13 +276,11 @@ label {
   justify-content: center;
 }
 
-
 /* provides some spacing for the footer social media icons */
 .footer-sm-icon-spacing {
  margin-left: 1%;
  margin-right: 1%;
 }
-
 
 /* Buisness hours and location information located at the top of the footer */
 .footer-biz-info-top-row {
@@ -291,7 +293,6 @@ label {
   padding-top: 1%;
 }
 
-
 /* Buisness hours and location information located at the bottom of the footer  */
 .footer-biz-info-bottom-row {
   font-family: "Lato", sans-serif;
@@ -302,8 +303,11 @@ label {
   display: flex;
 }
 
+/**************************************************************************************/
 
-/** COMING SOON PLACEHOLDER *********************************************************/
+
+
+/** COMING SOON PLACEHOLDER ***********************************************************/
 
 /* heading for the coming soon disclaimer on contacts and gallery */
 .coming-soon-heading {

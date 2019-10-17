@@ -1,4 +1,5 @@
-function GetAllInfo(req, res) {
+// get data for all event reviews
+function GetAllEventReviews(req, res, next) {
     const {knex}=req.app.locals;
     knex
         .select('*')
@@ -8,8 +9,8 @@ function GetAllInfo(req, res) {
 };
 
 
-// Pull individual table record
-function GetIndividualInfo(req, res) {
+// get data for an individual event review
+function GetEventReview(req, res, next) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
@@ -21,13 +22,14 @@ function GetIndividualInfo(req, res) {
             return res.status(200).json(data);
         }
         else {
-            return res.status(404).json(`The event review with the ID ${id} could not be found`)
+            return res.status(404).json(`Event review ${id} could not be found`)
         }
     })
     .catch(error => res.status(500).json(error))
 };
 
+
 module.exports = {
-    GetAllInfo,
-    GetIndividualInfo
+    GetAllEventReviews,
+    GetEventReview
 };
