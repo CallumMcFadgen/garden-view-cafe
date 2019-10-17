@@ -28,25 +28,19 @@ app.use((req, res, next) => {
 });
 
 
-// Pull all data from the menu_items table
-router.get('/menu-items', routes.menuItems.GetAllInfo);
-
-// Pull single items data from the menu_items table
-router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetIndividualInfo);
-
-// Post new menu item
-router.post('/menu-items', jsonParser, routes.menuItems.PostNewItem);
-
-// Patch menu item
-router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchItem);
+// Pull all items, pull single items, post new item, patch menu item from menu_items table
+router.get('/menu-items', routes.menuItems.GetAllMenuItems);
+router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
+router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
+router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchMenuItem);
 
 
+// Pull all reviews, pull a single review from the item_reviews table
+router.get('/item-reviews', routes.itemReviews.GetAllItemReviews);
+router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetIndividualItemReview);
+router.post('/item-reviews', jsonParser, routes.itemReviews.PostMenuItemReview);
+router.patch('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PatchMenuItemReview);
 
-
-
-
-// Pull all data from the item_reviews table
-router.get('/item-reviews', routes.itemReviews.GetAllInfo);
 
 // Pull all data from the events table
 router.get('/events', routes.events.GetAllInfo);
@@ -57,8 +51,7 @@ router.get('/event_reviews', routes.eventReviews.GetAllInfo);
 // Pull all data from the admin table
 router.get('/admins', routes.admins.GetAllInfo);
 
-// Pull single items data from the item_reviews table       (buggy)
-router.get('/item_reviews/:id', middleware.checkID, routes.itemReviews.GetIndividualInfo);
+
 
 // Pull single items data from the events table
 router.get('/events/:id', middleware.checkID, routes.events.GetIndividualInfo);

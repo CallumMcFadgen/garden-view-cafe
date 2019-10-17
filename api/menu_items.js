@@ -1,5 +1,5 @@
-// Pull all table information
-function GetAllInfo(req, res) {
+// Get all items from the menu table
+function GetAllMenuItems(req, res) {
     const {knex}=req.app.locals;
     knex
         .select('*')
@@ -9,8 +9,8 @@ function GetAllInfo(req, res) {
 };
 
 
-// Pull individual table record
-function GetIndividualInfo(req, res) {
+// Get an individual item from the menu table
+function GetMenuItem(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
@@ -29,9 +29,10 @@ function GetIndividualInfo(req, res) {
 };
 
 
-function PostNewItem(req, res, next) {
+function PostMenuItem(req, res, next) {
     const {knex} = req.app.locals;
     const payload = req.body;
+    
     // Setting mandatory fields
     const mandatoryColumns = ['menu_item_name', 'menu_item_description', 'menu_item_price'];
     const payloadKeys = Object.keys(payload);
@@ -49,7 +50,7 @@ function PostNewItem(req, res, next) {
 };
 
 
-function PatchItem(req, res, next) {
+function PatchMenuItem(req, res, next) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     const payload = req.body;
@@ -72,8 +73,8 @@ function PatchItem(req, res, next) {
 
 // Exports 
 module.exports = {
-    GetAllInfo,
-    GetIndividualInfo,
-    PostNewItem,
-    PatchItem
+    GetAllMenuItems,
+    GetMenuItem,
+    PostMenuItem,
+    PatchMenuItem
 };

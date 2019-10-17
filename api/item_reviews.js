@@ -1,5 +1,5 @@
-// Pull all table information
-function GetAllInfo(req, res) {
+// Get all reviews from the item reviews table
+function GetAllItemReviews(req, res) {
     const {knex}=req.app.locals;
     knex
         .select('*')
@@ -9,8 +9,8 @@ function GetAllInfo(req, res) {
 };
 
 
-// Pull individual table record             (buggy)
-function GetIndividualInfo(req, res) {
+// Get an individual review from the item_reviews table
+function GetIndividualItemReview(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
@@ -29,8 +29,52 @@ function GetIndividualInfo(req, res) {
 };
 
 
+// Create a new item_review row
+function PostMenuItemReview(req, res, next) {
+    const {knex} = req.app.locals;
+    const payload = req.body;
+
+    // Setting mandatory fields
+    const mandatoryColumns = ['item_review_reviewer_name', 'item_review_review'];
+    const payloadKeys = Object.keys(payload);
+    const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
+    
+    if(mandatoryColumnsExist) {
+        knex('item_reviews')
+            .insert(payload)
+            .then(response => res.status(201).json(`New item review added`))
+            .catch(error => res.status(500).json(error))
+    }
+    else {
+        return res.status(400).json(`Coloumns are required ${mandatoryColumns}`)
+    }
+};
+
+
+// UPdate a item_review row
+function PatchMenuItemReview(req, res, next) {
+    const {knex} = req.app.locals;
+    const {id} = req.params;
+    const payload = req.body;
+    knex('item_reviews')
+        .where('item_review_id', id)
+        .update(payload)
+        .then(response => {
+            if(response) {
+                res.status(204).json(`Item review has been updated.`);
+            }
+            else {
+                return res.status(404).json(`The item review with ID ${id} cannot be found.`)
+            }
+    })
+    .catch(error => res.status(500).json(error));
+};
+
+
 // Exports
 module.exports = {
-    GetAllInfo,
-    GetIndividualInfo
+    GetAllItemReviews,
+    GetIndividualItemReview,
+    PostMenuItemReview,
+    PatchMenuItemReview
 };

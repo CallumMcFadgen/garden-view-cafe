@@ -3,21 +3,21 @@ import { Button, Form, FormGroup, Label, Input,} from 'reactstrap';
 
 const MenuItemForm = (props) => {
   return (
-    <Form>
-      <FormGroup>
+    <Form className="update-menu-form">
+      <FormGroup className="update-menu-form-subheadings">
         <Label>Item name</Label>
-        <Input type="text" name="menu_item_name" id="menu_item_name" placeholder="enter a menu item name" />
+        <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter a menu item name" />
       </FormGroup>
       <FormGroup>
         <Label>Item description</Label>
-        <Input type="text" name="menu_item_description" id="menu_item_description" placeholder="enter a menu item description" />
+        <Input type="inputt" name="menu_item_description" id="menu_item_description" placeholder="enter a menu item description" />
       </FormGroup>
       <FormGroup>
       <Label>Item price</Label>
-        <Input type="text" name="menu_item_price" id="menu_item_price" placeholder="enter a menu item price" />
+        <Input type="input" name="menu_item_price" id="menu_item_price" placeholder="enter a menu item price" />
       </FormGroup>
       <FormGroup check>
-        <Label check>
+        <Label check >
           <Input type="checkbox" />{' '}
           Item is available
         </Label>

@@ -5,6 +5,26 @@
 }
 
 
+/*  */
+.update-menu-form{
+  padding-bottom: 2%;
+}
+
+
+/* update check box headings on menu update form (overright bootstrap) */
+label {
+  font-family: "Lato", sans-serif !important;
+  font-size: 120% !important;
+}
+
+
+/* update check box headings on menu update form (overright bootstrap) */
+.form-check-label{
+  font-family: "Lato", sans-serif !important;
+  font-size: 90% !important;
+}
+
+
 /* Primary navbar heading (overiding bootstrap) */
 .navbar-brand {
   font-family: "Lato", sans-serif !important;

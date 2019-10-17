@@ -44,6 +44,7 @@ class Footer extends Component {    //page Footer with copyright information and
             </p>
           </Col>
           <Col  xs="4" sm="4" md="4" lg="4" xl="4" >
+          <p className="copyright-text">Copyright © 2019 Garden View Cafe</p>
           </Col>
           <Col  xs="4" sm="4" md="4" lg="4" xl="4" className="footer-biz-info-bottom-row">
             <p>
