@@ -1,4 +1,4 @@
-function GetAllInfo(req, res) {
+function GetAllEvents(req, res) {
     const {knex}=req.app.locals;
     knex
         .select('*')
@@ -9,7 +9,7 @@ function GetAllInfo(req, res) {
 
 
 // Pull individual table record
-function GetIndividualInfo(req, res) {
+function GetEvent(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
@@ -29,6 +29,6 @@ function GetIndividualInfo(req, res) {
 
 
 module.exports = {
-    GetAllInfo,
-    GetIndividualInfo
+    GetAllEvents,
+    GetEvent
 };

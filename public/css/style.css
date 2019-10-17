@@ -5,20 +5,20 @@
 }
 
 
-/*  */
+/* update menu form padding (overriding bootstrap)  */
 .update-menu-form{
-  padding-bottom: 2%;
+  padding-bottom: 2%  !important;
 }
 
 
-/* update check box headings on menu update form (overright bootstrap) */
+/* update check box headings on menu update form (overriding bootstrap) */
 label {
   font-family: "Lato", sans-serif !important;
   font-size: 120% !important;
 }
 
 
-/* update check box headings on menu update form (overright bootstrap) */
+/* update check box headings on menu update form (overriding bootstrap) */
 .form-check-label{
   font-family: "Lato", sans-serif !important;
   font-size: 90% !important;
@@ -301,3 +301,27 @@ label {
   text-align: center;
   display: flex;
 }
+
+
+/** COMING SOON PLACEHOLDER *********************************************************/
+
+/* heading for the coming soon disclaimer on contacts and gallery */
+.coming-soon-heading {
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+  font-size: 400%;
+  font-weight: 400;
+  padding-top: 1%;
+}
+
+/* text for the coming soon disclaimer on contacts and gallery */
+.coming-soon-text {
+  font-family: "Merriweather", sans-serif;
+  font-size: 125%;
+  font-weight: 100;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+}
+
+/**************************************************************************************/

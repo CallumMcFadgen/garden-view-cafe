@@ -37,13 +37,18 @@ router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems
 
 // Pull all reviews, pull a single review from the item_reviews table
 router.get('/item-reviews', routes.itemReviews.GetAllItemReviews);
-router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetIndividualItemReview);
-router.post('/item-reviews', jsonParser, routes.itemReviews.PostMenuItemReview);
-router.patch('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PatchMenuItemReview);
+router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetItemReview);
+router.post('/item-reviews', jsonParser, routes.itemReviews.PostItemReview);
+router.patch('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PatchItemReview);
 
 
 // Pull all data from the events table
-router.get('/events', routes.events.GetAllInfo);
+router.get('/events', routes.events.GetAllEvents);
+router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
+
+
+
+
 
 // Pull all data from the event_reviews table
 router.get('/event_reviews', routes.eventReviews.GetAllInfo);
@@ -53,8 +58,7 @@ router.get('/admins', routes.admins.GetAllInfo);
 
 
 
-// Pull single items data from the events table
-router.get('/events/:id', middleware.checkID, routes.events.GetIndividualInfo);
+
 
 // Pull single items data from the event_reviews table
 router.get('/event_reviews/:id', middleware.checkID, routes.eventReviews.GetIndividualInfo);

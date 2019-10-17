@@ -10,7 +10,7 @@ function GetAllItemReviews(req, res) {
 
 
 // Get an individual review from the item_reviews table
-function GetIndividualItemReview(req, res) {
+function GetItemReview(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
@@ -30,7 +30,7 @@ function GetIndividualItemReview(req, res) {
 
 
 // Create a new item_review row
-function PostMenuItemReview(req, res, next) {
+function PostItemReview(req, res, next) {
     const {knex} = req.app.locals;
     const payload = req.body;
 
@@ -52,7 +52,7 @@ function PostMenuItemReview(req, res, next) {
 
 
 // UPdate a item_review row
-function PatchMenuItemReview(req, res, next) {
+function PatchItemReview(req, res, next) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     const payload = req.body;
@@ -74,7 +74,7 @@ function PatchMenuItemReview(req, res, next) {
 // Exports
 module.exports = {
     GetAllItemReviews,
-    GetIndividualItemReview,
-    PostMenuItemReview,
-    PatchMenuItemReview
+    GetItemReview,
+    PostItemReview,
+    PatchItemReview
 };
