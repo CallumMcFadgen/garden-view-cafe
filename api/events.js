@@ -90,6 +90,7 @@ function DeleteEvent(req, res, next) {
 };
 
 
+// exports
 module.exports = {
     GetAllEvents,
     GetEvent,

@@ -90,7 +90,7 @@ function DeleteMenuItem(req, res, next) {
 };
 
 
-// Exports 
+// exports 
 module.exports = {
     GetAllMenuItems,
     GetMenuItem,

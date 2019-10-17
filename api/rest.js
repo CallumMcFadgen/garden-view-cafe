@@ -47,25 +47,25 @@ router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemRe
 // get all events, get one event, add a new event, update a event, delete a event
 router.get('/events', routes.events.GetAllEvents);
 router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
-router.post('/events', jsonParser, middleware.checkID, routes.events.PostEvent);             //bug
+router.post('/events', jsonParser, routes.events.PostEvent);
 router.patch('/events/:id', jsonParser, middleware.checkID, routes.events.Patchevent);
 router.delete('/events/:id', jsonParser, middleware.checkID, routes.events.DeleteEvent);
 
 
-// Pull all data from the event_reviews table
+// get all event reviews, get one event review, add a new event review, update a event review, delete a event review
 router.get('/event_reviews', routes.eventReviews.GetAllEventReviews);
 router.get('/event_reviews/:id', middleware.checkID, routes.eventReviews.GetEventReview);
+router.post('/event_reviews', jsonParser, routes.eventReviews.PostEventReview);
+router.patch('/event_reviews/:id', jsonParser, middleware.checkID, routes.eventReviews.PatchEventReview);
+router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.eventReviews.DeleteEventReview);
+ 
 
-
-
-
-
-// Pull all data from the admin table
-router.get('/admins', routes.eventReviews.GetAllEventReviews);
-router.get('/admins/:id', middleware.checkID, routes.eventReviews.GetEventReview);
-
-
-
+// get all admins, get one admin, add a new admin, update a admin, delete a admin
+router.get('/admins', routes.admins.GetAllAdmins);
+router.get('/admins/:id', middleware.checkID, routes.admins.GetAdmin);
+router.post('/admins', jsonParser, routes.admins.PostAdmin);
+router.patch('/admins/:id', jsonParser,  middleware.checkID, routes.admins.PatchAdmin);
+router.delete('/admins/:id', jsonParser, middleware.checkID, routes.admins.DeleteAdmin);
 
 
 app.use('/api', router);
