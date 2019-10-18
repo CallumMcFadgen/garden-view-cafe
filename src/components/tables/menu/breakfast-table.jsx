@@ -3,26 +3,35 @@ import React from 'react';
 import { Table } from 'reactstrap';
 
 class BreakfastTable extends React.Component {
+  _isMounted = false;           // variable to hold the components mounted state
 
   constructor() {
     super();
     this.state = ({
-      data: ''            // set a null variable for data
+      data: []            // set a null variable for data
     })
   }
 
   componentDidMount() {
+    this._isMounted = true;           // set mounted state to true
+
     fetch('http://localhost:4200/api/menu-items')    // get data 
       .then(res => res.json())   // json the results
       .then(data => {
+        if (this._isMounted) {                  // if the component is mounted, do stuff
         this.setState({    // set to storage?
           data: data
-        })
+        })}
       })
       .catch(err => {
         console.log(err);
       })
   }
+
+  componentWillUnmount() {            //reset components mounted state on unmount
+    this._isMounted = false;
+  }
+
   render() {
     console.log(this.state.data)
     if (this.state.data !== '') {     // if there is data, do stuff

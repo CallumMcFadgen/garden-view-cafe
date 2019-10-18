@@ -4,10 +4,6 @@ import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
-import AutumnButtons from './buttons/events/autumn-sort-group';
-import SpringButtons from './buttons/events/spring-sort-group';
-import SummerButtons from './buttons/events/summer-sort-group';
-import WinterButtons from './buttons/events/winter-sort-group';
 import AutumnTable from './tables/events/autumn-events';
 import SpringTable from './tables/events/spring-events';
 import SummerTable from './tables/events/summer-events';
@@ -40,12 +36,6 @@ class EventsPage extends Component {
         </Row>
 
         <Row>
-          <Col className="menu-button">
-            <SpringButtons />
-          </Col>
-        </Row>
-
-        <Row>
           <Col>
             <SpringTable />
           </Col>
@@ -55,12 +45,6 @@ class EventsPage extends Component {
           <Col className="image-col-banner">
             <img className="sub-banner-image" src="./images/banners/sub-banner-summer.png" alt="summer wheat" />
             <h2 className="sub-banner-text">Summer</h2>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col className="menu-button">
-            <SummerButtons />
           </Col>
         </Row>
 
@@ -78,12 +62,6 @@ class EventsPage extends Component {
         </Row>
 
         <Row>
-          <Col className="menu-button">
-            <AutumnButtons />
-          </Col>
-        </Row>
-
-        <Row>
           <Col>
             <AutumnTable />
           </Col>
@@ -93,12 +71,6 @@ class EventsPage extends Component {
           <Col className="image-col-banner">
             <img className="sub-banner-image" src="./images/banners/sub-banner-winter.png" alt="frosty herbs" />
             <h2 className="sub-banner-text">Winter</h2>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col className="menu-button">
-            <WinterButtons />
           </Col>
         </Row>
 
