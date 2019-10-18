@@ -1,6 +1,6 @@
 // Package Dependences
 import React from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, FormText } from 'reactstrap';
 
 class NewMenuItemForm extends React.Component {
 
@@ -18,7 +18,7 @@ class NewMenuItemForm extends React.Component {
       body: JSON.stringify({                                // turn the contents to a json string
         "menu_item_name": this.menu_item_name.value,                  // the value of the input 
         "menu_item_description": this.menu_item_description.value,
-        "menu_item_price": this.menu_item_price.value,
+        "menu_item_price": this.menu_item_price.valueAsNumber,
         "menu_item_available": this.menu_item_available.checked,        // checked for check boxes
         "menu_item_gluten_free": this.menu_item_gluten_free.checked,
         "menu_item_vegan": this.menu_item_vegan.checked,
@@ -43,15 +43,15 @@ class NewMenuItemForm extends React.Component {
         <div className="form-heading">Add Menu Item</div>
         <FormGroup>
           <Label>Name</Label>
-          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" innerRef={(input) => { this.menu_item_name = input }} />
+          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" required innerRef={(input) => { this.menu_item_name = input }} />
         </FormGroup>
         <FormGroup>
           <Label>Description</Label>
-          <Input type="input" name="menu_item_description" id="menu_item_description" placeholder="enter an item description" innerRef={(input) => { this.menu_item_description = input }} />
+          <Input type="textarea" name="menu_item_description" id="menu_item_description" placeholder="enter an item description" innerRef={(input) => { this.menu_item_description = input }} />
         </FormGroup>
         <FormGroup>
           <Label>Price</Label>
-          <Input type="input" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" innerRef={(input) => { this.menu_item_price = input }} />
+          <Input type="number" pattern="[0-9]*" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" required  innerRef={(input) => { this.menu_item_price = input }} />
         </FormGroup>
         <FormGroup check>
           <Label check >

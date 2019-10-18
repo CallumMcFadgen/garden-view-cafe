@@ -33,7 +33,7 @@ router.get('/menu-items', routes.menuItems.GetAllMenuItems);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
 router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchMenuItem);
-router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);
+router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);                          // id checking removed, using name as the identifiyer
 
 
 // get all item reviews, get one item review, add a new item review, update a item review, delete a item review
