@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
-import BreakfastButtons from './buttons/menu/breakfast-sort-group';
-import LunchButtons from './buttons/menu/lunch-sort-group';
-import DinnerButtons from './buttons/menu/dinner-sort-group';
 import BreakfastTable from './tables/menu/breakfast-table';
 import LunchTable from './tables/menu/lunch-table';
 import DinnerTable from './tables/menu/dinner-table';
@@ -37,13 +34,7 @@ class MenuPage extends Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col className="menu-button">
-          <BreakfastButtons/>
-          </Col>
-        </Row>
-
-        <Row>
+        <Row className="menu-table">
           <Col>
           <BreakfastTable/>
           </Col>
@@ -56,13 +47,7 @@ class MenuPage extends Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col className="menu-button">
-          <LunchButtons/>
-          </Col>
-        </Row>
-
-        <Row>
+        <Row className="menu-table">
           <Col>
           <LunchTable/>
           </Col>
@@ -75,13 +60,7 @@ class MenuPage extends Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col className="menu-button">
-          <DinnerButtons/>
-          </Col>
-        </Row>
-
-        <Row>
+        <Row className="menu-table">
           <Col>
           <DinnerTable/>
           </Col>

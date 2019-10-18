@@ -13,10 +13,9 @@ class BreakfastTable extends React.Component {
 
   componentDidMount() {
     fetch('http://localhost:4200/api/menu-items')    // get data 
-
-      .then(res => res.json())        // json the results
+      .then(res => res.json())   // json the results
       .then(data => {
-        this.setState({             // set to storage?
+        this.setState({    // set to storage?
           data: data
         })
       })
@@ -30,7 +29,7 @@ class BreakfastTable extends React.Component {
       return (
         <Table>
           <thead>
-            <tr className="test">
+            <tr>
               <th></th>
               <th>Name</th>
               <th>Description</th>
@@ -38,7 +37,8 @@ class BreakfastTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => {         // map out array and return each item (the loop function)
+            {this.state.data.map((item, index) => { 
+              if (item.menu_item_breakfast == true) { 
               return (
                 <tr>
                   <th scope="row"></th>
@@ -47,8 +47,8 @@ class BreakfastTable extends React.Component {
                   <td>${item.menu_item_price}</td>
                 </tr>
               )
+            } 
             })}
-
           </tbody>
         </Table>
       )
@@ -60,7 +60,3 @@ class BreakfastTable extends React.Component {
 }
 
 export default BreakfastTable;
-
-if (this.state.data.menu_item_breakfast == true) {
-  
-}
