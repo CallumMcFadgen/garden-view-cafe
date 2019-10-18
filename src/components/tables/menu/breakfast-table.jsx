@@ -10,7 +10,8 @@ class BreakfastTable extends React.Component {
     this.state = ({
       data: []            // set a null variable for data
     })
-  }
+  };
+
 
   componentDidMount() {
     this._isMounted = true;           // set mounted state to true
@@ -26,11 +27,8 @@ class BreakfastTable extends React.Component {
       .catch(err => {
         console.log(err);
       })
-  }
+  };
 
-  componentWillUnmount() {            //reset components mounted state on unmount
-    this._isMounted = false;
-  }
 
   render() {
     console.log(this.state.data)
@@ -65,7 +63,12 @@ class BreakfastTable extends React.Component {
     else {
       return null;
     }
-  }
-}
+  };
+
+
+  componentWillUnmount() {            //reset components mounted state on unmount
+    this._isMounted = false;
+  };
+};
 
 export default BreakfastTable;

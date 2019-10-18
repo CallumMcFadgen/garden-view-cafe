@@ -2,8 +2,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
+// Local Dependences
+import NewMenuItemForm from './forms/new-menu-item-form';
+import DeleteMenuItemForm from './forms//delete-menu-item-form';
 
-import MenuItemForm from './forms/update-menu-form';
 
 class AdminPage extends Component {
     render() {
@@ -17,7 +19,12 @@ class AdminPage extends Component {
           </Row>
          <Row>
            <Col>
-              <MenuItemForm />
+              <NewMenuItemForm />
+           </Col>
+         </Row>
+         <Row>
+           <Col>
+              <DeleteMenuItemForm />
            </Col>
          </Row>
          </div>

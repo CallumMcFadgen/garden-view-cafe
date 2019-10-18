@@ -76,7 +76,7 @@ function DeleteMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     knex('menu_items')
-        .where('menu_item_id', id)
+        .where('menu_item_name', id)
         .del()
         .then(response => {
             if (response) {

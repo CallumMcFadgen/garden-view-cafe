@@ -2,7 +2,7 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-class MenuItemForm extends React.Component {
+class NewMenuItemForm extends React.Component {
 
   constructor() {
     super();
@@ -39,8 +39,8 @@ class MenuItemForm extends React.Component {
 
   render() {
     return (
-      <Form className="update-menu-form" onSubmit={this.handleSubmit}>
-        <div className="form-heading">Add To Menu</div>
+      <Form className="form" onSubmit={this.handleSubmit}>
+        <div className="form-heading">Add Menu Item</div>
         <FormGroup>
           <Label>Name</Label>
           <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" innerRef={(input) => { this.menu_item_name = input }} />
@@ -96,10 +96,10 @@ class MenuItemForm extends React.Component {
           </Label>
         </FormGroup>
         <br />
-        <Button color="secondary" type="submit" value="Add to menu" >Add to menu</Button>{' '}
+        <Button color="secondary" type="submit" value="Add to menu" >ADD TO MENU</Button>{' '}
       </Form>
     );
   }
 }
 
-export default MenuItemForm;
+export default NewMenuItemForm;

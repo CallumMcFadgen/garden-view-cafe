@@ -6,7 +6,7 @@
 
 
 /* update menu form padding (overriding bootstrap)  */
-.update-menu-form{
+.form{
   padding: 2% !important;
   border: thin black solid !important;
   margin-bottom: 1%;

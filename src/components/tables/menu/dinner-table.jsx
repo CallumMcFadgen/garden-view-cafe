@@ -47,7 +47,7 @@ class DinnerTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => { 
-              if (item.menu_item_dinner == true) { 
+              if (item.menu_item_dinner === 1) { 
               return (
                 <tr>
                   <th scope="row"></th>
