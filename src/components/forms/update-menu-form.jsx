@@ -1,6 +1,6 @@
 // Package Dependences
 import React from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 class MenuItemForm extends React.Component {
 
@@ -10,24 +10,27 @@ class MenuItemForm extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault();           // prevent the buttons default behaviour
 
-    fetch('http://localhost:4200/api/menu-items', {
-      method: 'post',
-      headers: {'Content-Type' : 'application/json'},
-      body: JSON.stringify({
-        "menu_item_name": this.menu_item_name.value,
+    fetch('http://localhost:4200/api/menu-items', {         // get the data
+      method: 'post',                                       // use the post method
+      headers: { 'Content-Type': 'application/json' },       // set json header
+      body: JSON.stringify({                                // turn the contents to a json string
+        "menu_item_name": this.menu_item_name.value,                  // the value of the input 
         "menu_item_description": this.menu_item_description.value,
         "menu_item_price": this.menu_item_price.value,
-        "menu_item_available": this.menu_item_available.checked,
-        "admin_id": 1
-      }) 
+        "menu_item_available": this.menu_item_available.checked,        // checked for check boxes
+        "menu_item_gluten_free": this.menu_item_gluten_free.checked,
+        "menu_item_vegan": this.menu_item_vegan.checked,
+        "menu_item_breakfast": this.menu_item_breakfast.checked,
+        "menu_item_lunch": this.menu_item_lunch.checked,
+        "menu_item_dinner": this.menu_item_dinner.checked,
+        "menu_item_function": this.menu_item_function.checked,
+        "admin_id": 1                                                 // hardcoded admin (will change in future)
+      })
     })
       .then(() => {
         console.log("New menu item added");
-        console.log(this.menu_item_name.value);
-        console.log(this.menu_item_description.value);
-        console.log(this.menu_item_price.value);
       })
       .catch(err => {
         console.log(err)
@@ -37,75 +40,66 @@ class MenuItemForm extends React.Component {
   render() {
     return (
       <Form className="update-menu-form" onSubmit={this.handleSubmit}>
-        <div className="form-heading">Edit menu items</div>
+        <div className="form-heading">Add To Menu</div>
         <FormGroup>
-          <Label>Item name</Label>
-          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter a menu item name" innerRef={(input) => { this.menu_item_name = input }} />
+          <Label>Name</Label>
+          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" innerRef={(input) => { this.menu_item_name = input }} />
         </FormGroup>
         <FormGroup>
-          <Label>Item description</Label>
-          <Input type="input" name="menu_item_description" id="menu_item_description" placeholder="enter a menu item description" innerRef={(input) => { this.menu_item_description = input }} />
+          <Label>Description</Label>
+          <Input type="input" name="menu_item_description" id="menu_item_description" placeholder="enter an item description" innerRef={(input) => { this.menu_item_description = input }} />
         </FormGroup>
         <FormGroup>
-          <Label>Item price</Label>
-          <Input type="input" name="menu_item_price" id="menu_item_price" placeholder="enter a menu item price" innerRef={(input) => { this.menu_item_price = input }} />
+          <Label>Price</Label>
+          <Input type="input" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" innerRef={(input) => { this.menu_item_price = input }} />
         </FormGroup>
         <FormGroup check>
           <Label check >
             <Input type="checkbox" innerRef={(input) => { this.menu_item_available = input }} />{' '}
-            Item is available
+            Available
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            Item is gluten free
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_gluten_free = input }} />{' '}
+            Gluten free
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            item is vegan
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_vegan = input }} />{' '}
+            Vegan
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            item is available for breakfast
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_breakfast = input }} />{' '}
+            Breakfast
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            item is available for lunch
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_lunch = input }} />{' '}
+            Lunch
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            item is available for dinner
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_dinner = input }} />{' '}
+            Dinner
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" />{' '}
-            item is available for functions
+            <Input type="checkbox" innerRef={(input) => { this.menu_item_function = input }} />{' '}
+            Functions
           </Label>
         </FormGroup>
         <br />
-        <Input type="submit" value="Add menu item" />
+        <Button color="secondary" type="submit" value="Add to menu" >Add to menu</Button>{' '}
       </Form>
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 export default MenuItemForm;
