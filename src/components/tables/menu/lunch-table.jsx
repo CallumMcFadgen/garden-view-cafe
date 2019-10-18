@@ -47,7 +47,7 @@ class LunchTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => { 
-              if (item.menu_item_lunch == true) { 
+              if (item.menu_item_lunch === 1) { 
               return (
                 <tr>
                   <th scope="row"></th>
