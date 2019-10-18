@@ -34,17 +34,17 @@ function PostMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
 
-    // set mandatory fields
+    //set mandatory fields
     const mandatoryColumns = ['menu_item_name', 'menu_item_description', 'menu_item_price'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
 
     if (mandatoryColumnsExist) {
-        knex('menu_items')
+       knex('menu_items')
             .insert(payload)
             .then(response => res.status(201).json(`New menu item added`))
             .catch(error => res.status(500).json(error))
-    }
+     }
     else {
         return res.status(400).json(`Columns are required ${mandatoryColumns}`)
     }
