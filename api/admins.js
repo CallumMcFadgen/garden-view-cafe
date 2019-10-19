@@ -97,7 +97,7 @@ function DeleteAdmin(req, res, next) {
 };
 
 
-// Export modules for use in app
+// Export modules
 module.exports = {
     GetAllAdmins,
     GetAdmin,

@@ -1,7 +1,7 @@
 /* Clear any existing mock ups on body */
 .body {
-  margin: none;
-  padding: none;
+  margin: 0%;
+  padding: 0%;
 }
 
 
@@ -39,9 +39,9 @@ label {
 .navbar-brand {
   font-family: "Lato", sans-serif !important;
   font-size: 3.5vw !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  padding: none !important;
+  font-weight: 100 !important;
+  color: #4d4d4d !important;
+  padding: 0% !important;
 }
 
 
@@ -341,5 +341,9 @@ label {
 /**************************************************************************************/
 
 .menu-table {
-  margin-top: 0.5%;
+text-decoration: none !important;
+}
+
+.Bold {
+  font-weight: 800% !important;
 }

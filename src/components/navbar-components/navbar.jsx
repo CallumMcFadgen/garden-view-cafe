@@ -19,7 +19,7 @@ const Example = (props) => {
   return (
     <div>
       <Navbar light expand="xl" style={{color: 'white', border: 'thin black solid'}}>>
-        <NavbarBrand href="/">Garden View Cafe</NavbarBrand>
+        <NavbarBrand href="/"><span style={{fontWeight: '800', color: 'black', fontSize: '4vw'}}>Garden View</span> Café</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>

@@ -42,7 +42,7 @@ class MenuPage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="sub-banner-image" src="./images/sub-banner/sub-banner-breakfast.png" alt="coffee&pancakes" />
+            <img className="sub-banner-image" src="./images/banners/sub-banner-lunch.png" alt="lunch buffet" />
             <h2 className="sub-banner-text">Lunch</h2>
           </Col>
         </Row>
@@ -55,7 +55,7 @@ class MenuPage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="sub-banner-image" src="./images/sub-banner/sub-banner-breakfast.png" alt="coffee&pancakes" />
+            <img className="sub-banner-image" src="./images/banners/sub-banner-dinner.png" alt="dinner buffet" />
             <h2 className="sub-banner-text">Dinner</h2>
           </Col>
         </Row>

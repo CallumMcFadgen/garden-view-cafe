@@ -97,7 +97,7 @@ function DeleteEventReview(req, res, next) {
 };
 
 
-// exports 
+// Export modules
 module.exports = {
     GetAllEventReviews,
     GetEventReview,

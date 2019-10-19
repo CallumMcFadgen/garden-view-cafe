@@ -57,7 +57,7 @@ function PostMenuItem(req, res, next) {
 
 
 // This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
+// payload of user input.  The record is specified by item name param.
 function PatchMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -78,7 +78,7 @@ function PatchMenuItem(req, res, next) {
 
 
 // This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
+// payload of user input.  The record is specified by....                     //still working on this one
 function DeleteMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -97,7 +97,7 @@ function DeleteMenuItem(req, res, next) {
 };
 
 
-// exports 
+// Export modules 
 module.exports = {
     GetAllMenuItems,
     GetMenuItem,

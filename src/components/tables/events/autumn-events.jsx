@@ -39,14 +39,14 @@ class AutumnTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => {  
+            {this.state.data.map((item, index) => {
               return (
                 <tr>
                   <th scope="row"></th>
-                  <td>{item.event_name}</td>
-                  <td>{moment(item.event_date_time).format("h:mm a DD-MM-YYYY")}</td>
-                  <td>{item.event_description}</td>
-                  <td>${item.event_price}</td>
+                  <td>Event name</td>
+                  <td>Event Time/Date</td>
+                  <td>Event Desc</td>
+                  <td>Event Price</td>
                 </tr>
               )
             })}

@@ -1,3 +1,5 @@
+// This function checks that a id is an integer (data validation)
+// if the id is not then the function throws an error
 function checkID(req, res, next) {
     const id = +req.params.id;
     if(Number.isInteger(id)) {
@@ -8,6 +10,8 @@ function checkID(req, res, next) {
     };
 };
 
+
+// Export modules
 module.exports = {
     checkID
 };

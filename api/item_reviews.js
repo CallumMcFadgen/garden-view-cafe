@@ -97,7 +97,7 @@ function DeleteItemReview(req, res, next) {
 };
 
 
-// exports
+// Export modules
 module.exports = {
     GetAllItemReviews,
     GetItemReview,

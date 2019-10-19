@@ -50,7 +50,7 @@ class DinnerTable extends React.Component {
             {this.state.data.map((item, index) => {
               if (item.menu_item_dinner === 1) {
                 return (
-                  <tr>
+                  <tr key={item.menu_item_id} value="menu_item_id">
                     <th scope="row"></th>
                     <td>{item.menu_item_name}</td>
                     <td>{item.menu_item_description}</td>
