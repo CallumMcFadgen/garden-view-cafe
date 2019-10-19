@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+const cors = require('cors')
+
 
 const config = require('./config');
 const routes = require('./routes');
@@ -14,15 +16,15 @@ const knex = require('knex')(
     {
         client: 'mysql',
         connection: config.database
-    }
-);
+    });
+
 app.locals.knex = knex;
 
 
 // Needed to avoid an "incorrect headers" error
 app.use((req, res, next) => {
-    res.append('Access-Control-Allow-Origin', ['*']);
-    res.append('Access-Control-Allow-Methods', 'GET, PUT, PATCH, POST, DELETE');
+    res.header('Access-Control-Allow-Origin', '*');
+    res.append('Access-Control-Allow-Methods', 'GET, PUT, PATCH, POST, DELETE, OPTIONS');
     res.append('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
@@ -32,7 +34,7 @@ app.use((req, res, next) => {
 router.get('/menu-items', routes.menuItems.GetAllMenuItems);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
-router.patch('/menu-items/:id', jsonParser, middleware.checkID, routes.menuItems.PatchMenuItem);
+router.patch('/menu-items/:id', jsonParser, routes.menuItems.PatchMenuItem);
 router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);                          // id checking removed, using name as the identifiyer
 
 
@@ -68,7 +70,7 @@ router.patch('/admins/:id', jsonParser,  middleware.checkID, routes.admins.Patch
 router.delete('/admins/:id', jsonParser, middleware.checkID, routes.admins.DeleteAdmin);
 
 
-app.use('/api', router);
+app.use('/api', cors(), router);
 
 app.listen(config.APIServerPort, () => {
     console.log(`server started on port ${config.APIServerPort}`);

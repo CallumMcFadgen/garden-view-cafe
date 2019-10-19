@@ -19,15 +19,16 @@ class DinnerTable extends React.Component {
       .then(res => res.json())   // json the results
       .then(data => {
         if (this._isMounted) {                  // if the component is mounted, do stuff
-        this.setState({    // set to storage?
-          data: data
-        })}
+          this.setState({    // set to storage?
+            data: data
+          })
+        }
       })
       .catch(err => {
         console.log(err);
       })
   }
-  
+
   componentWillUnmount() {            //reset components mounted state on unmount
     this._isMounted = false;
   }
@@ -46,18 +47,20 @@ class DinnerTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => { 
-              if (item.menu_item_dinner === 1) { 
-              return (
-                <tr>
-                  <th scope="row"></th>
-                  <td>{item.menu_item_name}</td>
-                  <td>{item.menu_item_description}</td>
-                  <td>${item.menu_item_price}</td>
-                </tr>
-              )
-            } 
-            })}
+            {this.state.data.map((item, index) => {
+              if (item.menu_item_dinner === 1) {
+                return (
+                  <tr>
+                    <th scope="row"></th>
+                    <td>{item.menu_item_name}</td>
+                    <td>{item.menu_item_description}</td>
+                    <td>${item.menu_item_price}</td>
+                  </tr>
+                )
+              }
+            }
+            )
+            }
           </tbody>
         </Table>
       )

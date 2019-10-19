@@ -1,4 +1,5 @@
-// get data for all menu items
+// This function uses knex to select everything in the table (*) and returns
+// With either an error json or a data json.
 function GetAllMenuItems(req, res, next) {
     const { knex } = req.app.locals;
     knex
@@ -9,7 +10,9 @@ function GetAllMenuItems(req, res, next) {
 };
 
 
-// get data for an individual menu item
+// This function uses knex to select everything in the table (*) for a specific record, the 
+// record is accessed by the menu_id param and returns with either an error json
+// or a data json.
 function GetMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -29,7 +32,9 @@ function GetMenuItem(req, res, next) {
 };
 
 
-// create a new menu item record
+// This function uses knex to create a new record in the table 
+// with some specified mandatory columns, then populate the row 
+// with the users input and return a successes json or an error json.
 function PostMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -51,13 +56,14 @@ function PostMenuItem(req, res, next) {
 };
 
 
-// update a menu item
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function PatchMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
     knex('menu_items')
-        .where('menu_item_id', id)
+        .where('menu_item_name', id)
         .update(payload)
         .then(response => {
             if (response) {
@@ -71,7 +77,8 @@ function PatchMenuItem(req, res, next) {
 };
 
 
-// delete a menu item
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function DeleteMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;

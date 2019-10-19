@@ -3,7 +3,7 @@ import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
-class NewMenuItemForm extends React.Component {
+class UpdateMenuItemForm extends React.Component {
 
   constructor() {
     super();
@@ -13,8 +13,14 @@ class NewMenuItemForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();           // prevent the buttons default behaviour
 
-    fetch('http://localhost:4200/api/menu-items', {         // get the data
-      method: 'post',                                       // use the post method
+    let menu_item_name = this.menu_item_name.value;         // assign input to a var
+    console.log(menu_item_name);
+    
+    let updatedURL = ('http://localhost:4200/api/menu-items' + '/' + menu_item_name)                //add the imput to the url
+
+
+    fetch(updatedURL, {         // get the data
+      method: 'patch',                                       // use the post method
       headers: { 'Content-Type': 'application/json' },       // set json header
       body: JSON.stringify({                                // turn the contents to a json string
         "menu_item_name": this.menu_item_name.value,                  // the value of the input 
@@ -31,7 +37,7 @@ class NewMenuItemForm extends React.Component {
       })
     })
       .then(() => {
-        console.log("New menu item added");
+        console.log("Menu item updated");
         this.ResetForm();
       })
       .catch(err => {
@@ -55,7 +61,7 @@ class NewMenuItemForm extends React.Component {
   render() {
     return (
       <Form name="new-menu-item-form" className="form" onSubmit={this.handleSubmit}>
-        <div className="form-heading">Add Menu Item</div>
+        <div className="form-heading">Edit Menu Item</div>
         <FormGroup>
           <Label>Name</Label>
           <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" required innerRef={(input) => { this.menu_item_name = input }} />
@@ -111,10 +117,10 @@ class NewMenuItemForm extends React.Component {
           </Label>
         </FormGroup>
         <br />
-        <Button color="secondary" type="submit" value="Add to menu" >ADD TO MENU</Button>{' '}
+        <Button color="secondary" type="submit" value="Add to menu" >EDIT MENU ITEM</Button>{' '}
       </Form>
     );
   }
 }
 
-export default NewMenuItemForm;
+export default UpdateMenuItemForm;

@@ -1,6 +1,7 @@
 // Package Dependences
 import React from 'react';
 import { Table } from 'reactstrap';
+import moment from "moment";
 
 class AutumnTable extends React.Component {
 
@@ -43,7 +44,7 @@ class AutumnTable extends React.Component {
                 <tr>
                   <th scope="row"></th>
                   <td>{item.event_name}</td>
-                  <td>{item.event_date}</td>
+                  <td>{moment(item.event_date).format("YYYY-MM-DD")}</td>
                   <td>{item.event_description}</td>
                   <td>${item.event_price}</td>
                 </tr>

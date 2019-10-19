@@ -1,4 +1,5 @@
-// get data for all item reviews
+// This function uses knex to select everything in the table (*) and returns
+// With either an error json or a data json.
 function GetAllItemReviews(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -9,7 +10,9 @@ function GetAllItemReviews(req, res) {
 };
 
 
-// get data for an individual item review
+// This function uses knex to select everything in the table (*) for a specific record, the 
+// record is accessed by the menu_id param and returns with either an error json
+// or a data json.
 function GetItemReview(req, res) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -29,7 +32,9 @@ function GetItemReview(req, res) {
 };
 
 
-// create a new item review record
+// This function uses knex to create a new record in the table 
+// with some specified mandatory columns, then populate the row 
+// with the users input and return a successes json or an error json.
 function PostItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -51,7 +56,8 @@ function PostItemReview(req, res, next) {
 };
 
 
-// update a item review
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function PatchItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -71,7 +77,8 @@ function PatchItemReview(req, res, next) {
 };
 
 
-// delete a item review
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function DeleteItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;

@@ -1,4 +1,5 @@
-// get data for all admins
+// This function uses knex to select everything in the table (*) and returns
+// With either an error json or a data json.
 function GetAllAdmins(req, res) {
     const {knex}=req.app.locals;
     knex
@@ -9,7 +10,9 @@ function GetAllAdmins(req, res) {
 };
 
 
-// get data for an individual admin
+// This function uses knex to select everything in the table (*) for a specific record, the 
+// record is accessed by the menu_id param and returns with either an error json
+// or a data json.
 function GetAdmin(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
@@ -29,7 +32,9 @@ function GetAdmin(req, res) {
 };
 
 
-// create a new admin record
+// This function uses knex to create a new record in the table 
+// with some specified mandatory columns, then populate the row 
+// with the users input and return a successes json or an error json.
 function PostAdmin(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -51,7 +56,8 @@ function PostAdmin(req, res, next) {
 };
 
 
-// update a admin
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function PatchAdmin(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -71,7 +77,8 @@ function PatchAdmin(req, res, next) {
 };
 
 
-// delete a admin
+// This function uses knex to update an existing record with a 
+// payload of user input.  The record is specified by ID param.
 function DeleteAdmin(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -90,6 +97,7 @@ function DeleteAdmin(req, res, next) {
 };
 
 
+// Export modules for use in app
 module.exports = {
     GetAllAdmins,
     GetAdmin,
