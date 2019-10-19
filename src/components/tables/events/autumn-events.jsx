@@ -44,7 +44,7 @@ class AutumnTable extends React.Component {
                 <tr>
                   <th scope="row"></th>
                   <td>{item.event_name}</td>
-                  <td>{moment(item.event_date).format("YYYY-MM-DD")}</td>
+                  <td>{moment(item.event_date_time).format("h:mm a DD-MM-YYYY")}</td>
                   <td>{item.event_description}</td>
                   <td>${item.event_price}</td>
                 </tr>

@@ -29,7 +29,7 @@ class MenuPage extends Component {
 
         <Row>
           <Col className="image-col-banner">
-            <img className="sub-banner-image" src="./images/sub-banner/sub-banner-breakfast.png" alt="coffee&pancakes" />
+            <img className="sub-banner-image" src="./images/banners/sub-banner-breakfast.png" alt="breakfast buffet" />
             <h2 className="sub-banner-text">Breakfast</h2>
           </Col>
         </Row>
