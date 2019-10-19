@@ -31,15 +31,29 @@ class NewMenuItemForm extends React.Component {
     })
       .then(() => {
         console.log("New menu item added");
+        this.ResetForm();
       })
       .catch(err => {
         console.log(err)
       })
   }
 
+  ResetForm = () => {
+    this.menu_item_name.value = null;
+    this.menu_item_description.value = null;
+    this.menu_item_price.value = null;
+    this.menu_item_available.checked = false;
+    this.menu_item_gluten_free.checked = false;
+    this.menu_item_vegan.checked = false;
+    this.menu_item_breakfast.checked = false;
+    this.menu_item_lunch.checked = false;
+    this.menu_item_dinner.checked = false;
+    this.menu_item_function.checked = false;
+}
+  
   render() {
     return (
-      <Form className="form" onSubmit={this.handleSubmit}>
+      <Form name="new-menu-item-form" className="form" onSubmit={this.handleSubmit}>
         <div className="form-heading">Add Menu Item</div>
         <FormGroup>
           <Label>Name</Label>
@@ -51,7 +65,7 @@ class NewMenuItemForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label>Price</Label>
-          <Input type="number" pattern="[0-9]*" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" required  innerRef={(input) => { this.menu_item_price = input }} />
+          <Input type="number" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" required  innerRef={(input) => { this.menu_item_price = input }} />
         </FormGroup>
         <FormGroup check>
           <Label check >
