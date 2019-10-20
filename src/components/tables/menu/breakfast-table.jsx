@@ -2,25 +2,32 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 
+
+// On this page,  I set a variable to reflect if the component is mounted (cause 
+// issues if it stays mounted) and set an empty variable to hold the data.  I have
+// a fetch that pulls all the data and saves it to state.  I then check for data, 
+// and if I git some I use it to run a display loop (each table item creates a new entry).
+
+
 class BreakfastTable extends React.Component {
-  _isMounted = false;           // variable to hold the components mounted state
+  _isMounted = false;
 
   constructor() {
     super();
     this.state = ({
-      data: []            // set a null variable for data
+      data: []
     })
   };
 
 
   componentDidMount() {
-    this._isMounted = true;           // set mounted state to true
+    this._isMounted = true;
 
-    fetch('http://localhost:4200/api/menu-items')    // get data 
-      .then(res => res.json())   // json the results
+    fetch('http://localhost:4200/api/menu-items')
+      .then(res => res.json())
       .then(data => {
-        if (this._isMounted) {                  // if the component is mounted, do stuff
-        this.setState({    // set to storage?
+        if (this._isMounted) {
+        this.setState({
           data: data
         })}
       })
@@ -32,7 +39,7 @@ class BreakfastTable extends React.Component {
 
   render() {
     console.log(this.state.data)
-    if (this.state.data !== '') {     // if there is data, do stuff
+    if (this.state.data !== '') {
       return (
         <Table>
           <thead>
@@ -66,9 +73,10 @@ class BreakfastTable extends React.Component {
   };
 
 
-  componentWillUnmount() {            //reset components mounted state on unmount
+  componentWillUnmount() {
     this._isMounted = false;
   };
 };
+
 
 export default BreakfastTable;
