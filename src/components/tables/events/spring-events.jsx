@@ -13,7 +13,7 @@ class SpringTable extends React.Component {
     })
   };
 
-  
+
   componentDidMount() {
     this._isMounted = true;           // set mounted state to true
 
@@ -21,9 +21,10 @@ class SpringTable extends React.Component {
       .then(res => res.json())   // json the results
       .then(data => {
         if (this._isMounted) {                  // if the component is mounted, do stuff
-        this.setState({    // set to storage?
-          data: data
-        })}
+          this.setState({    // set to storage?
+            data: data
+          })
+        }
       })
       .catch(err => {
         console.log(err);
@@ -46,16 +47,18 @@ class SpringTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => {  
-              return (
-                <tr key={item.event_id} value="event_id">
-                  <th scope="row"></th>
-                  <td>{moment(item.event_date_time).format("h:mm a DD-MM-YYYY")}</td>
-                  <td>{item.event_name}</td>
-                  <td>{item.event_description}</td>
-                  <td>${item.event_price}</td>
-                </tr>
-              )
+            {this.state.data.map((item, index) => {
+              if (item.event_spring === 1) {
+                return (
+                  <tr key={item.event_id} value="event_id">
+                    <th scope="row"></th>
+                    <td>{moment(item.event_date_time).format("h:mm a DD-MM-YYYY")}</td>
+                    <td>{item.event_name}</td>
+                    <td>{item.event_description}</td>
+                    <td>${item.event_price}</td>
+                  </tr>
+                )
+              }
             })}
           </tbody>
         </Table>

@@ -53,7 +53,7 @@ class BreakfastTable extends React.Component {
                   <td>{item.menu_item_description}</td>
                   <td>${item.menu_item_price}</td>
                 </tr>
-              );
+              )
             } 
             })}
           </tbody>
