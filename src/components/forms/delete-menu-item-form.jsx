@@ -2,22 +2,31 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
+
+// On this page I am disabling the button submit event so that I can use it to bind
+// the users input to the variable 'this'.  I then reset the input box and use the
+// item name taken from the user input (bound to 'this') to send a delete method with 
+// an updated URL that contains the name of the item to be deleted.
+
+
 class DeleteMenuItemForm extends React.Component {
 
+  
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
+  };
+
 
   handleSubmit(event) {
-    event.preventDefault();           // prevent the buttons default behaviour
+    event.preventDefault();
 
-    let menu_item_name = this.menu_item_name.value;         // assign input to a var
-    let updatedURL = ('http://localhost:4200/api/menu-items' + '/' + menu_item_name)                //add the imput to the url
+    let menu_item_name = this.menu_item_name.value;
+    let updatedURL = ('http://localhost:4200/api/menu-items' + '/' + menu_item_name)
 
-    fetch(updatedURL, {                                        // get the data
-      method: 'delete',                                       // use the delete method
-      headers: { 'Content-Type': 'application/json' },       // set json header                              // turn the contents to a json string                 // the value of the input                                                 // hardcoded admin (will change in future)
+    fetch(updatedURL, {
+      method: 'delete',
+      headers: { 'Content-Type': 'application/json' },
     })
       .then(() => {
         console.log(updatedURL);
@@ -26,11 +35,13 @@ class DeleteMenuItemForm extends React.Component {
       .catch(err => {
         console.log(err)
       })
-  }
+  };
 
-  ResetForm = () => {                                           // rests inputs and checkboxes
+
+  ResetForm = () => {
     this.menu_item_name.value = null;
-}
+  };
+
 
   render() {
     return (
@@ -44,7 +55,8 @@ class DeleteMenuItemForm extends React.Component {
         <Button color="secondary" type="submit" value="Add to menu" >REMOVE FROM MENU</Button>{' '}
       </Form>
     )
-  }
-}
+  };
+};
+
 
 export default DeleteMenuItemForm;

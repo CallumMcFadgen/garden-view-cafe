@@ -9,11 +9,13 @@ import LunchTable from './tables/menu/lunch-table';
 import DinnerTable from './tables/menu/dinner-table';
 
 
+// // The menu page holds sub banners and menu tables (breakfast, lunch, dinner).
+
+
 class MenuPage extends Component {
   render() {
     return (
       <div>
-
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="menu page banner" />
@@ -36,7 +38,7 @@ class MenuPage extends Component {
 
         <Row className="menu-table">
           <Col>
-          <BreakfastTable/>
+            <BreakfastTable />
           </Col>
         </Row>
 
@@ -49,7 +51,7 @@ class MenuPage extends Component {
 
         <Row className="menu-table">
           <Col>
-          <LunchTable/>
+            <LunchTable />
           </Col>
         </Row>
 
@@ -62,14 +64,16 @@ class MenuPage extends Component {
 
         <Row className="menu-table">
           <Col>
-          <DinnerTable/>
+            <DinnerTable />
           </Col>
         </Row>
 
+        <Row className="pre-footer-spacing">
+        </Row>
       </div>
     )
-  }
-}
+  };
+};
 
 ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 

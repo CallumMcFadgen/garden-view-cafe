@@ -3,12 +3,19 @@ import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
+// On this page I am disabling the button submit event so that I can use it to bind 
+// the users input to the variable 'this'.  I then reset the input fields.  The rest is 
+// currently a work in progress.
+
+
 class UpdateMenuItemForm extends React.Component {
+
 
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
+  };
+
 
   handleSubmit(event) {
     event.preventDefault();           // prevent the buttons default behaviour
@@ -43,7 +50,7 @@ class UpdateMenuItemForm extends React.Component {
       .catch(err => {
         console.log(err)
       })
-  }
+  };
 
   ResetForm = () => {                                           // rests inputs and checkboxes
     this.menu_item_name.value = null;
@@ -56,15 +63,16 @@ class UpdateMenuItemForm extends React.Component {
     this.menu_item_lunch.checked = false;
     this.menu_item_dinner.checked = false;
     this.menu_item_function.checked = false;
-}
+};
   
   render() {
     return (
       <Form name="new-menu-item-form" className="form" onSubmit={this.handleSubmit}>
         <div className="form-heading">Edit Menu Item</div>
+        <div style={{textAlign: "center", fontSize: "150%"}}>Currently unavailable :(</div>
         <FormGroup>
           <Label>Name</Label>
-          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" required innerRef={(input) => { this.menu_item_name = input }} />
+          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" innerRef={(input) => { this.menu_item_name = input }} />
         </FormGroup>
         <FormGroup>
           <Label>Description</Label>
@@ -72,7 +80,7 @@ class UpdateMenuItemForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label>Price</Label>
-          <Input type="number" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" required  innerRef={(input) => { this.menu_item_price = input }} />
+          <Input type="number" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" innerRef={(input) => { this.menu_item_price = input }} />
         </FormGroup>
         <FormGroup check>
           <Label check >
@@ -119,8 +127,9 @@ class UpdateMenuItemForm extends React.Component {
         <br />
         <Button color="secondary" type="submit" value="Add to menu" >EDIT MENU ITEM</Button>{' '}
       </Form>
-    );
-  }
-}
+    )
+  };
+};
+
 
 export default UpdateMenuItemForm;

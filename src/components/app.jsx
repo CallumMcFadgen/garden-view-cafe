@@ -16,6 +16,10 @@ import NavBar from './navbar-components/navbar';
 import Footer from './footer-components/footer';
 
 
+// The app page holds all the components that are used throughout 
+// the app (nav bar, footer, router links, container).
+
+
 class App extends Component {
   render() {
     return (
@@ -39,9 +43,11 @@ class App extends Component {
         </div>
       </Container>
     )
-  }
-}
+  };
+};
+
 
 ReactDOM.render(<App />, document.querySelector('#root'));
+
 
 export default App;

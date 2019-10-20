@@ -4,11 +4,16 @@ import { Row, Col } from 'reactstrap';
 import { SocialIcon } from 'react-social-icons';
 
 
-class Footer extends Component {    //page Footer with copyright information and active social media links
+// Page footer, this is used on all pages throughout the application.  The footer 
+// holds 6 columns containing buisness information and social media ions that link
+// to social media pages (client accounts can be added).
+
+class Footer extends Component { 
   render() {
     return (
       <div className="footer">
         <Row>
+
           <Col xs="4" sm="4" md="4" lg="4" xl="4" className="footer-biz-info-top-row">
             <p>
               <strong>LOCATED AT</strong>
@@ -18,6 +23,7 @@ class Footer extends Component {    //page Footer with copyright information and
               <span>Nelson</span>
             </p>
           </Col>
+
           <Col xs="4" sm="4" md="4" lg="4" xl="4" className="footer-sm-icon">
             <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 26, width: 26 }} bgColor="#4d4d4d" />
             <span className="footer-sm-icon-spacing">  </span>
@@ -27,6 +33,7 @@ class Footer extends Component {    //page Footer with copyright information and
             <span className="footer-sm-icon-spacing">  </span>
             <SocialIcon network="pinterest" url="https://www.pinterest.nz" style={{ height: 26, width: 26 }} bgColor="#4d4d4d" />
           </Col>
+
           <Col xs="4" sm="4" md="4" lg="4" xl="4" className="footer-biz-info-top-row">
             <p>
               <strong>OPEN 7 DAYS</strong>
@@ -34,6 +41,7 @@ class Footer extends Component {    //page Footer with copyright information and
               <span>Monday to Sunday <br /> 8.00am - 9.00pm</span>
             </p>
           </Col>
+
           <Col  xs="4" sm="4" md="4" lg="4" xl="4" className="footer-biz-info-bottom-row">
             <p>
             <strong>CONTACT</strong>
@@ -43,9 +51,11 @@ class Footer extends Component {    //page Footer with copyright information and
             <span><strong>Email -</strong> manager@gvc.co.nz </span>
             </p>
           </Col>
+          
           <Col  xs="4" sm="4" md="4" lg="4" xl="4" >
           <p className="copyright-text">Copyright © 2019 Garden View Cafe</p>
           </Col>
+
           <Col  xs="4" sm="4" md="4" lg="4" xl="4" className="footer-biz-info-bottom-row">
             <p>
             <strong>LICENSED</strong>
@@ -55,11 +65,12 @@ class Footer extends Component {    //page Footer with copyright information and
             <span>BYO fees apply</span>
             </p>
           </Col>
+
         </Row>
       </div>
     )
-  }
-}
+  };
+};
 
 export default Footer;
 

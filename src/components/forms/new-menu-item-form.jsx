@@ -3,31 +3,38 @@ import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
+// On this page I am disabling the button submit event so that I can use it to bind the users 
+// input to the variable “this”.  I then reset the input fields and use the user input to send 
+// a post method containing the information to create a new table record.
+
+
 class NewMenuItemForm extends React.Component {
+
 
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
+  };
+
 
   handleSubmit(event) {
-    event.preventDefault();           // prevent the buttons default behaviour
+    event.preventDefault();
 
-    fetch('http://localhost:4200/api/menu-items', {         // get the data
-      method: 'post',                                       // use the post method
-      headers: { 'Content-Type': 'application/json' },       // set json header
-      body: JSON.stringify({                                // turn the contents to a json string
-        "menu_item_name": this.menu_item_name.value,                  // the value of the input 
+    fetch('http://localhost:4200/api/menu-items', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "menu_item_name": this.menu_item_name.value,
         "menu_item_description": this.menu_item_description.value,
         "menu_item_price": this.menu_item_price.valueAsNumber,
-        "menu_item_available": this.menu_item_available.checked,        // checked for check boxes
+        "menu_item_available": this.menu_item_available.checked,
         "menu_item_gluten_free": this.menu_item_gluten_free.checked,
         "menu_item_vegan": this.menu_item_vegan.checked,
         "menu_item_breakfast": this.menu_item_breakfast.checked,
         "menu_item_lunch": this.menu_item_lunch.checked,
         "menu_item_dinner": this.menu_item_dinner.checked,
         "menu_item_function": this.menu_item_function.checked,
-        "admin_id": 1                                                 // hardcoded admin (will change in future)
+        "admin_id": 1
       })
     })
       .then(() => {
@@ -37,9 +44,10 @@ class NewMenuItemForm extends React.Component {
       .catch(err => {
         console.log(err)
       })
-  }
+  };
 
-  ResetForm = () => {                                           // rests inputs and checkboxes
+
+  ResetForm = () => {
     this.menu_item_name.value = null;
     this.menu_item_description.value = null;
     this.menu_item_price.value = null;
@@ -50,7 +58,8 @@ class NewMenuItemForm extends React.Component {
     this.menu_item_lunch.checked = false;
     this.menu_item_dinner.checked = false;
     this.menu_item_function.checked = false;
-}
+};
+
   
   render() {
     return (
@@ -113,8 +122,9 @@ class NewMenuItemForm extends React.Component {
         <br />
         <Button color="secondary" type="submit" value="Add to menu" >ADD TO MENU</Button>{' '}
       </Form>
-    );
-  }
-}
+    )
+  };
+};
+
 
 export default NewMenuItemForm;

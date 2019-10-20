@@ -10,11 +10,13 @@ import SummerTable from './tables/events/summer-events';
 import WinterTable from './tables/events/winter-events';
 
 
+// The events page holds sub banners and events tables (Spring, Summer, Autumn, Winter).
+
+
 class EventsPage extends Component {
   render() {
     return (
       <div>
-
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="events page banner" />
@@ -82,12 +84,13 @@ class EventsPage extends Component {
 
         <Row className="pre-footer-spacing">
         </Row>
-
       </div>
     )
-  }
-}
+  };
+};
+
 
 ReactDOM.render(<EventsPage />, document.querySelector('#root'));
+
 
 export default EventsPage;

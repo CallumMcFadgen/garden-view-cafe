@@ -1,25 +1,23 @@
+// Package Dependences
 import React, { useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
+
+// Page navbar, this is used on all pages throughout the application.  The navbar contains a header/homepage
+// link, nav links to other pages and social media links via the social media icons.  The navbar is responsive
+// and the navlinks are contained in a dropdown when the navbar resizes 
 
 
 const Example = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar light expand="xl" style={{color: 'white', border: 'thin black solid'}}>>
-        <NavbarBrand href="/"><span style={{fontWeight: '800', color: 'black'}}>Garden View</span> Café</NavbarBrand>
+      <Navbar light expand="xl" style={{ color: 'white', border: 'thin black solid' }}>>
+        <NavbarBrand href="/"><span style={{ fontWeight: '800', color: 'black' }}>Garden View</span> Café</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -71,7 +69,8 @@ const Example = (props) => {
         </Collapse>
       </Navbar>
     </div>
-  );
-}
+  )
+};
+
 
 export default Example;
