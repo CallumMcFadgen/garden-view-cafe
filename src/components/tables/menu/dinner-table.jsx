@@ -22,8 +22,9 @@ class DinnerTable extends React.Component {
   
   componentDidMount() {
     this._isMounted = true;
+    const dinnerURL = ('http://localhost:4200/api/menu-items/dinner')
 
-    fetch('http://localhost:4200/api/menu-items')
+    fetch(dinnerURL)
       .then(res => res.json())
       .then(data => {
         if (this._isMounted) {
@@ -56,7 +57,6 @@ class DinnerTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => {
-              if (item.menu_item_dinner === 1) {
                 return (
                   <tr key={item.menu_item_id} value="menu_item_id">
                     <th scope="row"></th>
@@ -65,7 +65,6 @@ class DinnerTable extends React.Component {
                     <td>${item.menu_item_price}</td>
                   </tr>
                 )
-              }
             }
             )
             }

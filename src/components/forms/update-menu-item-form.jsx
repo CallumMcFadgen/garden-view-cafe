@@ -27,7 +27,7 @@ class UpdateMenuItemForm extends React.Component {
 
 
     fetch(updatedURL, {         // get the data
-      method: 'patch',                                       // use the post method
+      method: 'put',                                       // use the put method
       headers: { 'Content-Type': 'application/json' },       // set json header
       body: JSON.stringify({                                // turn the contents to a json string
         "menu_item_name": this.menu_item_name.value,                  // the value of the input 
@@ -44,7 +44,7 @@ class UpdateMenuItemForm extends React.Component {
       })
     })
       .then(() => {
-        console.log("Menu item updated");
+        alert("Menu item has been updated")
         this.ResetForm();
       })
       .catch(err => {
