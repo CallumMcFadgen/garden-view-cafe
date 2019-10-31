@@ -43,7 +43,7 @@ class SummerTable extends React.Component {
     console.log(this.state.data)
     if (this.state.data !== '') {     // if there is data, do stuff
       return (
-        <Table>
+        <Table responsive>
           <thead>
             <tr>
               <th></th>
