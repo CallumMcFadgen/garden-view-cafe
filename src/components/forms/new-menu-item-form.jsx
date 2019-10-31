@@ -38,7 +38,7 @@ class NewMenuItemForm extends React.Component {
       })
     })
       .then(() => {
-        console.log("New menu item added");
+        alert("Menu item has been added")
         this.ResetForm();
       })
       .catch(err => {

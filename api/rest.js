@@ -16,9 +16,12 @@ app.locals.knex = knex;
 
 // get all menu items, get one menu item, add a new menu item, update a menu item, delete a menu item
 router.get('/menu-items', routes.menuItems.GetAllMenuItems);
+router.get('/menu-items/breakfast', routes.menuItems.GetBreakfastMenu);
+router.get('/menu-items/lunch', routes.menuItems.GetLunchMenu);
+router.get('/menu-items/dinner', routes.menuItems.GetDinnerMenu);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
-router.patch('/menu-items/:id', jsonParser, routes.menuItems.PatchMenuItem);
+router.put('/menu-items/:id', jsonParser, routes.menuItems.PatchMenuItem);
 router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);                          // id checking removed, using name as the identifiyer
 
 
@@ -32,6 +35,10 @@ router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemRe
 
 // get all events, get one event, add a new event, update a event, delete a event
 router.get('/events', routes.events.GetAllEvents);
+router.get('/events/autumn', routes.events.GetAutumnEvents);
+router.get('/events/spring', routes.events.GetSpringEvents);
+router.get('/events/summer', routes.events.GetSummerEvents);
+router.get('/events/winter', routes.events.GetWinterEvents);
 router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
 router.post('/events', jsonParser, routes.events.PostEvent);
 router.patch('/events/:id', jsonParser, middleware.checkID, routes.events.Patchevent);

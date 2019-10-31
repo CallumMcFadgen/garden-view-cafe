@@ -29,7 +29,7 @@ class DeleteMenuItemForm extends React.Component {
       headers: { 'Content-Type': 'application/json' },
     })
       .then(() => {
-        console.log(updatedURL);
+        alert("Menu item has been deleted")
         this.ResetForm();
       })
       .catch(err => {

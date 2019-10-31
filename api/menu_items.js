@@ -1,5 +1,6 @@
-// This function uses knex to select everything in the table (*) and returns
-// With either an error json or a data json.
+
+// GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function GetAllMenuItems(req, res, next) {
     const { knex } = req.app.locals;
     knex
@@ -8,6 +9,40 @@ function GetAllMenuItems(req, res, next) {
         .then(data => res.status(200).json(data))
         .catch(error => res.status(500).json(error))
 };
+
+
+function GetBreakfastMenu(req, res, next) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('menu_items')
+        .where('menu_item_breakfast', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
+function GetLunchMenu(req, res, next) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('menu_items')
+        .where('menu_item_lunch', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
+function GetDinnerMenu(req, res, next) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('menu_items')
+        .where('menu_item_dinner', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
 
 
 // This function uses knex to select everything in the table (*) for a specific record, the 
@@ -100,6 +135,9 @@ function DeleteMenuItem(req, res, next) {
 // Export modules 
 module.exports = {
     GetAllMenuItems,
+    GetBreakfastMenu,
+    GetLunchMenu,
+    GetDinnerMenu,
     GetMenuItem,
     PostMenuItem,
     PatchMenuItem,

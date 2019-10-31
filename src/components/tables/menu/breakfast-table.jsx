@@ -10,6 +10,7 @@ import { Table } from 'reactstrap';
 
 
 class BreakfastTable extends React.Component {
+  
   _isMounted = false;
 
   constructor() {
@@ -21,15 +22,18 @@ class BreakfastTable extends React.Component {
 
 
   componentDidMount() {
-    this._isMounted = true;
 
-    fetch('http://localhost:4200/api/menu-items')
+    this._isMounted = true;
+    const breakfastURL = ('http://localhost:4200/api/menu-items/breakfast')
+
+    fetch(breakfastURL)
       .then(res => res.json())
       .then(data => {
         if (this._isMounted) {
-        this.setState({
-          data: data
-        })}
+          this.setState({
+            data: data
+          })
+        }
       })
       .catch(err => {
         console.log(err);
@@ -41,7 +45,7 @@ class BreakfastTable extends React.Component {
     console.log(this.state.data)
     if (this.state.data !== '') {
       return (
-        <Table>
+        <Table responsive>
           <thead>
             <tr>
               <th></th>
@@ -51,8 +55,7 @@ class BreakfastTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => { 
-              if (item.menu_item_breakfast === 1) { 
+            {this.state.data.map((item, index) => {
               return (
                 <tr key={item.menu_item_id} value="menu_item_id">
                   <th scope="row"></th>
@@ -61,7 +64,6 @@ class BreakfastTable extends React.Component {
                   <td>${item.menu_item_price}</td>
                 </tr>
               )
-            } 
             })}
           </tbody>
         </Table>

@@ -1,5 +1,6 @@
-// This function uses knex to select everything in the table (*) and returns
-// With either an error json or a data json.
+
+// GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function GetAllEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -10,9 +11,50 @@ function GetAllEvents(req, res) {
 };
 
 
-// This function uses knex to select everything in the table (*) for a specific record, the 
-// record is accessed by the menu_id param and returns with either an error json
-// or a data json.
+function GetAutumnEvents(req, res) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('events')
+        .where('event_autumn', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
+function GetSpringEvents(req, res) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('events')
+        .where('event_spring', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
+function GetSummerEvents(req, res) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('events')
+        .where('event_summer', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
+function GetWinterEvents(req, res) {
+    const { knex } = req.app.locals;
+    knex
+        .select('*')
+        .from('events')
+        .where('event_winter', true)
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+};
+
+
 function GetEvent(req, res) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -101,6 +143,10 @@ function DeleteEvent(req, res, next) {
 // Export modules
 module.exports = {
     GetAllEvents,
+    GetAutumnEvents,
+    GetSpringEvents,
+    GetSummerEvents,
+    GetWinterEvents,
     GetEvent,
     PostEvent,
     Patchevent,
