@@ -35,6 +35,10 @@ router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemRe
 
 // get all events, get one event, add a new event, update a event, delete a event
 router.get('/events', routes.events.GetAllEvents);
+router.get('/events/autumn', routes.events.GetAutumnEvents);
+router.get('/events/spring', routes.events.GetSpringEvents);
+router.get('/events/summer', routes.events.GetSummerEvents);
+router.get('/events/winter', routes.events.GetWinterEvents);
 router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
 router.post('/events', jsonParser, routes.events.PostEvent);
 router.patch('/events/:id', jsonParser, middleware.checkID, routes.events.Patchevent);

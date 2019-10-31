@@ -11,6 +11,7 @@ import moment from "moment";
 
 
 class AutumnTable extends React.Component {
+
   _isMounted = false;
 
   constructor() {
@@ -24,7 +25,9 @@ class AutumnTable extends React.Component {
   componentDidMount() {
 
     this._isMounted = true;
-    fetch('http://localhost:4200/api/events')
+    const autumnURL = ('http://localhost:4200/api/events/autumn')
+
+    fetch(autumnURL)
       .then(res => res.json())
       .then(data => {
         if (this._isMounted) {
@@ -55,7 +58,6 @@ class AutumnTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => {
-              if (item.event_autumn === 1) {
                 return (
                   <tr key={item.event_id} value="event_id">
                     <th scope="row"></th>
@@ -65,7 +67,6 @@ class AutumnTable extends React.Component {
                     <td>${item.event_price}</td>
                   </tr>
                 )
-              }
             })}
           </tbody>
         </Table>

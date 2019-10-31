@@ -10,6 +10,7 @@ import { Table } from 'reactstrap';
 
 
 class DinnerTable extends React.Component {
+  
   _isMounted = false;
 
   constructor() {
@@ -19,7 +20,7 @@ class DinnerTable extends React.Component {
     })
   };
 
-  
+
   componentDidMount() {
     this._isMounted = true;
     const dinnerURL = ('http://localhost:4200/api/menu-items/dinner')
@@ -57,14 +58,14 @@ class DinnerTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => {
-                return (
-                  <tr key={item.menu_item_id} value="menu_item_id">
-                    <th scope="row"></th>
-                    <td>{item.menu_item_name}</td>
-                    <td>{item.menu_item_description}</td>
-                    <td>${item.menu_item_price}</td>
-                  </tr>
-                )
+              return (
+                <tr key={item.menu_item_id} value="menu_item_id">
+                  <th scope="row"></th>
+                  <td>{item.menu_item_name}</td>
+                  <td>{item.menu_item_description}</td>
+                  <td>${item.menu_item_price}</td>
+                </tr>
+              )
             }
             )
             }

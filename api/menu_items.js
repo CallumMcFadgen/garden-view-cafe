@@ -1,5 +1,6 @@
-// This function uses knex to select everything in the table (*) and returns
-// With either an error json or a data json.
+
+// GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function GetAllMenuItems(req, res, next) {
     const { knex } = req.app.locals;
     knex

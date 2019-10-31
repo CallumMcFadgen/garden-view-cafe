@@ -11,6 +11,7 @@ import moment from "moment";
 
 
 class WinterTable extends React.Component {
+  
   _isMounted = false;
 
   constructor() {
@@ -22,9 +23,11 @@ class WinterTable extends React.Component {
 
 
   componentDidMount() {
-    this._isMounted = true;
 
-    fetch('http://localhost:4200/api/events')
+    this._isMounted = true;
+    const winterURL = ('http://localhost:4200/api/events/winter')
+
+    fetch(winterURL)
       .then(res => res.json())
       .then(data => {
         if (this._isMounted) {
@@ -55,7 +58,6 @@ class WinterTable extends React.Component {
           </thead>
           <tbody>
             {this.state.data.map((item, index) => {
-              if (item.event_winter === 1) {
                 return (
                   <tr key={item.event_id} value="event_id">
                     <th scope="row"></th>
@@ -65,7 +67,6 @@ class WinterTable extends React.Component {
                     <td>${item.event_price}</td>
                   </tr>
                 )
-              }
             })}
           </tbody>
         </Table>

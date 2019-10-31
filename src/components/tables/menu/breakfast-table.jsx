@@ -10,6 +10,7 @@ import { Table } from 'reactstrap';
 
 
 class BreakfastTable extends React.Component {
+  
   _isMounted = false;
 
   constructor() {
@@ -21,16 +22,18 @@ class BreakfastTable extends React.Component {
 
 
   componentDidMount() {
+
     this._isMounted = true;
-    let breakfastURL = ('http://localhost:4200/api/menu-items/breakfast')
+    const breakfastURL = ('http://localhost:4200/api/menu-items/breakfast')
 
     fetch(breakfastURL)
       .then(res => res.json())
       .then(data => {
         if (this._isMounted) {
-        this.setState({
-          data: data
-        })}
+          this.setState({
+            data: data
+          })
+        }
       })
       .catch(err => {
         console.log(err);
@@ -52,7 +55,7 @@ class BreakfastTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map((item, index) => { 
+            {this.state.data.map((item, index) => {
               return (
                 <tr key={item.menu_item_id} value="menu_item_id">
                   <th scope="row"></th>
