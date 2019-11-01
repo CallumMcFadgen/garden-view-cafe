@@ -347,3 +347,7 @@ text-decoration: none !important;
 .Bold {
   font-weight: 800% !important;
 }
+
+.test-border {
+  border: thin black solid;
+}

@@ -16,7 +16,7 @@ import WinterTable from './tables/events/winter-events';
 class EventsPage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="events page banner" />
@@ -84,7 +84,7 @@ class EventsPage extends Component {
 
         <Row className="pre-footer-spacing">
         </Row>
-      </div>
+      </React.Fragment>
     )
   };
 };

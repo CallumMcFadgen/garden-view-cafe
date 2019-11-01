@@ -1,5 +1,6 @@
-// This function uses knex to select everything in the table (*) and returns
-// With either an error json or a data json.
+
+// GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function GetAllEventReviews(req, res, next) {
     const {knex}=req.app.locals;
     knex
@@ -10,9 +11,6 @@ function GetAllEventReviews(req, res, next) {
 };
 
 
-// This function uses knex to select everything in the table (*) for a specific record, the 
-// record is accessed by the menu_id param and returns with either an error json
-// or a data json.
 function GetEventReview(req, res, next) {
     const {knex} = req.app.locals;
     const {id} = req.params;
@@ -32,9 +30,8 @@ function GetEventReview(req, res, next) {
 };
 
 
-// This function uses knex to create a new record in the table 
-// with some specified mandatory columns, then populate the row 
-// with the users input and return a successes json or an error json.
+// POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function PostEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -56,9 +53,9 @@ function PostEventReview(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
-function PatchEventReview(req, res, next) {
+// PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function PutEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
@@ -77,8 +74,8 @@ function PatchEventReview(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
+// DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function DeleteEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -102,6 +99,6 @@ module.exports = {
     GetAllEventReviews,
     GetEventReview,
     PostEventReview,
-    PatchEventReview,
+    PutEventReview,
     DeleteEventReview
 };

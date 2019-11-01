@@ -15,7 +15,7 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar light expand="xl" style={{ color: 'white', border: 'thin black solid' }}>>
         <NavbarBrand href="/"><span style={{ fontWeight: '800', color: 'black' }}>Garden View</span> Café</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -68,7 +68,7 @@ const Example = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </React.Fragment>
   )
 };
 

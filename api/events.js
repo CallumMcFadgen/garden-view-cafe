@@ -74,9 +74,8 @@ function GetEvent(req, res) {
 };
 
 
-// This function uses knex to create a new record in the table 
-// with some specified mandatory columns, then populate the row 
-// with the users input and return a successes json or an error json.
+// POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function PostEvent(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -98,8 +97,8 @@ function PostEvent(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
+// PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function Patchevent(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -119,9 +118,8 @@ function Patchevent(req, res, next) {
 };
 
 
+// DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
 function DeleteEvent(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;

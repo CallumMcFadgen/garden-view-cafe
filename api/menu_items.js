@@ -44,10 +44,6 @@ function GetDinnerMenu(req, res, next) {
 };
 
 
-
-// This function uses knex to select everything in the table (*) for a specific record, the 
-// record is accessed by the menu_id param and returns with either an error json
-// or a data json.
 function GetMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -67,9 +63,8 @@ function GetMenuItem(req, res, next) {
 };
 
 
-// This function uses knex to create a new record in the table 
-// with some specified mandatory columns, then populate the row 
-// with the users input and return a successes json or an error json.
+// POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function PostMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -91,9 +86,9 @@ function PostMenuItem(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by item name param.
-function PatchMenuItem(req, res, next) {
+// PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function PutMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
@@ -112,8 +107,8 @@ function PatchMenuItem(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by....                     //still working on this one
+// DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function DeleteMenuItem(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -140,6 +135,6 @@ module.exports = {
     GetDinnerMenu,
     GetMenuItem,
     PostMenuItem,
-    PatchMenuItem,
+    PutMenuItem,
     DeleteMenuItem
 };
