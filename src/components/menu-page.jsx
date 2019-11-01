@@ -15,7 +15,7 @@ import DinnerTable from './tables/menu/dinner-table';
 class MenuPage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="menu page banner" />
@@ -70,7 +70,7 @@ class MenuPage extends Component {
 
         <Row className="pre-footer-spacing">
         </Row>
-      </div>
+      </React.Fragment>
     )
   };
 };

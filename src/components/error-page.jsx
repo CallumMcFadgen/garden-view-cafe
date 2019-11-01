@@ -11,12 +11,12 @@ import ReactDOM from 'react-dom';
 class ErrorPage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div>
           <h1>Error</h1>
           <h4>page not found</h4>
         </div>
-      </div>
+      </React.Fragment>
     )
   };
 };

@@ -10,7 +10,7 @@ import { Row, Col } from 'reactstrap';
 class HomePage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="home page banner" />
@@ -53,7 +53,7 @@ class HomePage extends Component {
             <img className="image-medium-portrait" src="./images/medium-portrait/medium-frenchtoast-image.png" alt="frenchtoast" />
           </Col>
         </Row>
-      </div>
+      </React.Fragment>
     )
   };
 };

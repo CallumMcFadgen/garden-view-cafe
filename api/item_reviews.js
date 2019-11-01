@@ -1,5 +1,5 @@
-// This function uses knex to select everything in the table (*) and returns
-// With either an error json or a data json.
+// GET API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function GetAllItemReviews(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -10,9 +10,6 @@ function GetAllItemReviews(req, res) {
 };
 
 
-// This function uses knex to select everything in the table (*) for a specific record, the 
-// record is accessed by the menu_id param and returns with either an error json
-// or a data json.
 function GetItemReview(req, res) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -32,9 +29,8 @@ function GetItemReview(req, res) {
 };
 
 
-// This function uses knex to create a new record in the table 
-// with some specified mandatory columns, then populate the row 
-// with the users input and return a successes json or an error json.
+// POST API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function PostItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
@@ -56,9 +52,9 @@ function PostItemReview(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
-function PatchItemReview(req, res, next) {
+// PUT API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function PutItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
@@ -77,8 +73,8 @@ function PatchItemReview(req, res, next) {
 };
 
 
-// This function uses knex to update an existing record with a 
-// payload of user input.  The record is specified by ID param.
+// DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function DeleteItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -102,6 +98,6 @@ module.exports = {
     GetAllItemReviews,
     GetItemReview,
     PostItemReview,
-    PatchItemReview,
+    PutItemReview,
     DeleteItemReview
 };

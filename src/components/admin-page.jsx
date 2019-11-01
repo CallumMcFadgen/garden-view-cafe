@@ -17,7 +17,7 @@ import DeleteMenuItemForm from './forms//delete-menu-item-form';
 class AdminPage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="contact page banner" />
@@ -42,7 +42,7 @@ class AdminPage extends Component {
             <DeleteMenuItemForm />
           </Col>
         </Row>
-      </div>
+      </React.Fragment>
     )
   };
 };

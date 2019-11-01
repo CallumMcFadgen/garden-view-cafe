@@ -21,7 +21,7 @@ router.get('/menu-items/lunch', routes.menuItems.GetLunchMenu);
 router.get('/menu-items/dinner', routes.menuItems.GetDinnerMenu);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
-router.put('/menu-items/:id', jsonParser, routes.menuItems.PatchMenuItem);
+router.put('/menu-items/:id', jsonParser, routes.menuItems.PutMenuItem);
 router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);                          // id checking removed, using name as the identifiyer
 
 
@@ -29,7 +29,7 @@ router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);  
 router.get('/item-reviews', routes.itemReviews.GetAllItemReviews);
 router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetItemReview);
 router.post('/item-reviews', jsonParser, routes.itemReviews.PostItemReview);
-router.patch('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PatchItemReview);
+router.put('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PutItemReview);
 router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.DeleteItemReview);
 
 
@@ -49,7 +49,7 @@ router.delete('/events/:id', jsonParser, middleware.checkID, routes.events.Delet
 router.get('/event_reviews', routes.eventReviews.GetAllEventReviews);
 router.get('/event_reviews/:id', middleware.checkID, routes.eventReviews.GetEventReview);
 router.post('/event_reviews', jsonParser, routes.eventReviews.PostEventReview);
-router.patch('/event_reviews/:id', jsonParser, middleware.checkID, routes.eventReviews.PatchEventReview);
+router.put('/event_reviews/:id', jsonParser, middleware.checkID, routes.eventReviews.PutEventReview);
 router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.eventReviews.DeleteEventReview);
  
 
@@ -57,7 +57,7 @@ router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.even
 router.get('/admins', routes.admins.GetAllAdmins);
 router.get('/admins/:id', middleware.checkID, routes.admins.GetAdmin);
 router.post('/admins', jsonParser, routes.admins.PostAdmin);
-router.patch('/admins/:id', jsonParser,  middleware.checkID, routes.admins.PatchAdmin);
+router.put('/admins/:id', jsonParser,  middleware.checkID, routes.admins.PutAdmin);
 router.delete('/admins/:id', jsonParser, middleware.checkID, routes.admins.DeleteAdmin);
 
 

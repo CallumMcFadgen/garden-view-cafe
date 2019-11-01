@@ -12,7 +12,7 @@ import { Row, Col } from 'reactstrap';
 class GalleryPage extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Row>
           <Col className="image-col-banner">
             <img className="banner-image" src="./images/banners/banner-img.png" alt="gallery page banner" />
@@ -29,7 +29,7 @@ class GalleryPage extends Component {
                Ka tohea ki uta te waka e nga tuakana, engari ahua rereke te ahua o te waka. Ka kii mai, “Kei te ahua taumaha te waka nei, kei te hoe tahi tatou, kao ranei?” Ka kii atu tetahi, “na to kaha kai i nga kumara te take” Ka kii atu tetahi ano, “Katia to korua mahi whakatoi”. I to ratou taenga atu ki te wahi taunga ika, ka puta mai a Maui, aue ko te ohorere o ona tuakana! “He aha.” “He aha tau?” “To mahi hianga e Maui.” “Ko koe te take e kore ai matou e whiwhi ika ana, ko koe ke”</p>
           </Col>
         </Row>
-      </div>
+        </React.Fragment>
     )
   };
 };
