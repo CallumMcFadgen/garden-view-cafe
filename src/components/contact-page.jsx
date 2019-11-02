@@ -5,6 +5,8 @@ import { Row, Col } from 'reactstrap';
 
 // Local Dependences
 import ContactForm from './forms/contact-form';
+import GoogleMap from './google-map/google-map';
+import ContactInfo from './contact-info/contact-info';
 
 
 // The contact page will hold a contact form, a maps plugin, biz info, etc.  
@@ -28,20 +30,18 @@ class ContactPage extends Component {
             <ContactForm />
           </Col>
           <Col xs="12" sm="12" md="12" lg="6" xl="6" >
-            TEST
+          <ContactInfo />
           </Col>
         </Row>
 
         <Row>
-          <Col className="test-border">
-            test
+          <Col xs="12" sm="12" md="12" lg="12" xl="12">
+            <GoogleMap />
           </Col>
         </Row>
 
-
-
-
-
+        <Row className="pre-footer-spacing">
+        </Row>
 
       </React.Fragment>
     )
