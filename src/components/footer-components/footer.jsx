@@ -11,6 +11,7 @@ import { SocialIcon } from 'react-social-icons';
 class Footer extends Component { 
   render() {
     return (
+      <React.Fragment>
       <div className="footer">
         <Row>
 
@@ -65,9 +66,10 @@ class Footer extends Component {
             <span>BYO fees apply</span>
             </p>
           </Col>
-
+          
         </Row>
       </div>
+      </React.Fragment>
     )
   };
 };

@@ -22,7 +22,7 @@ class DeleteMenuItemForm extends React.Component {
     event.preventDefault();
 
     let menu_item_name = this.menu_item_name.value;
-    let updatedURL = ('http://localhost:4200/api/menu-items' + '/' + menu_item_name)
+    let updatedURL = ('http://localhost:4200/api/menu-items/'&menu_item_name)
 
     fetch(updatedURL, {
       method: 'delete',
