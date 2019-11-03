@@ -8,15 +8,8 @@ import ContactPhone from './contact-info/ph-numbers';
 import ContactEmails from './contact-info/email-addresses';
 import ContactBizHours from './contact-info/biz-hours';
 import ContactLocation from './contact-info/location';
-
 import ContactForm from './forms/contact-form';
 import GoogleMap from './google-map/google-map';
-
-
-// The contact page will hold a contact form, a maps plugin, biz info, etc.  
-// I am just setting a page nav bar, page banner, placeholder text and a 
-// footer.  Hopefully more content will be in soon.
-
 
 class ContactPage extends Component {
   render() {
@@ -28,7 +21,6 @@ class ContactPage extends Component {
             <h1 className="banner-text">Contact</h1>
           </Col>
         </Row>
-
         <Row>
           <Col xs="12" sm="12" md="12" lg="12" xl="12">
             <h3 className="contact-info-heading">Contact Us</h3>
@@ -46,7 +38,6 @@ class ContactPage extends Component {
             <ContactLocation />
           </Col>
         </Row>
-
         <Row>
           <Col xs="12" sm="12" md="6" lg="6" xl="6" >
             <ContactForm />
@@ -55,10 +46,8 @@ class ContactPage extends Component {
             <GoogleMap />
           </Col>
         </Row>
-
         <Row className="pre-footer-spacing">
         </Row>
-
       </React.Fragment>
     )
   };

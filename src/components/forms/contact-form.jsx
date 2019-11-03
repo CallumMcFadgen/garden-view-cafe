@@ -1,6 +1,6 @@
 // Package Dependences
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 
 
@@ -49,11 +49,6 @@ class ContactForm extends React.Component {
     this.contact_email_address.value = null;
     this.contact_subject.value = false;
     this.contact_message.value = false;
-    //     this.menu_item_vegan.checked = false;
-    //     this.menu_item_breakfast.checked = false;
-    //     this.menu_item_lunch.checked = false;
-    //     this.menu_item_dinner.checked = false;
-    //     this.menu_item_function.checked = false;
   };
 
 

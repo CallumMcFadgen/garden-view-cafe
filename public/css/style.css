@@ -4,14 +4,12 @@
   padding: 0%;
 }
 
-
 /* update menu form padding (overriding bootstrap)  */
-.form{
+.form {
   padding: 2% !important;
   border: thin black solid !important;
   margin-bottom: 1%;
 }
-
 
 /* heading for forms */
 .form-heading {
@@ -27,13 +25,11 @@ label {
   font-size: 120% !important;
 }
 
-
 /* update check box headings on menu update form (overriding bootstrap) */
-.form-check-label{
+.form-check-label {
   font-family: "Lato", sans-serif !important;
   font-size: 90% !important;
 }
-
 
 /* Primary navbar heading (overiding bootstrap) */
 .navbar-brand {
@@ -44,7 +40,6 @@ label {
   padding: 0% !important;
 }
 
-
 /* Navigation links (overiding bootstrap) */
 .nav-link {
   font-family: "Lato", sans-serif !important;
@@ -52,39 +47,34 @@ label {
   font-weight: 500 !important;
 }
 
-
 /* Small round social media icons in the appbar  */
 .header-sm-icons-ui {
   display: inline-flexbox;
-  padding-left: .2rem;
-  padding-right: .2rem;
-  padding-top: .4rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.4rem;
 }
-
 
 /* Styling for the page wrapper (overiding bootstrap) */
 .container {
   padding: 1% !important;
-  width:100% !important;
+  width: 100% !important;
   max-width: 1920px !important;
 }
-
 
 /* Styling for banner image col */
 .image-col-banner {
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 1% !important;
-  padding-right: 1%  !important;
+  padding-right: 1% !important;
 }
-
 
 /* Styling for the page banner image (large thin image) */
 .banner-image {
   width: 100%;
   border: thin black solid;
 }
-
 
 /* Large white heading text with a black outline on the main page banner image */
 .banner-text {
@@ -97,16 +87,13 @@ label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
-
 
 /* Styling for the page sub-banner image (large thin image) */
 .sub-banner-image {
   width: 100%;
   border: thin black solid;
 }
-
 
 /* White heading text with a black outline on the page sub banner image */
 .sub-banner-text {
@@ -121,12 +108,10 @@ label {
   transform: translate(-50%, -50%);
 }
 
-
 /* Padding for rows */
 .row-padding {
   padding: 1%;
 }
-
 
 /* Column for displaying images */
 .image-col-portrait {
@@ -134,7 +119,6 @@ label {
   align-items: center;
   justify-content: center;
 }
-
 
 /* Quote col styling */
 .quote-col {
@@ -145,7 +129,6 @@ label {
   justify-content: center;
 }
 
-
 /* Text col styling */
 .text-col {
   padding: 1%;
@@ -153,7 +136,6 @@ label {
   align-items: center;
   justify-content: center;
 }
-  
 
 /* Quote text styling */
 .quote-text {
@@ -162,25 +144,21 @@ label {
   font-style: italic;
   font-size: 150%;
   font-weight: 400;
-  top:5px;
+  top: 5px;
 }
 
-
-
 /* table text (overriding bootstrap) */
-.table td, .table th {
+.table td,
+.table th {
   font-family: "Merriweather", sans-serif !important;
   font-size: 1rem !important;
   font-weight: 200 !important;
 }
 
-
-
 /* Menu sorting buttons styling */
 .menu-button {
   padding-bottom: 1%;
 }
-
 
 .btn-outline-secondary {
   position: relative !important;
@@ -188,12 +166,10 @@ label {
   margin-right: 1%;
 }
 
-
-
 /* Table heading (overriding bootstrap) */
-.table thead th{
+.table thead th {
   font-family: "Lato", sans-serif !important;
-  font-size:  1.5rem !important;
+  font-size: 1.5rem !important;
   font-weight: Bold !important;
 }
 
@@ -205,7 +181,6 @@ label {
   display: block;
 }
 
-
 /* sizing for a medium portrait image */
 .image-medium-portrait {
   border: black thin solid;
@@ -214,13 +189,11 @@ label {
   justify-content: center;
 }
 
-
 /* sizing for a medium landscape image */
 .image-medium-landscape {
   border: black thin solid;
   width: 100%;
 }
-
 
 .intro-text {
   font-family: "Merriweather", sans-serif;
@@ -229,7 +202,6 @@ label {
   font-weight: 400;
   text-align: center;
 }
-
 
 /** SUB BANNER ****************************************************************************/
 
@@ -257,8 +229,6 @@ label {
 
 /**************************************************************************************/
 
-
-
 /** FOOTER STYLING ********************************************************************/
 
 /* spacing aboving footer*/
@@ -269,7 +239,7 @@ label {
 /* basic stylying for footer row */
 .footer {
   border: thin black solid;
-  width:100%;
+  width: 100%;
 }
 
 /* copyright text located in the page footer */
@@ -291,8 +261,8 @@ label {
 
 /* provides some spacing for the footer social media icons */
 .footer-sm-icon-spacing {
- margin-left: 1%;
- margin-right: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 /* Buisness hours and location information located at the top of the footer */
@@ -316,7 +286,6 @@ label {
   display: flex;
 }
 
-
 /** COMING SOON ************************************************************************/
 
 /* heading for the coming soon disclaimer on contacts and gallery */
@@ -338,12 +307,11 @@ label {
   padding-bottom: 2%;
 }
 
-
 /** CONTACT INFO **********************************************************************/
 
 /* some default padding for the contact info */
 .contact-info {
-  padding-top: 2%;
+  padding-top: 4%;
   padding-bottom: 2%;
   padding-left: 1%;
   padding-right: 1%;
@@ -388,23 +356,21 @@ label {
   align-items: center;
   justify-content: center;
   text-align: center;
-  display: flex;  
+  display: flex;
   font-weight: bold;
 }
-
 
 /** CONTACT FORM **********************************************************************/
 
 /* some default padding for the contact form */
 .contact-form {
-  padding: 1%
+  padding: 1%;
 }
 
 /* central placement for the contact form submit button */
 .contact-submit-button {
   text-align: center;
 }
-
 
 /** GOOGLE MAP ************************************************************************/
 
@@ -416,10 +382,10 @@ label {
 
 /* styling for the google map heading */
 .google-map-heading {
-    font-family: "Lato", sans-serif;
-    font-size: 300%;
-    font-weight: Bold;
-    text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
 }
 
 /* styling for the google map image */
@@ -429,4 +395,38 @@ label {
   justify-content: center;
   width: 100%;
   border: thin black solid;
+}
+
+/** GALLERY ***************************************************************************/
+
+.gallery-tile {
+  border: thin black solid;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 3%;
+}
+
+.gallery-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
+}
+
+.gallery-tile-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: thin black solid;
+}
+
+.gallery-tile-text {
+  padding: 3% 3% 3% 3%;
+  font-family: "Merriweather", sans-serif;
+  font-size: 100%;
+  font-weight: 200;
+  display: block;
 }

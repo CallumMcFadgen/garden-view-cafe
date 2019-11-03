@@ -23,7 +23,7 @@ class UpdateMenuItemForm extends React.Component {
     let menu_item_name = this.menu_item_name.value;         // assign input to a var
     console.log(menu_item_name);
     
-    let updatedURL = ('http://localhost:4200/api/menu-items' + '/' + menu_item_name)                //add the imput to the url
+    let updatedURL = ('http://localhost:4200/api/menu-items/' + menu_item_name)                //add the imput to the url
 
 
     fetch(updatedURL, {         // get the data
