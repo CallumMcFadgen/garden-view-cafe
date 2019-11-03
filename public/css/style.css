@@ -17,7 +17,7 @@
 .form-heading {
   font-family: "Lato", sans-serif;
   font-size: 300%;
-  font-weight: 400;
+  font-weight: Bold;
   text-align: center;
 }
 
@@ -74,8 +74,8 @@ label {
 .image-col-banner {
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 0 !important;
-  padding-right: 0  !important;
+  padding-left: 1% !important;
+  padding-right: 1%  !important;
 }
 
 
@@ -194,7 +194,7 @@ label {
 .table thead th{
   font-family: "Lato", sans-serif !important;
   font-size:  1.5rem !important;
-  font-weight: 300 !important;
+  font-weight: Bold !important;
 }
 
 .regular-text {
@@ -316,11 +316,8 @@ label {
   display: flex;
 }
 
-/**************************************************************************************/
 
-
-
-/** COMING SOON PLACEHOLDER ***********************************************************/
+/** COMING SOON ************************************************************************/
 
 /* heading for the coming soon disclaimer on contacts and gallery */
 .coming-soon-heading {
@@ -341,48 +338,91 @@ label {
   padding-bottom: 2%;
 }
 
-/**************************************************************************************/
 
-.menu-table {
-text-decoration: none !important;
+/** CONTACT INFO **********************************************************************/
+
+/* some default padding for the contact info */
+.contact-info {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
-.Bold {
-  font-weight: 800% !important;
+/* styling for the main heading  */
+.contact-info-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
 }
 
-.test-border {
-  border: thin black solid;
+/* styling for the sub headings */
+.contact-info-subheading {
+  font-family: "Lato", sans-serif;
+  font-size: 120%;
+  font-weight: Bold;
+  text-align: center;
+}
+
+.contact-info-bold-text {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.contact-info-text {
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  font-weight: 100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.contact-info-text-italic {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 80%;
+  font-weight: 100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;  
+  font-weight: bold;
 }
 
 
 /** CONTACT FORM **********************************************************************/
 
+/* some default padding for the contact form */
 .contact-form {
   padding: 1%
 }
 
+/* central placement for the contact form submit button */
 .contact-submit-button {
   text-align: center;
 }
 
-/**************************************************************************************/
-
 
 /** GOOGLE MAP ************************************************************************/
 
+/* some padding and placement for the google map */
 .google-map {
   padding: 1%;
   text-align: center;
 }
 
+/* styling for the google map heading */
 .google-map-heading {
     font-family: "Lato", sans-serif;
     font-size: 300%;
-    font-weight: 400;
+    font-weight: Bold;
     text-align: center;
 }
 
+/* styling for the google map image */
 .google-map-image {
   position: relative;
   display: flex;
@@ -390,5 +430,3 @@ text-decoration: none !important;
   width: 100%;
   border: thin black solid;
 }
-
-/**************************************************************************************/

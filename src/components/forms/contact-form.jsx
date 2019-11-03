@@ -61,8 +61,8 @@ class ContactForm extends React.Component {
     return (
       <React.Fragment>
         <div className="contact-form">
+        <div className="form-heading">Message us</div>
           <Form name="contact-form" className="form" onSubmit={this.handleSubmit}>
-            <div className="form-heading">Message us</div>
             <FormGroup>
               <Label>First Name</Label>
               <Input type="input" name="contact_first_name" id="contact_first_name" placeholder="your first name" required innerRef={(input) => { this.contact_first_name = input }} />
