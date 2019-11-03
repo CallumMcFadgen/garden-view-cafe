@@ -12,13 +12,10 @@ import GalleryPage from './gallery-page';
 import ContactPage from './contact-page';
 import ErrorPage from './error-page';
 import AdminPage from './admin-page';
-import NavBar from './navbar-components/navbar';
-import Footer from './footer-components/footer';
-
-
-// The app page holds all the components that are used throughout 
-// the app (nav bar, footer, router links, container).
-
+import LoginPage from './login-page';
+import RegisterPage from './register-page';
+import NavBar from './navbar/navbar';
+import Footer from './footer/footer';
 
 class App extends Component {
   render() {
@@ -35,6 +32,8 @@ class App extends Component {
               <Route name="contact" exact path="/contact-page" component={ContactPage} />
               <Route name="admin" exact path="/admin-page" component={AdminPage} />
               <Route name="error" exact path="/error-page" component={ErrorPage} />
+              <Route name="login" exact path="/login-page" component={LoginPage} />
+              <Route name="register" exact path="/register-page" component={RegisterPage} />
             </div>
           </div>
         </Router>
@@ -46,8 +45,6 @@ class App extends Component {
   };
 };
 
-
 ReactDOM.render(<App />, document.querySelector('#root'));
-
 
 export default App;

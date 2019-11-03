@@ -2,12 +2,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
-// The error page will hold a generic error message, 
-// it is intended to handle errors but is not currently 
-// implemented.
-
-
 class ErrorPage extends Component {
   render() {
     return (
@@ -21,8 +15,6 @@ class ErrorPage extends Component {
   };
 };
 
-
 ReactDOM.render(<ErrorPage />, document.querySelector('#root'));
-
 
 export default ErrorPage;

@@ -1,6 +1,6 @@
 // Package Dependences
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 
 
@@ -49,11 +49,6 @@ class ContactForm extends React.Component {
     this.contact_email_address.value = null;
     this.contact_subject.value = false;
     this.contact_message.value = false;
-    //     this.menu_item_vegan.checked = false;
-    //     this.menu_item_breakfast.checked = false;
-    //     this.menu_item_lunch.checked = false;
-    //     this.menu_item_dinner.checked = false;
-    //     this.menu_item_function.checked = false;
   };
 
 
@@ -61,8 +56,8 @@ class ContactForm extends React.Component {
     return (
       <React.Fragment>
         <div className="contact-form">
+        <div className="form-heading">Message us</div>
           <Form name="contact-form" className="form" onSubmit={this.handleSubmit}>
-            <div className="form-heading">Message us</div>
             <FormGroup>
               <Label>First Name</Label>
               <Input type="input" name="contact_first_name" id="contact_first_name" placeholder="your first name" required innerRef={(input) => { this.contact_first_name = input }} />

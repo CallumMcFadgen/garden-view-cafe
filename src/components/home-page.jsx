@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
-
-// The home page holds images and text.
-
-
 class HomePage extends Component {
   render() {
     return (
@@ -17,12 +13,10 @@ class HomePage extends Component {
             <h1 className="banner-text">Welcome</h1>
           </Col>
         </Row>
-
         <Row>
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="image-col-portrait">
             <img className="image-medium-portrait" src="./images/medium-portrait/medium-wineglasses-image.png" alt="wineglass" />
           </Col>
-          
           <Col xs="12" sm="12" md="12" lg="8" xl="8" className="text-col">
             <p className="regular-text">
               Ki ta Maui e kii ai, “Kaore au e whakahoha i a koutou, ka noho hei karetao noa iho, koinei taku whakapono ki a koutou.” Ko te whakautu o te tuakana, “Na to hiroki ka pohehe matou he kai noa iho ma nga ika”.
@@ -32,14 +26,12 @@ class HomePage extends Component {
             </p>
           </Col>
         </Row>
-
         <Row>
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="quote-col">
             <p className="quote-text">
               I te hokinga mai a Maui me tona iwi, ka noho ohorere ratou, ka kii ratou, “Ko Maui te Rangatira mo nga mahi hii-ika.”<br /><br />A ka kitekite ratou i nga mahi kikino o nga tuakana, ka noho riri etahi hunga, ka noho pouri etahi hunga i nga mahi whakakohuru a nga tuakana.
             </p>
           </Col>
-
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="text-col">
             <p className="regular-text">
               Ka kata nga tuakana! Engari kaore a Maui i whakarata i a ratou mahi whakatoi ki a ia, a, ka karakia a Maui. <br /><br />
@@ -48,7 +40,6 @@ class HomePage extends Component {
               Ka kii atu ia ki ona tuakana, “purua a koutou toto koa ki taku rakau hii-ika?” Ka kata haere nga tuakana i te tono nei i a Maui, a, ka riri haere a Maui, ka patua ia ki tona ihu, ka rere iho ai te toto, ka taupokihia ki te kauae raro. Ka a Maui ki te kei o te waka, purua te rakau hii-ika ki a Tangaroa, ka tau te raro, a ka tangohia te rakau hii-ika e tetahi mea!
             </p>
           </Col>
-          
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="image-col-portrait">
             <img className="image-medium-portrait" src="./images/medium-portrait/medium-frenchtoast-image.png" alt="frenchtoast" />
           </Col>
@@ -58,8 +49,6 @@ class HomePage extends Component {
   };
 };
 
-
 ReactDOM.render(<HomePage />, document.querySelector('#root'));
-
 
 export default HomePage;

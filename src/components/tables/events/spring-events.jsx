@@ -50,7 +50,7 @@ class SpringTable extends React.Component {
           <thead>
             <tr>
               <th></th>
-              <th>Time & Date</th>
+              <th>Date</th>
               <th>Name</th>
               <th>Description</th>
               <th>Price</th>
