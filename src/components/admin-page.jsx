@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
-import NewMenuItemForm from './forms/new-menu-item-form';
-import UpdateMenuItemForm from './forms/update-menu-item-form';
-import DeleteMenuItemForm from './forms/delete-menu-item-form';
+import NewMenuItemForm from './forms/new-menu-item';
+import UpdateMenuItemForm from './forms/update-menu-item';
+import DeleteMenuItemForm from './forms/delete-menu-item';
 import UpdateTest from './forms/update-menu-item-test';
 
 

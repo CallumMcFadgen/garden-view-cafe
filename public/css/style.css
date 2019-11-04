@@ -477,3 +477,24 @@ label {
   margin-right: auto;
   width: 60%;
 }
+
+/** LOGIN ***********************************************************************************/
+
+.login-form {
+  margin-top: 5%;
+  margin-bottom: 5% !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 2% !important;
+  border: thin black solid !important;
+  margin-bottom: 1%;
+}
+
+.login-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
+}
+
