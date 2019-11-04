@@ -9,6 +9,7 @@ import UpdateMenuItemForm from './forms/update-menu-item-form';
 import DeleteMenuItemForm from './forms/delete-menu-item-form';
 import UpdateTest from './forms/update-menu-item-test';
 
+
 class AdminPage extends Component {
   render() {
     return (
@@ -48,6 +49,6 @@ class AdminPage extends Component {
   };
 };
 
-ReactDOM.render(<AdminPage />, document.querySelector('#root'));
 
+ReactDOM.render(<AdminPage />, document.querySelector('#root'));
 export default AdminPage;

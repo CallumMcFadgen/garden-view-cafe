@@ -2,20 +2,12 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-
-// On this page I am disabling the button submit event so that I can use it to bind 
-// the users input to the variable 'this'.  I then reset the input fields.  The rest is 
-// currently a work in progress.
-
-
 class UpdateMenuItemForm extends React.Component {
-
 
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this)
   };
-
 
   handleSubmit(event) {
     event.preventDefault();           // prevent the buttons default behaviour
@@ -128,6 +120,5 @@ class UpdateMenuItemForm extends React.Component {
     )
   };
 };
-
 
 export default UpdateMenuItemForm;
