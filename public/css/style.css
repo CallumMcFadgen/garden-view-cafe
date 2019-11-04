@@ -12,11 +12,13 @@
 }
 
 /* heading for forms */
-.form-heading {
-  font-family: "Lato", sans-serif;
-  font-size: 300%;
-  font-weight: Bold;
-  text-align: center;
+.admin-form-heading {
+  font-family: "Lato", sans-serif !important; 
+  font-size: 300% !important;
+  font-weight: Bold !important;
+  text-align: center !important;
+left:50px;
+
 }
 
 /* update check box headings on menu update form (overriding bootstrap) */
@@ -311,7 +313,7 @@ label {
 
 /* some default padding for the contact info */
 .contact-info {
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 2%;
   padding-left: 1%;
   padding-right: 1%;
@@ -333,6 +335,7 @@ label {
   text-align: center;
 }
 
+/* bold text for emphasis */
 .contact-info-bold-text {
   font-family: "Lato", sans-serif;
   font-weight: bold;
@@ -358,6 +361,10 @@ label {
   text-align: center;
   display: flex;
   font-weight: bold;
+}
+
+.contact-top-margin {
+  margin-top: 2%;
 }
 
 /** CONTACT FORM **********************************************************************/

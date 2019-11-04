@@ -6,13 +6,8 @@ import { Row, Col } from 'reactstrap';
 // Local Dependences
 import NewMenuItemForm from './forms/new-menu-item-form';
 import UpdateMenuItemForm from './forms/update-menu-item-form';
-import DeleteMenuItemForm from './forms//delete-menu-item-form';
-
-
-// The admin page will have forms for Add/Update/Delete on the various database 
-// tables (menu_items, item_reviews, events, events_reviews, etc).  Currently it
-// is only supporting the menu_items.
-
+import DeleteMenuItemForm from './forms/delete-menu-item-form';
+import UpdateTest from './forms/update-menu-item-test';
 
 class AdminPage extends Component {
   render() {
@@ -24,22 +19,28 @@ class AdminPage extends Component {
             <h1 className="banner-text">Admin</h1>
           </Col>
         </Row>
-
+          <h4 className="admin-form-heading">Add New Menu Item</h4>
         <Row>
           <Col>
             <NewMenuItemForm />
           </Col>
         </Row>
-
+          <div className="admin-form-heading">Edit Menu Item</div>
         <Row>
           <Col>
             <UpdateMenuItemForm />
           </Col>
         </Row>
-
+          <div className="admin-form-heading">Delete Menu Item</div>
         <Row>
           <Col>
             <DeleteMenuItemForm />
+          </Col>
+        </Row>
+          <div className="admin-form-heading">Edit Menu Items</div>
+        <Row>
+          <Col>
+            <UpdateTest />
           </Col>
         </Row>
       </React.Fragment>
@@ -47,8 +48,6 @@ class AdminPage extends Component {
   };
 };
 
-
 ReactDOM.render(<AdminPage />, document.querySelector('#root'));
-
 
 export default AdminPage;
