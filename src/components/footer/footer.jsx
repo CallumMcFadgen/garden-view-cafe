@@ -49,7 +49,7 @@ class Footer extends Component {
             <br />
             <span><strong>Phone -</strong> (03)5739784 </span>
             <br />
-            <span><strong>Email -</strong> manager@gvc.co.nz </span>
+            <span><strong>Email -</strong> cafe@gvc.co.nz </span>
             </p>
           </Col>
           
