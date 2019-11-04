@@ -21,9 +21,9 @@ class ContactPage extends Component {
             <h1 className="banner-text">Contact</h1>
           </Col>
         </Row>
-        <Row>
+        <Row className="contact-top-margin">
           <Col xs="12" sm="12" md="12" lg="12" xl="12">
-            <h3 className="contact-info-heading">Contact Us</h3>
+          <h3 className="contact-info-heading">Contact Us</h3>
           </Col>
           <Col xs="12" sm="12" md="6" lg="3" xl="3">
             <ContactPhone />

@@ -7,7 +7,7 @@ class ContactLocation extends Component {
             <React.Fragment>
                 <div className="contact-info">
                     <h4 className="contact-info-subheading">Location</h4>
-                    <p className ="contact-info-text"><span className="contact-info-bold-text">Queens Gardens</span></p>
+                    <p className ="contact-info-text">Queens Gardens</p>
                     <p className ="contact-info-text">208 Bridge Street</p>
                     <p className ="contact-info-text">Nelson</p>
                     <p className ="contact-info-text">New Zealand</p>

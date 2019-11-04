@@ -68,8 +68,6 @@ class UpdateMenuItemForm extends React.Component {
   render() {
     return (
       <Form name="new-menu-item-form" className="form" onSubmit={this.handleSubmit}>
-        <div className="form-heading">Edit Menu Item</div>
-        <div style={{textAlign: "center", fontSize: "150%"}}>Currently unavailable :(</div>
         <FormGroup>
           <Label>Name</Label>
           <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" innerRef={(input) => { this.menu_item_name = input }} />
