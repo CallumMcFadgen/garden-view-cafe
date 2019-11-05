@@ -20,9 +20,7 @@ class LoginForm extends React.Component {
                     <div className="contact-submit-button">
                         <Button color="secondary" type="submit" value="Login" >Login</Button>{' '}
                     </div>
-                    <div className="contact-submit-button">
-                        <Button color="secondary" type="submit" value="Register" >Register</Button>{' '}
-                    </div>
+                    <div className="register-text">Not a member? click <a href="/register-page">here</a> to register</div>
                 </Form>
             </React.Fragment>
         )

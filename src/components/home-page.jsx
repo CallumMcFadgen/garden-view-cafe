@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
+
 class HomePage extends Component {
   render() {
     return (
@@ -49,6 +50,6 @@ class HomePage extends Component {
   };
 };
 
-ReactDOM.render(<HomePage />, document.querySelector('#root'));
 
+ReactDOM.render(<HomePage />, document.querySelector('#root'));
 export default HomePage;

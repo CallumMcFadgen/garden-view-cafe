@@ -11,6 +11,7 @@ import ContactLocation from './contact-info/location';
 import ContactForm from './forms/contact';
 import GoogleMap from './google-map/google-map';
 
+
 class ContactPage extends Component {
   render() {
     return (
@@ -53,6 +54,6 @@ class ContactPage extends Component {
   };
 };
 
-ReactDOM.render(<ContactPage />, document.querySelector('#root'));
 
+ReactDOM.render(<ContactPage />, document.querySelector('#root'));
 export default ContactPage;

@@ -8,6 +8,7 @@ import BreakfastTable from './tables/menu/breakfast';
 import LunchTable from './tables/menu/lunch';
 import DinnerTable from './tables/menu/dinner';
 
+
 class MenuPage extends Component {
   render() {
     return (
@@ -63,6 +64,6 @@ class MenuPage extends Component {
   };
 };
 
-ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 
+ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 export default MenuPage;

@@ -9,6 +9,7 @@ import SpringTable from './tables/events/spring-events';
 import SummerTable from './tables/events/summer-events';
 import WinterTable from './tables/events/winter-events';
 
+
 class EventsPage extends Component {
   render() {
     return (
@@ -75,6 +76,6 @@ class EventsPage extends Component {
   };
 };
 
-ReactDOM.render(<EventsPage />, document.querySelector('#root'));
 
+ReactDOM.render(<EventsPage />, document.querySelector('#root'));
 export default EventsPage;

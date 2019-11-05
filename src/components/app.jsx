@@ -17,6 +17,7 @@ import ErrorPage from './error-page';
 import NavBar from './navbar/navbar';
 import Footer from './footer/footer';
 
+
 class App extends Component {
   render() {
     return (
@@ -47,6 +48,6 @@ class App extends Component {
   };
 };
 
-ReactDOM.render(<App />, document.querySelector('#root'));
 
+ReactDOM.render(<App />, document.querySelector('#root'));
 export default App;

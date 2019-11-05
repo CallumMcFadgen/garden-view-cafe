@@ -6,6 +6,7 @@ import { Row, Col } from 'reactstrap';
 // Local Dependences
 import GalleryTile from './gallery/gallery-tile';
 
+
 class GalleryPage extends Component {
   render() {
     return (
@@ -51,6 +52,6 @@ class GalleryPage extends Component {
   };
 };
 
-ReactDOM.render(<GalleryPage />, document.querySelector('#root'));
 
+ReactDOM.render(<GalleryPage />, document.querySelector('#root'));
 export default GalleryPage;
