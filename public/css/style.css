@@ -17,8 +17,13 @@
   font-size: 300% !important;
   font-weight: Bold !important;
   text-align: center !important;
-left:50px;
+}
 
+.form-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
 }
 
 /* update check box headings on menu update form (overriding bootstrap) */
@@ -476,4 +481,32 @@ label {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+}
+
+/** LOGIN ***********************************************************************************/
+
+.login-form {
+  margin-bottom: 5% !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 2% !important;
+  border: thin black solid !important;
+  margin-bottom: 1%;
+}
+
+.login-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-text {
+  margin-top: 3%;
+  font-size: 80%;
+  font-family: "Merriweather", sans-serif;
+  text-align: center;
 }

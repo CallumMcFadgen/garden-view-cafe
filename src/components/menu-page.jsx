@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
-import BreakfastTable from './tables/menu/breakfast-table';
-import LunchTable from './tables/menu/lunch-table';
-import DinnerTable from './tables/menu/dinner-table';
+import BreakfastTable from './tables/menu/breakfast';
+import LunchTable from './tables/menu/lunch';
+import DinnerTable from './tables/menu/dinner';
+
 
 class MenuPage extends Component {
   render() {
@@ -63,6 +64,6 @@ class MenuPage extends Component {
   };
 };
 
-ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 
+ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 export default MenuPage;

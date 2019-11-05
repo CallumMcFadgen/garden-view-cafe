@@ -8,8 +8,9 @@ import ContactPhone from './contact-info/ph-numbers';
 import ContactEmails from './contact-info/email-addresses';
 import ContactBizHours from './contact-info/biz-hours';
 import ContactLocation from './contact-info/location';
-import ContactForm from './forms/contact-form';
+import ContactForm from './forms/contact';
 import GoogleMap from './google-map/google-map';
+
 
 class ContactPage extends Component {
   render() {
@@ -53,6 +54,6 @@ class ContactPage extends Component {
   };
 };
 
-ReactDOM.render(<ContactPage />, document.querySelector('#root'));
 
+ReactDOM.render(<ContactPage />, document.querySelector('#root'));
 export default ContactPage;
