@@ -17,8 +17,13 @@
   font-size: 300% !important;
   font-weight: Bold !important;
   text-align: center !important;
-left:50px;
+}
 
+.form-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  text-align: center;
 }
 
 /* update check box headings on menu update form (overriding bootstrap) */
