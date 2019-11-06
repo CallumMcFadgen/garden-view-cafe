@@ -234,8 +234,6 @@ label {
   border: thin black solid;
 }
 
-/**************************************************************************************/
-
 /** FOOTER STYLING ********************************************************************/
 
 /* spacing aboving footer*/
@@ -483,7 +481,7 @@ label {
   width: 60%;
 }
 
-/** LOGIN ***********************************************************************************/
+/** LOGIN FORM ***********************************************************************************/
 
 .login-form {
   margin-bottom: 5% !important;
@@ -509,4 +507,25 @@ label {
   font-size: 80%;
   font-family: "Merriweather", sans-serif;
   text-align: center;
+}
+
+/** REGISTER FORM ***********************************************************************************/
+
+.register-form {
+  margin-bottom: 5% !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 2% !important;
+  border: thin black solid !important;
+  margin-bottom: 1%;
+}
+
+.register-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 300%;
+  font-weight: Bold;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
