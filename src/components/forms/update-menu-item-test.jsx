@@ -35,7 +35,7 @@ class UpdateTest extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         "menu_item_name": name,
-        "admin_id": 1
+        "user_id": 1
       })
     })
       .then(() => {

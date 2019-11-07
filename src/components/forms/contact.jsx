@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
     //     "menu_item_lunch": this.menu_item_lunch.checked,
     //     "menu_item_dinner": this.menu_item_dinner.checked,
     //     "menu_item_function": this.menu_item_function.checked,
-    //     "admin_id": 1
+    //     "user_id": 1
     //   })
     // })
     //   .then(() => {

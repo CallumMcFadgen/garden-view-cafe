@@ -1,29 +1,29 @@
 
 // GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function GetAllAdmins(req, res) {
+function GetAllUsers(req, res) {
     const {knex}=req.app.locals;
     knex
         .select('*')
-        .from('admins')
+        .from('users')
         .then(data => res.status(200).json(data))
         .catch(error => res.status(500).json(error))
 };
 
 
-function GetAdmin(req, res) {
+function GetUser(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
     knex
     .select('*')
-    .from('admins')
-    .where({admin_id: `${id}`})
+    .from('users')
+    .where({user_id: `${id}`})
     .then(data => {
         if(data.length > 0) {
             return res.status(200).json(data);
         }
         else {
-            return res.status(404).json(`Admin ${id} could not be found`)
+            return res.status(404).json(`User ${id} could not be found`)
         }
     })
     .catch(error => res.status(500).json(error))
@@ -32,19 +32,19 @@ function GetAdmin(req, res) {
 
 // POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function PostAdmin(req, res, next) {
+function PostUser(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
 
     // set mandatory fields
-    const mandatoryColumns = ['admin_user_name', 'admin_password', 'admin_email'];
+    const mandatoryColumns = ['user_first_name', 'user_last', 'user_password', 'user_email', 'user_admin_status'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
 
     if (mandatoryColumnsExist) {
-        knex('admins')
+        knex('users')
             .insert(payload)
-            .then(response => res.status(201).json(`New admin added`))
+            .then(response => res.status(201).json(`New user added`))
             .catch(error => res.status(500).json(error))
     }
     else {
@@ -55,19 +55,19 @@ function PostAdmin(req, res, next) {
 
 // PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function PutAdmin(req, res, next) {
+function PutUser(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
-    knex('admins')
-        .where('admin_id', id)
+    knex('users')
+        .where('user_id', id)
         .update(payload)
         .then(response => {
             if (response) {
-                res.status(204).json(`Admin ${id} has been updated.`);
+                res.status(204).json(`User ${id} has been updated.`);
             }
             else {
-                return res.status(404).json(`Admin ${id} cannot be found.`)
+                return res.status(404).json(`User ${id} cannot be found.`)
             }
         })
         .catch(error => res.status(500).json(error));
@@ -76,18 +76,18 @@ function PutAdmin(req, res, next) {
 
 // DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function DeleteAdmin(req, res, next) {
+function DeleteUser(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
-    knex('admins')
-        .where('admin_id', id)
+    knex('user')
+        .where('user_id', id)
         .del()
         .then(response => {
             if (response) {
-                res.status(204).json(`Admin ${id} has been deleted.`);
+                res.status(204).json(`User ${id} has been deleted.`);
             }
             else {
-                res.status(400).json(`Admin ${id} cannot be found.`)
+                res.status(400).json(`User ${id} cannot be found.`)
             }
         })
         .catch(error => res.status(500).json(error));
@@ -96,9 +96,9 @@ function DeleteAdmin(req, res, next) {
 
 // Export modules
 module.exports = {
-    GetAllAdmins,
-    GetAdmin,
-    PostAdmin,
-    PutAdmin,
-    DeleteAdmin
+    GetAllUsers,
+    GetUser,
+    PostUser,
+    PutUser,
+    DeleteUser
 };
