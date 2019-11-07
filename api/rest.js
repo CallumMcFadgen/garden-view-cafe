@@ -53,12 +53,12 @@ router.put('/event_reviews/:id', jsonParser, middleware.checkID, routes.eventRev
 router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.eventReviews.DeleteEventReview);
  
 
-// get all admins, get one admin, add a new admin, update a admin, delete a admin
-router.get('/admins', routes.admins.GetAllAdmins);
-router.get('/admins/:id', middleware.checkID, routes.admins.GetAdmin);
-router.post('/admins', jsonParser, routes.admins.PostAdmin);
-router.put('/admins/:id', jsonParser,  middleware.checkID, routes.admins.PutAdmin);
-router.delete('/admins/:id', jsonParser, middleware.checkID, routes.admins.DeleteAdmin);
+// get all users, get one users, add a new users, update a users, delete a users
+router.get('/users', routes.users.GetAllUsers);
+router.get('/users/:id', middleware.checkID, routes.users.GetUser);
+router.post('/users', jsonParser, routes.users.PostUser);
+router.put('/users/:id', jsonParser,  middleware.checkID, routes.users.PutUser);
+router.delete('/users/:id', jsonParser, middleware.checkID, routes.users.DeleteUser);
 
 
 app.use('/api', cors(), router);

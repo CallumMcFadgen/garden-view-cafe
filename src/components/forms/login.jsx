@@ -10,11 +10,11 @@ class LoginForm extends React.Component {
                 <Form name="login-form" className="login-form" onSubmit={this.handleSubmit}>
                     <FormGroup>
                         <Label>Username</Label>
-                        <Input type="input" name="user_name" id="user_name" placeholder="enter you username" required innerRef={(input) => { this.user_name = input }} />
+                        <Input type="input" name="user_name" id="user_name" placeholder="enter your username" required innerRef={(input) => { }} />
                     </FormGroup>
                     <FormGroup>
                         <Label>Password</Label>
-                        <Input type="input" name="password" id="password" placeholder="enter your password" required innerRef={(input) => { this.password = input }} />
+                        <Input type="password" name="password" id="password" placeholder="enter your password" required innerRef={(input) => { }} />
                     </FormGroup>
                     <br />
                     <div className="contact-submit-button">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Row, Col} from 'reactstrap';
+import { Row } from 'reactstrap';
 
 
 class RegisterForm extends React.Component {
@@ -25,7 +25,7 @@ class RegisterForm extends React.Component {
                     </FormGroup>
                     <FormGroup>
                         <Label>Password</Label>
-                        <Input type="input" name="password" id="password" placeholder="enter your password" required innerRef={(input) => { }} />
+                        <Input type="password" name="password" id="password" placeholder="enter your password" required innerRef={(input) => { }} />
                     </FormGroup>
                     <FormGroup>
                         <Label>Email</Label>
