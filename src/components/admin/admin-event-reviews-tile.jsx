@@ -9,9 +9,9 @@ class AdminEventReviewsTile extends Component {
                 <div className="admin-tile">
                     <h4 className="admin-tile-heading">Event reviews</h4>
                     <a href="/register-page">
-                    <img className="admin-tile-image" src="./images/gallery/CafeImage.png" alt="placeholder" />
+                    <img className="admin-tile-image" src="./images/gallery-thumbnails/EventReviewThumbnail.png" alt="placeholder" />
                     </a>
-                    <p className="admin-tile-text">Add, edit and delete event reviews</p>
+                    <p className="admin-tile-text">Edit event reviews</p>
                 </div>
             </React.Fragment>
         )

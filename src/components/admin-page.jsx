@@ -14,6 +14,7 @@ import AdminItemReviewsTile from './admin/admin-item-reviews-tile';
 import AdminEventsTile from './admin/admin-events-tile';
 import AdminEventReviewsTile from './admin/admin-event-reviews-tile';
 import AdminUserTile from './admin/admin-users-tile';
+import AdminPlaceholderTile from './admin/admin-placeholder-tile';
 
 
 
@@ -45,10 +46,18 @@ class AdminPage extends Component {
             <Col xs="12" sm="6" md="6" lg="3" xl="3">
               <AdminUserTile />
             </Col>
+            <Col xs="12" sm="6" md="6" lg="3" xl="3">
+              <AdminPlaceholderTile />
+            </Col>
+            <Col xs="12" sm="6" md="6" lg="3" xl="3">
+              <AdminPlaceholderTile />
+            </Col>
+            <Col xs="12" sm="6" md="6" lg="3" xl="3">
+              <AdminPlaceholderTile />
+            </Col> 
           </Row>
           <Row className="pre-footer-spacing">
           </Row>
-
         </Row>
       </React.Fragment>
     )

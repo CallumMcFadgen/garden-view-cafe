@@ -8,10 +8,10 @@ class AdminItemReviewsTile extends Component {
             <React.Fragment>
                 <div className="admin-tile">
                     <h4 className="admin-tile-heading">Menu reviews</h4>
-                    <a href="/register-page">
-                        <img className="admin-tile-image" src="./images/gallery/CafeImage.png" alt="placeholder" />
+                    <a href="">
+                        <img className="admin-tile-image" src="./images/gallery-thumbnails/ItemReviewThumbnail.png" alt="placeholder" />
                     </a>
-                    <p className="admin-tile-text">Add, edit and delete menu item reviews</p>
+                    <p className="admin-tile-text">Edit menu item reviews</p>
                 </div>
             </React.Fragment>
         )

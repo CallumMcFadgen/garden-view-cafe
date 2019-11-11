@@ -8,10 +8,10 @@ class AdminUserTile extends Component {
             <React.Fragment>
                 <div className="admin-tile">
                     <h4 className="admin-tile-heading">Users</h4>
-                    <a href="/register-page">
-                        <img className="admin-tile-image" src="./images/gallery/CafeImage.png" alt="placeholder" />
+                    <a href="/admin-menu-page">
+                        <img className="admin-tile-image" src="./images/gallery-thumbnails/UsersThumbnail.png" alt="placeholder" />
                     </a>
-                    <p className="admin-tile-text">Add, edit and delete users</p>
+                    <p className="admin-tile-text">Edit users</p>
                 </div>
             </React.Fragment>
         )

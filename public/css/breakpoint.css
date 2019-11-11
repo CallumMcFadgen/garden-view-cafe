@@ -1,0 +1,63 @@
+/* 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
+
+
+@media (min-width: 576px) and (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1199px)  {}
+@media (min-width: 1200px) {} 
+
+
+
+
+@media (min-width: 296px) and (max-width:395px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 180% !important; font-weight: 100 !important; color: Purple !important; padding: 0% !important;}
+}
+
+
+@media (min-width: 396px) and (max-width:495px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 200% !important; font-weight: 100 !important; color: Orange !important; padding: 0% !important;}
+}
+
+
+@media (min-width: 496px) and (max-width: 576px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 270% !important; font-weight: 100 !important; color: Red !important; padding: 0% !important;}
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Yellow !important; padding: 0% !important;}
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Green !important; padding: 0% !important;}
+
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Blue !important; padding: 0% !important;}
+
+} 
+
+
+
+
+@media (min-width: 1200px) {
+  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: #4d4d4d !important; padding: 0% !important;}
+}

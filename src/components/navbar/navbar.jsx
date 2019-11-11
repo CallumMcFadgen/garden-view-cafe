@@ -24,23 +24,18 @@ const Example = (props) => {
             <NavItem>
               <NavLink href="/">Home</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;</span>
             <NavItem>
               <NavLink href="/menu-page">Menu</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;</span>
             <NavItem>
               <NavLink href="/events-page">Events</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;</span>
             <NavItem>
               <NavLink href="/gallery-page">Gallery</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;</span>
             <NavItem>
               <NavLink href="/contact-page">Contact</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;</span>
             <NavItem>
               <NavLink href="/admin-page">Admin</NavLink>
             </NavItem>

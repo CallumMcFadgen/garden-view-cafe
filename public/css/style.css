@@ -8,13 +8,17 @@
 .form {
   padding: 2% !important;
   border: thin black solid !important;
-  margin-bottom: 1%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 90% !important;
+  margin-bottom: 2% !important;
 }
 
 /* heading for forms */
 .admin-form-heading {
   font-family: "Lato", sans-serif !important; 
   font-size: 300% !important;
+  margin-top: 3% !important;
   font-weight: Bold !important;
   text-align: center !important;
 }
@@ -546,7 +550,7 @@ label {
 
 .admin-tile-heading {
   font-family: "Lato", sans-serif;
-  font-size: 300%;
+  font-size: 250%;
   font-weight: Bold;
 }
 
@@ -565,3 +569,4 @@ label {
   font-weight: 200;
   display: block;
 }
+
