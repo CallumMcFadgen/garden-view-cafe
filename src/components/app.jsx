@@ -11,6 +11,7 @@ import EventsPage from './events-page';
 import GalleryPage from './gallery-page';
 import ContactPage from './contact-page';
 import AdminPage from './admin-page';
+import AdminMenuPage from './admin-menu-page';
 import LoginPage from './login-page';
 import RegisterPage from './register-page';
 import ErrorPage from './error-page';
@@ -33,6 +34,7 @@ class App extends Component {
               <Route name="gallery" exact path="/gallery-page" component={GalleryPage} />
               <Route name="contact" exact path="/contact-page" component={ContactPage} />
               <Route name="admin" exact path="/admin-page" component={AdminPage} />
+              <Route name="admin-menu" exact path="/admin-menu-page" component={AdminMenuPage} />
               <Route name="login" exact path="/login-page" component={LoginPage} />
               <Route name="register" exact path="/register-page" component={RegisterPage} />
               <Route name="error" status={404} component={ErrorPage} />
