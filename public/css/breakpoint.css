@@ -1,34 +1,49 @@
 
  /* Extra small devices (phonesn) */
  @media only screen and (max-width: 667px) {
-  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 240% !important; font-weight: 100 !important; color: Purple !important; padding: 0% !important;}
-  .login-form { margin-bottom: 5% !important; margin-left: auto; margin-right: auto; width: 60%; padding: 2% !important; border: thin black solid !important; margin-bottom: 1%;}
- }
+  .navbar-brand {font-size: 155% !important;}
+  .quote-text {font-size: 105%;}
+  .table thead th {font-size: 100% !important;}
+  .table td,.table th {font-size: 80% !important;}
+  .register-form {width: 80%;}
+  .login-form {width: 80%;}
+  .banner-text {font-size: 400%;}
+  .sub-banner-text {font-size: 250%;}
+  .contact-info-heading {font-size: 200%;}
+  .form-heading {font-size: 200%;}
+  .google-map-heading {font-size: 200%;}
+  .gallery-tile {margin-left: auto; margin-right: auto; width: 80%;}
+  .gallery-heading {font-size: 200%;}
+  .admin-tile-heading {font-size: 200%;}
+  .admin-tile {margin-left: auto; margin-right: auto; width: 80%;}
+}
 
 
  /* Small devices (portrait tablets and large phones) */
  @media only screen and (min-width: 600px) {
-  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Red !important; padding: 0% !important;}
-  .login-form { margin-bottom: 5% !important; margin-left: auto; margin-right: auto; width: 60%; padding: 2% !important; border: thin black solid !important; margin-bottom: 1%;}
+  .navbar-brand {font-size: 280% !important;}
+  .login-form {width: 60%; }
+  .register-form {width: 60%};
  }
  
 
  /* Medium devices (landscape tablets) */
  @media only screen and (min-width: 768px) {
-  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Yellow !important; padding: 0% !important;}
-  .login-form { margin-bottom: 5% !important; margin-left: auto; margin-right: auto; width: 60%; padding: 2% !important; border: thin black solid !important; margin-bottom: 1%;}
+  .navbar-brand {font-size: 280% !important;}
+  .login-form {width: 60%;}
+  .register-form {width: 60%};
  }
  
 
  /* Large devices (laptops/desktops) */
  @media only screen and (min-width: 992px) {
-   .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: Blue !important; padding: 0% !important;}
+   .navbar-brand {font-size: 280% !important;}
   }
  
 
  /* Extra large devices (large laptops and desktops) */
  @media only screen and (min-width: 1200px) {
-  .navbar-brand {font-family: "Lato", sans-serif !important; font-size: 280% !important; font-weight: 100 !important; color: #4d4d4d !important; padding: 0% !important;}
-  .banner-text {color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; font-family: "Lato", sans-serif; font-size: 1000%; font-weight: 800; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  .navbar-brand {font-size: 280% !important;}
+  .banner-text {font-size: 1000%;}
  } 
 

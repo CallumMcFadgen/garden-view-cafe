@@ -16,6 +16,8 @@ class RegisterPage extends Component {
                         <RegisterForm />
                     </Col>
                 </Row>
+                <Row className="pre-footer-spacing">
+                </Row>
             </React.Fragment>
         )
     };
