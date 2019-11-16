@@ -1,5 +1,6 @@
 // GET API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Get all of the item reviews data
 function GetAllItemReviews(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -10,6 +11,7 @@ function GetAllItemReviews(req, res) {
 };
 
 
+// Get a specific item review based on the id of the item review
 function GetItemReview(req, res) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -31,11 +33,10 @@ function GetItemReview(req, res) {
 
 // POST API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Create a new item review record set
 function PostItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
-
-    // Setting mandatory fields
     const mandatoryColumns = ['item_review_reviewer_name', 'item_review_review'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
@@ -54,6 +55,7 @@ function PostItemReview(req, res, next) {
 
 // PUT API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Update a specific item review record set based on the id of the item review
 function PutItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -75,6 +77,7 @@ function PutItemReview(req, res, next) {
 
 // DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Delete a specific item review record set based on the id of the item review
 function DeleteItemReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;

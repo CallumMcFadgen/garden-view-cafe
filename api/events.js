@@ -1,6 +1,7 @@
 
 // GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Get all of the events data
 function GetAllEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -11,6 +12,7 @@ function GetAllEvents(req, res) {
 };
 
 
+// Get all of the events data for autumn
 function GetAutumnEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -22,6 +24,7 @@ function GetAutumnEvents(req, res) {
 };
 
 
+// Get all of the events data for spring
 function GetSpringEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -33,6 +36,7 @@ function GetSpringEvents(req, res) {
 };
 
 
+// Get all of the events data for summer
 function GetSummerEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -44,6 +48,7 @@ function GetSummerEvents(req, res) {
 };
 
 
+// Get all of the events data for winter
 function GetWinterEvents(req, res) {
     const { knex } = req.app.locals;
     knex
@@ -55,6 +60,7 @@ function GetWinterEvents(req, res) {
 };
 
 
+// Get a specific event based on the id of the event
 function GetEvent(req, res) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -76,11 +82,10 @@ function GetEvent(req, res) {
 
 // POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Create a new event record set
 function PostEvent(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
-
-    // set mandatory fields
     const mandatoryColumns = ['event_name', 'event_description', 'event_price'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
@@ -99,7 +104,8 @@ function PostEvent(req, res, next) {
 
 // PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function Patchevent(req, res, next) {
+// Update a specific event record set based on the id of the event
+function PutEvent(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
     const payload = req.body;
@@ -120,6 +126,7 @@ function Patchevent(req, res, next) {
 
 // DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Delete a specific evnt record set based on the id of the event
 function DeleteEvent(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -147,6 +154,6 @@ module.exports = {
     GetWinterEvents,
     GetEvent,
     PostEvent,
-    Patchevent,
+    PutEvent,
     DeleteEvent
 };

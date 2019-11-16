@@ -22,7 +22,7 @@ router.get('/menu-items/dinner', routes.menuItems.GetDinnerMenu);
 router.get('/menu-items/:id', middleware.checkID, routes.menuItems.GetMenuItem);
 router.post('/menu-items', jsonParser, routes.menuItems.PostMenuItem);
 router.put('/menu-items/:id', jsonParser, routes.menuItems.PutMenuItem);
-router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);                          // id checking removed, using name as the identifiyer
+router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);     // id checking removed, using name as ID
 
 
 // get all item reviews, get one item review, add a new item review, update a item review, delete a item review
@@ -41,7 +41,7 @@ router.get('/events/summer', routes.events.GetSummerEvents);
 router.get('/events/winter', routes.events.GetWinterEvents);
 router.get('/events/:id', middleware.checkID, routes.events.GetEvent);
 router.post('/events', jsonParser, routes.events.PostEvent);
-router.patch('/events/:id', jsonParser, middleware.checkID, routes.events.Patchevent);
+router.put('/events/:id', jsonParser, middleware.checkID, routes.events.PutEvent);
 router.delete('/events/:id', jsonParser, middleware.checkID, routes.events.DeleteEvent);
 
 

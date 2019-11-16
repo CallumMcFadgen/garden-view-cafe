@@ -1,6 +1,7 @@
 
 // GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Get all of the users data
 function GetAllUsers(req, res) {
     const {knex}=req.app.locals;
     knex
@@ -11,6 +12,7 @@ function GetAllUsers(req, res) {
 };
 
 
+// Get a specific user based on the id of the user
 function GetUser(req, res) {
     const {knex} = req.app.locals;
     const {id} = req.params;
@@ -32,11 +34,10 @@ function GetUser(req, res) {
 
 // POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Create a new user record set
 function PostUser(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
-
-    // set mandatory fields
     const mandatoryColumns = ['user_first_name', 'user_last', 'user_password', 'user_email', 'user_admin_status'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
@@ -55,6 +56,7 @@ function PostUser(req, res, next) {
 
 // PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Update a specific user record set based on the id of the user
 function PutUser(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -76,6 +78,7 @@ function PutUser(req, res, next) {
 
 // DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Delete a specific user record set based on the id of the user
 function DeleteUser(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;

@@ -1,6 +1,7 @@
 
 // GET API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Get all of the event reviews data
 function GetAllEventReviews(req, res, next) {
     const {knex}=req.app.locals;
     knex
@@ -11,6 +12,7 @@ function GetAllEventReviews(req, res, next) {
 };
 
 
+// Get a specific event review based on the id of the event review
 function GetEventReview(req, res, next) {
     const {knex} = req.app.locals;
     const {id} = req.params;
@@ -32,11 +34,10 @@ function GetEventReview(req, res, next) {
 
 // POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Create a new event review record set
 function PostEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
-
-    // set mandatory fields
     const mandatoryColumns = ['event_review_reviewer_name', 'event_review_review'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
@@ -55,6 +56,7 @@ function PostEventReview(req, res, next) {
 
 // PUT API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Update a specific event review record set based on the id of the event review
 function PutEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
@@ -76,6 +78,7 @@ function PutEventReview(req, res, next) {
 
 // DELETE API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//Delete a specific event review based on the event review id
 function DeleteEventReview(req, res, next) {
     const { knex } = req.app.locals;
     const { id } = req.params;
