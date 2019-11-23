@@ -32,6 +32,30 @@ function GetUser(req, res) {
 };
 
 
+// Get a specific user based on the email and password
+function GetUserCredentials(req, res) {
+    const {knex} = req.app.locals;
+    const {email} = req.params;
+    const {password} = req.params;
+    console.log(req.params);
+    
+    knex
+    .select('user_email')
+    .from('users')
+    .where({user_email: `${email}`, user_password: `${password}`}, console.log())
+
+    .then(data => {
+        if(data.length > 0) {
+            return res.status(200).json(data);
+        }
+        else {
+            return res.status(404).json(`User could not be found`)
+        }
+    })
+    .catch(error => res.status(500).json(error))
+};
+
+
 // POST API /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Create a new user record set
@@ -103,5 +127,6 @@ module.exports = {
     GetUser,
     PostUser,
     PutUser,
-    DeleteUser
+    DeleteUser,
+    GetUserCredentials
 };

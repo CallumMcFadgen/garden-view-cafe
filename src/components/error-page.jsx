@@ -22,5 +22,4 @@ class ErrorPage extends Component {
 };
 
 
-ReactDOM.render(<ErrorPage />, document.querySelector('#root'));
 export default ErrorPage;

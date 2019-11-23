@@ -65,5 +65,4 @@ class MenuPage extends Component {
 };
 
 
-ReactDOM.render(<MenuPage />, document.querySelector('#root'));
 export default MenuPage;

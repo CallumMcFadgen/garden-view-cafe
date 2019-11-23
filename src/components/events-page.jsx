@@ -77,5 +77,4 @@ class EventsPage extends Component {
 };
 
 
-ReactDOM.render(<EventsPage />, document.querySelector('#root'));
 export default EventsPage;

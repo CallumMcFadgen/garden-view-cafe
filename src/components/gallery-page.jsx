@@ -53,5 +53,4 @@ class GalleryPage extends Component {
 };
 
 
-ReactDOM.render(<GalleryPage />, document.querySelector('#root'));
 export default GalleryPage;

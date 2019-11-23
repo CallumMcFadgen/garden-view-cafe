@@ -1,7 +1,23 @@
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
 
- /* Extra small devices (phonesn) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {} 
+
+
+
+ /* Extra small devices (phones) */
  @media only screen and (max-width: 667px) {
-  .navbar-brand {font-size: 155% !important;}
+  .navbar-brand {font-size: 155% !important}
   .quote-text {font-size: 105%;}
   .table thead th {font-size: 100% !important;}
   .table td,.table th {font-size: 80% !important;}

@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 
+import QuoteTile from './home/quote';
+
+
 class HomePage extends Component {
   render() {
     return (
@@ -28,11 +31,11 @@ class HomePage extends Component {
           </Col>
         </Row>
         <Row>
+
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="quote-col">
-            <p className="quote-text">
-              I te hokinga mai a Maui me tona iwi, ka noho ohorere ratou, ka kii ratou, “Ko Maui te Rangatira mo nga mahi hii-ika.”<br /><br />A ka kitekite ratou i nga mahi kikino o nga tuakana, ka noho riri etahi hunga, ka noho pouri etahi hunga i nga mahi whakakohuru a nga tuakana.
-            </p>
+            <QuoteTile />
           </Col>
+          
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="text-col">
             <p className="regular-text">
               Ka kata nga tuakana! Engari kaore a Maui i whakarata i a ratou mahi whakatoi ki a ia, a, ka karakia a Maui. <br /><br />
@@ -51,5 +54,4 @@ class HomePage extends Component {
 };
 
 
-ReactDOM.render(<HomePage />, document.querySelector('#root'));
 export default HomePage;

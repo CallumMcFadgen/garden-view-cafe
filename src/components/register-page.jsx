@@ -24,5 +24,4 @@ class RegisterPage extends Component {
 };
 
 
-ReactDOM.render(<RegisterPage />, document.querySelector('#root'));
 export default RegisterPage;

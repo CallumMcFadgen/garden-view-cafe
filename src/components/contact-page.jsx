@@ -55,5 +55,4 @@ class ContactPage extends Component {
 };
 
 
-ReactDOM.render(<ContactPage />, document.querySelector('#root'));
 export default ContactPage;

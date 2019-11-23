@@ -51,5 +51,4 @@ class App extends Component {
 };
 
 
-ReactDOM.render(<App />, document.querySelector('#root'));
 export default App;

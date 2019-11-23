@@ -134,7 +134,7 @@ class UpdateTest extends React.Component {
                     </Label>
                   </FormGroup>
                   <br />
-                  <Button color="secondary" type="submit" value="Add to menu" >UPDATE</Button>{' '}
+                  <Button color="secondary" type="submit" value="Add to menu" >UPDATE</Button>
                 </Form>
               </div>
             )

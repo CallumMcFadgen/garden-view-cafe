@@ -26,11 +26,11 @@ router.delete('/menu-items/:id', jsonParser, routes.menuItems.DeleteMenuItem);  
 
 
 // get all item reviews, get one item review, add a new item review, update a item review, delete a item review
-router.get('/item-reviews', routes.itemReviews.GetAllItemReviews);
-router.get('/item-reviews/:id', middleware.checkID, routes.itemReviews.GetItemReview);
-router.post('/item-reviews', jsonParser, routes.itemReviews.PostItemReview);
-router.put('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PutItemReview);
-router.delete('/item-reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.DeleteItemReview);
+router.get('/item_reviews', routes.itemReviews.GetAllItemReviews);
+router.get('/item_reviews/:id', middleware.checkID, routes.itemReviews.GetItemReview);
+router.post('/item_reviews', jsonParser, routes.itemReviews.PostItemReview);
+router.put('/item_reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.PutItemReview);
+router.delete('/item_reviews/:id', jsonParser, middleware.checkID, routes.itemReviews.DeleteItemReview);
 
 
 // get all events, get one event, add a new event, update a event, delete a event
@@ -56,6 +56,7 @@ router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.even
 // get all users, get one users, add a new users, update a users, delete a users
 router.get('/users', routes.users.GetAllUsers);
 router.get('/users/:id', middleware.checkID, routes.users.GetUser);
+router.get('/users/:email/:password', routes.users.GetUserCredentials);             // Get user info based on email and password (login)
 router.post('/users', jsonParser, routes.users.PostUser);
 router.put('/users/:id', jsonParser,  middleware.checkID, routes.users.PutUser);
 router.delete('/users/:id', jsonParser, middleware.checkID, routes.users.DeleteUser);

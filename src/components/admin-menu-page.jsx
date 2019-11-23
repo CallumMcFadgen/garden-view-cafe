@@ -40,5 +40,4 @@ class AdminMenuPage extends Component {
 };
 
 
-ReactDOM.render(<AdminMenuPage />, document.querySelector('#root'));
 export default AdminMenuPage;

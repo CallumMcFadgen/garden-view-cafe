@@ -65,7 +65,4 @@ class AdminPage extends Component {
 };
 
 
-ReactDOM.render(<AdminPage />, document.querySelector('#root'));
 export default AdminPage;
-
-//             <UpdateMenuItemForm />

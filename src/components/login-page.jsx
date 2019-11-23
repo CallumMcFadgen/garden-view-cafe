@@ -27,5 +27,4 @@ class LoginPage extends Component {
 };
 
 
-ReactDOM.render(<LoginPage />, document.querySelector('#root'));
 export default LoginPage;
