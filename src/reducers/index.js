@@ -1,7 +1,7 @@
-
 const initialState = {
     account : {
-        email: ''
+        email: '', 
+        password:''
     }
 }
 

@@ -15,31 +15,8 @@ class ContactForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
-    // fetch('http://localhost:4200/api/menu-items', {
-    //   method: 'post',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({
-    //     "menu_item_name": this.menu_item_name.value,
-    //     "menu_item_description": this.menu_item_description.value,
-    //     "menu_item_price": this.menu_item_price.valueAsNumber,
-    //     "menu_item_available": this.menu_item_available.checked,
-    //     "menu_item_gluten_free": this.menu_item_gluten_free.checked,
-    //     "menu_item_vegan": this.menu_item_vegan.checked,
-    //     "menu_item_breakfast": this.menu_item_breakfast.checked,
-    //     "menu_item_lunch": this.menu_item_lunch.checked,
-    //     "menu_item_dinner": this.menu_item_dinner.checked,
-    //     "menu_item_function": this.menu_item_function.checked,
-    //     "user_id": 1
-    //   })
-    // })
-    //   .then(() => {
     alert("Thank you for your message, we will be in contact as soon as possibile")
     this.ResetForm();
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
   };
 
 

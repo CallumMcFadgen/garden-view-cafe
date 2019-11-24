@@ -32,10 +32,6 @@ class HomePage extends Component {
         </Row>
         <Row>
 
-          <Col xs="12" sm="12" md="12" lg="4" xl="4" className="quote-col">
-            <QuoteTile />
-          </Col>
-          
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="text-col">
             <p className="regular-text">
               Ka kata nga tuakana! Engari kaore a Maui i whakarata i a ratou mahi whakatoi ki a ia, a, ka karakia a Maui. <br /><br />
@@ -43,6 +39,9 @@ class HomePage extends Component {
               I to ratou taenga atu ki te wahi taunga ika, ka puta mai a Maui, aue ko te ohorere o ona tuakana! “He aha.” “He aha tau?” “To mahi hianga e Maui.” “Ko koe te take e kore ai matou e whiwhi ika ana, ko koe ke” <br /><br />
               Ka kii atu ia ki ona tuakana, “purua a koutou toto koa ki taku rakau hii-ika?” Ka kata haere nga tuakana i te tono nei i a Maui, a, ka riri haere a Maui, ka patua ia ki tona ihu, ka rere iho ai te toto, ka taupokihia ki te kauae raro. Ka a Maui ki te kei o te waka, purua te rakau hii-ika ki a Tangaroa, ka tau te raro, a ka tangohia te rakau hii-ika e tetahi mea!
             </p>
+          </Col>
+          <Col xs="12" sm="12" md="12" lg="4" xl="4" className="quote-col">
+            <QuoteTile />
           </Col>
           <Col xs="12" sm="12" md="12" lg="4" xl="4" className="image-col-portrait">
             <img className="image-medium-portrait" src="./images/medium-portrait/medium-frenchtoast-image.png" alt="frenchtoast" />

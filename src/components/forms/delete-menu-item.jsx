@@ -48,7 +48,13 @@ class DeleteMenuItemForm extends React.Component {
       <Form name="delete-menu-item-form" className="form" onSubmit={this.handleSubmit}>
         <FormGroup>
           <Label>Name</Label>
-          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" required innerRef={(input) => { this.menu_item_name = input }} />
+          <Input 
+          type="input" 
+          name="menu_item_name" 
+          id="menu_item_name" 
+          placeholder="enter an item name" 
+          required 
+          innerRef={(input) => { this.menu_item_name = input }} />
         </FormGroup>
         <br />
         <Button color="secondary" type="submit" value="Add to menu" >REMOVE FROM MENU</Button>{' '}
