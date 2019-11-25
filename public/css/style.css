@@ -68,7 +68,8 @@ label {
 
 /* Small button for login*/
 .login-button {
-  padding-top: 0.3rem;
+  padding-top: 0.3rem !important;
+  height: 50px !important;
 }
 
 /* Styling for the page wrapper (overiding bootstrap) */

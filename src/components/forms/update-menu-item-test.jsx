@@ -2,14 +2,10 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-
 // On this page I am disabling the button submit event so that I can use it to bind 
 // the users input to the variable 'this'.  I then reset the input fields.  The rest is 
 // currently a work in progress.
-
-
 class UpdateTest extends React.Component {
-
   _isMounted = false;
 
   constructor() {
@@ -81,55 +77,91 @@ class UpdateTest extends React.Component {
                 <Form name="update-menu-item-form" className="form" onSubmit={this.handleSubmit}>
                   <FormGroup>
                     <Label>Name</Label>
-                    <Input type="input" name="menu_item_name" id="menu_item_name" defaultValue={item.menu_item_name} onChange={this.handleChange} />
+                    <Input 
+                    type="input" 
+                    name="menu_item_name" 
+                    id="menu_item_name" 
+                    defaultValue={item.menu_item_name} 
+                    onChange={this.handleChange} />
                   </FormGroup>
                   <FormGroup>
                     <Label>Description</Label>
-                    <Input type="textarea" name="menu_item_description" id="menu_item_description" defaultValue={item.menu_item_description} onChange={this.handleChange} />
+                    <Input 
+                    type="textarea" 
+                    name="menu_item_description" 
+                    id="menu_item_description" 
+                    defaultValue={item.menu_item_description} 
+                    onChange={this.handleChange} />
                   </FormGroup>
                   <FormGroup>
                     <Label>Price</Label>
-                    <Input type="number" name="menu_item_price" id="menu_item_price" defaultValue={item.menu_item_price} onChange={this.handleChange} />
+                    <Input 
+                    type="number" 
+                    name="menu_item_price" 
+                    id="menu_item_price" 
+                    defaultValue={item.menu_item_price} 
+                    onChange={this.handleChange} />
                   </FormGroup>
                   <FormGroup check>
                     <Label check >
-                      <Input type="checkbox" defaultChecked={item.menu_item_available} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_available} 
+                      onChange={this.handleChange} />
                       Available
                   </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_gluten_free} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_gluten_free} 
+                      onChange={this.handleChange} />
                       Gluten free
                   </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_vegan} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_vegan} 
+                      onChange={this.handleChange} />
                       Vegan
                       </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_breakfast} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_breakfast} 
+                      onChange={this.handleChange} />
                       Breakfast
                     </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_lunch} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_lunch} 
+                      onChange={this.handleChange} />
                       Lunch
                     </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_dinner} onChange={this.handleChange} />
+                      <Input 
+                      ype="checkbox" 
+                      defaultChecked={item.menu_item_dinner} 
+                      onChange={this.handleChange} />
                       Dinner
                     </Label>
                   </FormGroup>
                   <FormGroup check>
                     <Label check>
-                      <Input type="checkbox" defaultChecked={item.menu_item_function} onChange={this.handleChange} />
+                      <Input 
+                      type="checkbox" 
+                      defaultChecked={item.menu_item_function} 
+                      onChange={this.handleChange} />
                       Functions
                     </Label>
                   </FormGroup>
