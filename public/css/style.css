@@ -63,7 +63,12 @@ label {
   display: inline-flexbox;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
+}
+
+/* Small button for login*/
+.login-button {
+  padding-top: 0.3rem;
 }
 
 /* Styling for the page wrapper (overiding bootstrap) */
@@ -156,6 +161,15 @@ label {
   font-size: 150%;
   font-weight: 400;
   top: 5px;
+}
+
+.quote-name {
+    padding: 3% 10% 3% 10%;
+    font-family: "Merriweather", sans-serif;
+    font-style: italic;
+    font-size: 100%;
+    font-weight: bold;
+    top: 5px;
 }
 
 /* table text (overriding bootstrap) */

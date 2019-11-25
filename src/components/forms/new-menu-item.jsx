@@ -66,55 +66,86 @@ class NewMenuItemForm extends React.Component {
       <Form name="new-item-form" className="form" onSubmit={this.handleSubmit}>
         <FormGroup>
           <Label>Name</Label>
-          <Input type="input" name="menu_item_name" id="menu_item_name" placeholder="enter an item name" required innerRef={(input) => { this.menu_item_name = input }} />
+          <Input 
+          type="input" 
+          name="menu_item_name" 
+          id="menu_item_name" 
+          placeholder="enter an item name" 
+          required 
+          innerRef={(input) => { this.menu_item_name = input }} />
         </FormGroup>
         <FormGroup>
           <Label>Description</Label>
-          <Input type="textarea" name="menu_item_description" id="menu_item_description" placeholder="enter an item description" innerRef={(input) => { this.menu_item_description = input }} />
+          <Input 
+          type="textarea" 
+          name="menu_item_description" 
+          id="menu_item_description" 
+          placeholder="enter an item description" 
+          innerRef={(input) => { this.menu_item_description = input }} />
         </FormGroup>
         <FormGroup>
           <Label>Price</Label>
-          <Input type="number" name="menu_item_price" id="menu_item_price" placeholder="enter an item price" required  innerRef={(input) => { this.menu_item_price = input }} />
+          <Input 
+          type="number" 
+          name="menu_item_price" 
+          id="menu_item_price" 
+          placeholder="enter an item price" 
+          required  
+          innerRef={(input) => { this.menu_item_price = input }} />
         </FormGroup>
         <FormGroup check>
           <Label check >
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_available = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_available = input }} />{' '}
             Available
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_gluten_free = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_gluten_free = input }} />{' '}
             Gluten free
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_vegan = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_vegan = input }} />{' '}
             Vegan
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_breakfast = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_breakfast = input }} />{' '}
             Breakfast
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_lunch = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_lunch = input }} />{' '}
             Lunch
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_dinner = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_dinner = input }} />{' '}
             Dinner
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input type="checkbox" innerRef={(input) => { this.menu_item_function = input }} />{' '}
+            <Input 
+            type="checkbox" 
+            innerRef={(input) => { this.menu_item_function = input }} />{' '}
             Functions
           </Label>
         </FormGroup>

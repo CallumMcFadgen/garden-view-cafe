@@ -1,7 +1,7 @@
 // Package Dependences
 import React, { useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Button, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 
 // Page navbar, this is used on all pages throughout the application.  The navbar contains a header/homepage
@@ -39,7 +39,7 @@ const Example = (props) => {
             <NavItem>
               <NavLink href="/admin-page">Admin</NavLink>
             </NavItem>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <NavItem>
               <div className="header-sm-icons-ui">
                 <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
@@ -58,6 +58,12 @@ const Example = (props) => {
             <NavItem>
               <div className="header-sm-icons-ui">
                 <SocialIcon network="pinterest" url="https://www.pinterest.nz" style={{ height: 30, width: 30 }} bgColor="#4d4d4d" />
+              </div>
+            </NavItem>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <NavItem>
+              <div className="login-button">
+              <a href="/login-page"><Button color="secondary" type="submit" value="Add to menu">Login</Button></a>
               </div>
             </NavItem>
           </Nav>

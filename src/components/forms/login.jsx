@@ -2,21 +2,25 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { connect } from 'react-redux';
+
+// Local Dependences
 import { login } from '../../actions/index';
-import store from '../../store';
 
 
 function mapDispatchToProps(dispatch) {
     return {
-        login: account => dispatch(login(account.email, account.password))
+        login: account => dispatch(login(
+            account.email, 
+            account.password))
     };
 }
 
 
 function mapStateToProps(state) {
-    return { email: state.account.email, password: state.account.password };
+    return { 
+        email: state.account.email, 
+        password: state.account.password };
 }
-
 
 
 class LoginForm extends React.Component {
@@ -24,21 +28,25 @@ class LoginForm extends React.Component {
         super(props);
 
         this.state = {
+            account: {
             email: '',
             password: ''
+            }
         }
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    };
+
 
     handleChange(event){
-        this.setState({[event.target.id]:event.target.value })
+        this.setState({[event.target.name]:event.target.value})
+        console.log(event.target.value)
     }
 
     handleSubmit(event){
         event.preventDefault();
         this.props.login(this.state);
+        console.log('LOGIN DATA: ' + JSON.stringify(this.state.account))
     }
 
     render() {
@@ -46,12 +54,28 @@ class LoginForm extends React.Component {
             <React.Fragment>
                 <Form name="login-form" className="login-form" onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label>Username</Label>
-                        <Input type="input" name="email" id="email" placeholder="enter your email address" value={this.state.email} onChange={this.handleChange} required innerRef={(input) => { }} />
+                        <Label>Email</Label>
+                        <Input 
+                        type="input" 
+                        name="email" 
+                        id="email" 
+                        placeholder="enter your email address" 
+                        value={this.state.email} 
+                        onChange={this.handleChange} 
+                        required 
+                        innerRef={(input) => { }} />
                     </FormGroup>
                     <FormGroup>
                         <Label>Password</Label>
-                        <Input type="password" name="password" id="password" placeholder="enter your password" value={this.state.password} onChange={this.handleChange} required innerRef={(input) => { }} />
+                        <Input 
+                        type="password"
+                        name="password"
+                        id="password" 
+                        placeholder="enter your password" 
+                        value={this.state.password} 
+                        onChange={this.handleChange} 
+                        required 
+                        innerRef={(input) => { }} />
                     </FormGroup>
                     <br />
                     <div className="contact-submit-button">
