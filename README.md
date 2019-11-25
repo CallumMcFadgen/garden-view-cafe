@@ -4,7 +4,7 @@ WEB601 Project Milestone Three
 
 This project is a web app designed for a fictional local cafe, "the Garden View Cafe", it uses a React based front-end framework connected to a MySQL database to display and manage goods and services.
 
-For a brief video walkthrough can be viewed at the following link.
+A video walkthrough can be viewed at the following link.
 
 https://youtu.be/HZZPJY2k_ng 
 
