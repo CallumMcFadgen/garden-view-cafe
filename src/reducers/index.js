@@ -1,5 +1,11 @@
 const initialState = {
-    account : {
+    account: {
+        email: '', 
+        password:''
+    },
+    user: {
+        firstName: '',
+        lastName: '',
         email: '', 
         password:''
     }
@@ -12,9 +18,14 @@ function rootReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 account: action.payload
             });
+        case 'REGISTER':
+            return Object.assign({}, state, {
+                user: action.payload
+            });
         default:
             return state;
     }
 };
+
 
 export default rootReducer;

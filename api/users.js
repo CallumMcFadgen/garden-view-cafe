@@ -32,7 +32,7 @@ function GetUser(req, res) {
 };
 
 
-// Get a specific user based on the email and password
+// Get a specific user based on the email and password (login)
 function GetUserCredentials(req, res) {
     const {knex} = req.app.locals;
     const {email} = req.params;
@@ -62,7 +62,7 @@ function GetUserCredentials(req, res) {
 function PostUser(req, res, next) {
     const { knex } = req.app.locals;
     const payload = req.body;
-    const mandatoryColumns = ['user_first_name', 'user_last', 'user_password', 'user_email', 'user_admin_status'];
+    const mandatoryColumns = ['user_first_name', 'user_last_name', 'user_password', 'user_email'];
     const payloadKeys = Object.keys(payload);
     const mandatoryColumnsExist = mandatoryColumns.every(mc => payloadKeys.includes(mc));
 

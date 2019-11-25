@@ -2,19 +2,24 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { connect } from 'react-redux';
+
+// Local Dependences
 import { login } from '../../actions/index';
-import store from '../../store/store';
 
 
 function mapDispatchToProps(dispatch) {
     return {
-        login: account => dispatch(login(account.email, account.password))
+        login: account => dispatch(login(
+            account.email, 
+            account.password))
     };
 }
 
 
 function mapStateToProps(state) {
-    return { email: state.account.email, password: state.account.password };
+    return { 
+        email: state.account.email, 
+        password: state.account.password };
 }
 
 
@@ -23,21 +28,25 @@ class LoginForm extends React.Component {
         super(props);
 
         this.state = {
+            account: {
             email: '',
             password: ''
+            }
         }
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    };
+
 
     handleChange(event){
-        this.setState({[event.target.name]:event.target.value })
+        this.setState({[event.target.name]:event.target.value})
+        console.log(event.target.value)
     }
 
     handleSubmit(event){
         event.preventDefault();
         this.props.login(this.state);
+        console.log('LOGIN DATA: ' + JSON.stringify(this.state.account))
     }
 
     render() {
