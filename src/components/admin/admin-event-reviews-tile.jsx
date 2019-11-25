@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 
+// UI tile for the admin page (event reviews)
 class AdminEventReviewsTile extends Component {
     render() {
         return (

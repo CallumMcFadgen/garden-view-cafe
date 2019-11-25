@@ -56,9 +56,9 @@ router.delete('/event_reviews/:id',  jsonParser, middleware.checkID, routes.even
 // get all users, get one users, add a new users, update a users, delete a users
 router.get('/users', routes.users.GetAllUsers);
 router.get('/users/:id', middleware.checkID, routes.users.GetUser);
-router.get('/users/:email/:password', routes.users.GetUserCredentials);                         // Get user info based on email and password (login)
+router.get('/users/:email/:password', routes.users.GetUserCredentials);                                 // Get user info based on email and password (login)
 router.post('/users', jsonParser, routes.users.PostUser);
-router.post('/users/:firstname/:lastname/:password/:email', jsonParser, routes.users.PostUser);     // Register
+router.post('/users/:firstname/:lastname/:password/:email', jsonParser, routes.users.PostUser);         // Register
 router.put('/users/:id', jsonParser,  middleware.checkID, routes.users.PutUser);
 router.delete('/users/:id', jsonParser, middleware.checkID, routes.users.DeleteUser);
 

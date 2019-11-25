@@ -1,12 +1,12 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
-
+// Local Dependences
 import QuoteTile from './home/quote';
 
 
+// Homepage contains text and images and a review/quote retrieved from database
 class HomePage extends Component {
   render() {
     return (

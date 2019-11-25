@@ -1,3 +1,4 @@
+// Initial for accounts (login) and for user (rego) 
 const initialState = {
     account: {
         email: '', 
@@ -12,6 +13,7 @@ const initialState = {
 }
 
 
+// Action switch statment (assigns payload )
 function rootReducer(state = initialState, action) {
     switch (action.type) {
         case 'LOG_IN':

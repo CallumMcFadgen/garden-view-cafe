@@ -1,12 +1,12 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
 import GalleryTile from './gallery/gallery-tile';
 
 
+// Gallery page contains tiles for thumbnail and info, link to nested gallery pages in future
 class GalleryPage extends Component {
   render() {
     return (

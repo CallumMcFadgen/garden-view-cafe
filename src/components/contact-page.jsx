@@ -1,6 +1,5 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
@@ -12,6 +11,7 @@ import ContactForm from './forms/contact';
 import GoogleMap from './google-map/google-map';
 
 
+// Contact page contains relevant biz info, contact form and a pending google map plugin
 class ContactPage extends Component {
   render() {
     return (

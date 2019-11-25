@@ -1,6 +1,5 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
@@ -10,6 +9,7 @@ import SummerTable from './tables/events/summer-events';
 import WinterTable from './tables/events/winter-events';
 
 
+// Events page contains banners with headings and tables of event information retrieved from database organised by season
 class EventsPage extends Component {
   render() {
     return (

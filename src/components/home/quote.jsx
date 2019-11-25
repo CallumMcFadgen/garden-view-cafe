@@ -1,7 +1,9 @@
+// Package Dependences
 import React from 'react';
 
-class QuoteTile extends React.Component {
 
+// Holds the 1st review and reviewers name retrieved form the database for display on the home page
+class QuoteTile extends React.Component {
   _isMounted = false;
 
   constructor() {
@@ -11,9 +13,7 @@ class QuoteTile extends React.Component {
     })
   };
 
-
   componentDidMount() {
-
     this._isMounted = true;
     const itemReviewURL = ('http://localhost:4200/api/item_reviews/1')
 
@@ -41,7 +41,7 @@ class QuoteTile extends React.Component {
           {this.state.data.map((item, index) => {
             return (
               <div key={item.item_review_id} value="item_review_id">
-                <p className="quote-text">{item.item_review_review}</p>
+                <p className="quote-text">"{item.item_review_review}"</p>
                 <p className="quote-name">{item.item_review_reviewer_name}</p>
               </div>
             )
