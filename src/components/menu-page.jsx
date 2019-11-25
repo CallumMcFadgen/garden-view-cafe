@@ -1,6 +1,5 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
@@ -9,6 +8,7 @@ import LunchTable from './tables/menu/lunch';
 import DinnerTable from './tables/menu/dinner';
 
 
+// Menu page contains banners with headings and tables containing menu information retrieved from database organized by meal type
 class MenuPage extends Component {
   render() {
     return (

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 
+// UI tile for the admin page (menu items)
 class AdminMenuTile extends Component {
     render() {
         return (

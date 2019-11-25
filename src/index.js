@@ -11,6 +11,7 @@ import store from './store/store';
 
 window.store = store;
 
+// Handles all rendering of pages and binding of redux to react via <Provider>
 ReactDOM.render(
     <Provider store={store}>
         <App />

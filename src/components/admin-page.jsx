@@ -1,14 +1,8 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
-import NewMenuItemForm from './forms/new-menu-item';
-// import UpdateMenuItemForm from './forms/update-menu-item';
-import DeleteMenuItemForm from './forms/delete-menu-item';
-import UpdateTest from './forms/update-menu-item-test';
-
 import AdminMenuTile from './admin/admin-menu-tile';
 import AdminItemReviewsTile from './admin/admin-item-reviews-tile';
 import AdminEventsTile from './admin/admin-events-tile';
@@ -17,8 +11,7 @@ import AdminUserTile from './admin/admin-users-tile';
 import AdminPlaceholderTile from './admin/admin-placeholder-tile';
 
 
-
-
+// Admin page holds tiles that allow users to navigate to the relevant content managment section
 class AdminPage extends Component {
   render() {
     return (

@@ -1,12 +1,12 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
 import LoginForm from './forms/login';
 
 
+// Login page contains a login form
 class LoginPage extends Component {
     render() {
         return (

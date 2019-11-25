@@ -1,3 +1,4 @@
+// pass email and password through URL for login authentication
 export function login(email, password) {
     return function (dispatch) {
         return fetch(`http://localhost:4200/api/users/${email}/${password}`)
@@ -8,6 +9,8 @@ export function login(email, password) {
     }
 };
 
+
+// In progress, pass first and last name, password and email (add a new user record)
 export function register(firstName, lastName, password, email) {
     return function (dispatch) {
         return fetch(`http://localhost:4200/api/users`,
@@ -19,9 +22,5 @@ export function register(firstName, lastName, password, email) {
              "user_password": password,
              "user_email": email})
             })
-            // .then (res => res.json())
-            // .then(json => {
-            //     dispatch({type: 'REGISTER', payload: json})
-            // })
     }
 };

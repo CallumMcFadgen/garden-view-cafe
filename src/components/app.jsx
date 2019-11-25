@@ -1,6 +1,5 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container} from 'reactstrap';
 
@@ -19,6 +18,8 @@ import NavBar from './navbar/navbar';
 import Footer from './footer/footer';
 
 
+// App class holds a lot of the page defaults like routes, container, navbar, footer that
+// applied to all of the child components
 class App extends Component {
   render() {
     return (

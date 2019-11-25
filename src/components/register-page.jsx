@@ -1,12 +1,12 @@
 // Package Dependences
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Row, Col } from 'reactstrap';
 
 // Local Dependences
 import RegisterForm from './forms/register';
 
 
+// Register page contains a register form
 class RegisterPage extends Component {
     render() {
         return (

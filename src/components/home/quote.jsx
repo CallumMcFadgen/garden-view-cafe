@@ -41,7 +41,7 @@ class QuoteTile extends React.Component {
           {this.state.data.map((item, index) => {
             return (
               <div key={item.item_review_id} value="item_review_id">
-                <p className="quote-text">{item.item_review_review}</p>
+                <p className="quote-text">"{item.item_review_review}"</p>
                 <p className="quote-name">{item.item_review_reviewer_name}</p>
               </div>
             )
