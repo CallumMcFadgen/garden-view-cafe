@@ -23,7 +23,7 @@
     "react-scripts": "3.1.1",
     "reactstrap": "^8.0.1",
     "redux-thunk": "^2.3.0",
-    "set-value": "^3.0.1"
+    "set-value": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
